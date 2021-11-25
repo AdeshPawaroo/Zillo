@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useRef  } from "react";
 import { useDispatch } from "react-redux";
 
-import { signup } from "../../actions/session_actions";
+import { signup, logout } from "../../actions/session_actions";
 
 export const Signup = () => {
     
@@ -30,6 +30,10 @@ export const Signup = () => {
         });
     }
 
+    const handleLogout = () => {
+        dispatch(logout());
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(signup(user));
@@ -51,6 +55,11 @@ export const Signup = () => {
                 <input type="password" className="password-signup-input" value={user.password} onChange={handlePassword} ref={_password} placeholder="Please enter your password" />
 
                 <button className="signup-submit" onClick={handleSubmit}>Signup!</button>
+
+                < br />
+                < br />
+
+                <button className='logout-btn' onClick={handleLogout}>Logout!</button>
             </form>
         </div>
     )
