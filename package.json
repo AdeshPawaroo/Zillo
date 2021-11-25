@@ -38,5 +38,8 @@
     "util": "^0.12.4",
     "webpack": "^5.64.3",
     "webpack-cli": "^4.9.1"
+  },
+  "devDependencies": {
+    "webpack-livereload-plugin": "^3.0.2"
   }
 }
