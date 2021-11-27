@@ -2,21 +2,22 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { openModal } from "../../actions/modal_actions";
 import { Link } from "react-router-dom";
-import { logout } from "../../actions/session_actions";
 
 export const Navbar = () => {
 
     const dispatch = useDispatch();
-
-    const handleLogout = (e) => {
-        e.preventDefault();
-        dispatch(logout());
-    }
-
+   
     const handleClick = (e) => {
         e.preventDefault();
         dispatch(openModal("login"));
     }
+
+    const handleHome = (e) => {
+        e.preventDefault();
+        
+        //refactor this later ?
+        window.location = "/"
+    }   
 
     return (
         <div className="navbar-container">
@@ -28,13 +29,14 @@ export const Navbar = () => {
                 <Link to="/agent">Agent Finder</Link>
             </div>
 
-            {/* LOGO GOES HERE */}
-
+            <img src={window.logo} className="logo" onClick={handleHome}/>
+        
             <div className="navbar-right">
                 <Link to="rentals">Manage Rentals</Link>
                 <Link to="advertise">Advertise</Link>
                 <Link to="/help">Help</Link>
-                <button onClick={handleClick}>Sign In</button>
+                <span onClick={handleClick}>Sign In</span>
+                {/* <button onClick={handleClick}>Sign In</button> */}
             </div>
         </div>
     )
