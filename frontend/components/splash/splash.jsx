@@ -6,5 +6,5 @@ export const Splash = () => {
         <div className="splash-container">
             <h2>Hello this will be the Splash page</h2>
         </div>
-    )
+    ) 
 }

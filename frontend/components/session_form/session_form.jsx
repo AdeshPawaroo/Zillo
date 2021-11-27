@@ -36,6 +36,8 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    console.log(this.props);
+    if (!this.props.errors) return null;
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -43,7 +45,7 @@ class SessionForm extends React.Component {
           <br/>
           Please {this.props.formType} or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">X</div>
-          {/* {this.renderErrors()} */}
+          {this.renderErrors()}
           <div className="login-form">
             <br/>
             <label>email:
