@@ -14,3 +14,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .login-form-box {
+    height: 70vh;
+    width: 23vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: .5rem;
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Antic Slab', serif;
+    font-size: 1.5rem;
+    padding: 2rem;
+  }

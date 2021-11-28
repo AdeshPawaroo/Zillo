@@ -23,17 +23,29 @@ class SessionForm extends React.Component {
     this.props.processForm(user).then(this.props.closeModal);
   }
 
-  renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+  handlePasswordErr() { 
+    if (this.props.errors["password"]) {
+      return (
+        "Password is too short!"
+      )
+    }
   }
+
+  handleEmailErr() {
+    if (this.props.errors["email"]) {
+      return (
+        "Email has already been taken!"
+      )
+    }
+  }
+
+  // handleSignIn() {
+  //   this.props.formType
+  // }
+
+  // handleLogin() {
+  //   this.props.otherForm
+  // }
 
   render() {
     console.log(this.props);
@@ -41,11 +53,10 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Zillo!
+         <p className="welcome">Welcome to Zillo</p>
           <br/>
           Please {this.props.formType} or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">X</div>
-          {this.renderErrors()}
           <div className="login-form">
             <br/>
             <label>email:
@@ -55,6 +66,7 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
+            {this.handleEmailErr()}
             <br/>
             <label>Password:
               <input type="password"
@@ -63,6 +75,7 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
+            {this.handlePasswordErr()}
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
