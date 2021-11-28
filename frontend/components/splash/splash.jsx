@@ -40,6 +40,14 @@ export const Splash = () => {
 
             <br/ >  <br/ >  <br/ >  <br/ >
 
+            <div className="splash-desc">
+                <div className="socials">
+
+                </div>
+            </div>
+
+            <br/ >  <br/ >  <br/ >  <br/ >
+
             <div className="footer-container">
                 <div className="footer"></div>
             </div>
