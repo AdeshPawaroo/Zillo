@@ -39,14 +39,6 @@ class SessionForm extends React.Component {
     }
   }
 
-  // handleSignIn() {
-  //   this.props.formType
-  // }
-
-  // handleLogin() {
-  //   this.props.otherForm
-  // }
-
   render() {
     console.log(this.props);
     if (!this.props.errors) return null;
@@ -55,11 +47,14 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
          <p className="welcome">Welcome to Zillo</p>
           <br/>
-          Please {this.props.formType} or {this.props.otherForm}
+          <div className="modal-type">
+            {/* {this.props.otherForm} */}
+            {this.props.formType}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.otherForm}
+          </div>
           <div onClick={this.props.closeModal} className="close-x">X</div>
           <div className="login-form">
             <br/>
-            <label>email:
+            <label>Email:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}

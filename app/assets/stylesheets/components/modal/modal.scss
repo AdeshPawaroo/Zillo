@@ -30,5 +30,25 @@
     font-weight: bold;
     font-family: 'Antic Slab', serif;
     font-size: 1.5rem;
-    padding: 2rem;
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .modal-type {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: left;
+    padding: 1.5rem;
+  }
+
+  .modal-si-btn {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.1rem;
+  }
+
+  .modal-su-btn {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.1rem;
   }
