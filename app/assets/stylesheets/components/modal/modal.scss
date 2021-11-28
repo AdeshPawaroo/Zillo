@@ -14,3 +14,41 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .login-form-box {
+    height: 70vh;
+    width: 23vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: .5rem;
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Antic Slab', serif;
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .modal-type {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: left;
+    padding: 1.5rem;
+  }
+
+  .modal-si-btn {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.1rem;
+  }
+
+  .modal-su-btn {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.1rem;
+  }
