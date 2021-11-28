@@ -38,8 +38,13 @@
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
+    box-shadow: 0px 1px 1px 0px;
+}
 
-    border: black solid;
+.panel-container > div:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .panel-container > div > button {
@@ -59,6 +64,7 @@
 .panel-container > div > button:hover {
     color: white;
     background-color: blue;
+    cursor: pointer;
 }
 
 .buy-img {
