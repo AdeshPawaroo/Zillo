@@ -26,52 +26,61 @@
 }
 
 .panel-container > div {
-    border: black solid;
     width: 18%;
-    height: 43vh;
+    height: 50vh;
     margin-left: .8rem;
     margin-right: .8rem;
+    text-align: center;
+    font-family: 'Antic Slab', serif;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+
+    border: black solid;
 }
 
-.buy-panel {
-    background-image: url("buy.png");
-    background-size: 100% 60%;
+.panel-container > div > button {
+    text-align: center;
+    font-family: 'Antic Slab', serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: blue;
+    background-color: white;
+    border-color: blue;
+    border-width: thin;
+    height: 10%;
+    width: 50%;
+    border-radius: .25rem;
+}
+
+.panel-container > div > button:hover {
+    color: white;
+    background-color: blue;
+}
+
+.buy-img {
+    width: 100%;
+    height: 65%;
+    background: url("buy.png");
     background-repeat: no-repeat;
-    background-position: top;
+    background-size: cover;
 }
 
-.sell-panel {
-    background-image: url("sell.png");
-    background-size: 100% 60%;
+.sell-img {
+    width: 100%;
+    height: 65%;
+    background: url("sell.png");
     background-repeat: no-repeat;
-    background-position: top;
+    background-size: cover;
 }
 
-.rent-panel {
-    background-image: url("rent.png");
-    background-size: 100% 60%;
+.rent-img {
+    width: 100%;
+    height: 65%;
+    background: url("rent.png");
     background-repeat: no-repeat;
-    background-position: top;
+    background-size: cover;
 }
-
-// .buy-img {
-//     height: 50%;
-//     width: 100%;
-//     background-image: url("buy.png");
-//     background-size: 100% 100%;
-// }
-
-// .sell-img {
-//     height: 20vh;
-//     width: 100%;
-//     background-image: url("sell.png");
-//     background-size: 100% 100%;
-//     border: black solid;
-// }
-
-// .rent-img {
-//     height: 50%;
-//     width: 100%;
-//     background-image: url("rent.png");
-//     background-size: 100% 100%;
-// }

@@ -16,13 +16,25 @@ export const Splash = () => {
 
             <div className="panel-container">
                 <div className="buy-panel">
-                    <span className="buy-img"></span>
+                    <div className="buy-img"></div>
+                    <p>
+                        Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.
+                    </p>
+                    <button>Search Homes</button>
                 </div>
                 <div className="sell-panel">
-                    <span className="sell-img"></span>
+                    <div className="sell-img"></div>
+                    <p>
+                        No matter what path you take to sell your home, we can help you navigate a successful sale.
+                    </p>
+                    <button>See your options</button>
                 </div>
                 <div className="rent-panel">
-                    <span className="rent-img"></span>
+                    <div className="rent-img"></div>
+                    <p>
+                        We're creating a seamless online experience - from shopping on the largest rental network, to applying, to paying rent.
+                    </p>
+                    <button>Find rentals</button>
                 </div>
             </div>
 
