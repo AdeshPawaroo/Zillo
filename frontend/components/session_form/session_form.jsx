@@ -48,8 +48,9 @@ class SessionForm extends React.Component {
          <p className="welcome">Welcome to Zillo</p>
           <br/>
           <div className="modal-type">
-            {/* {this.props.otherForm} */}
-            {this.props.formType}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.otherForm}
+            
+            {this.props.loginForm} {this.props.signupForm}
+            {/* {this.props.formType}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.otherForm} */}
           </div>
           <div onClick={this.props.closeModal} className="close-x">X</div>
           <div className="login-form">

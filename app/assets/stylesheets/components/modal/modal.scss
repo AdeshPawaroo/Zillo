@@ -46,9 +46,25 @@
   .modal-si-btn {
     font-family: 'Antic Slab', serif;
     font-size: 1.1rem;
+    text-decoration: underline;
+    text-decoration-color: blue;
   }
 
   .modal-su-btn {
     font-family: 'Antic Slab', serif;
     font-size: 1.1rem;
+    text-decoration: underline;
+    text-decoration-color: blue;
+  }
+
+  .modal-si-btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+  }
+
+  .modal-su-btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
   }
