@@ -4,6 +4,10 @@
     background-image: url("splash_img.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .slogan-container { 
@@ -99,3 +103,22 @@
     background-repeat: no-repeat;
     background-position: bottom;
 }
+
+.searchbar {
+    width: 37%;
+    height: 4vh;
+    border-radius: .4rem;
+    padding: 1rem;
+    font-family: 'Antic Slab', serif;
+    font-weight: bold;
+}
+
+.img-slogan {
+    color: white;
+    font-family: 'Antic Slab', serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
