@@ -2,8 +2,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Splash } from './splash/splash';
-import Modal from './modal/modal';
 import { Navbar } from './nav_bar/navbar';
+import { ListingsIndex } from './listing/listings_index';
+import Modal from './modal/modal';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Splash />}  />
+                <Route path="/buy" element={<ListingsIndex />}  />
             </Routes>
         </div>
     )
