@@ -1,10 +1,14 @@
 import React from "react";
+import { Searchbar } from "./searchbar";
 
 export const Splash = () => {
 
     return (
         <div className="splash-container">
-            <div className="img-container"></div>
+            <div className="img-container">
+                <h1 className='img-slogan'>Change starts here</h1>
+                <Searchbar />
+            </div>
 
             <br/ >  <br/ >  <br/ >  <br/ >
 

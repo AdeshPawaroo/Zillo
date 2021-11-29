@@ -35,8 +35,21 @@ export const Navbar = () => {
         e.preventDefault();
         
         //refactor this later ?
-        window.location = "/"
+        window.location = "/";
     }   
+
+    //socials
+    const handleGH = () => {
+        window.location = "https://github.com/AdeshPawaroo/Zillo";
+    }
+
+    const handleLI = () => {
+        window.location = "https://www.linkedin.com/in/adesh-pawaroo-997394226/";
+    }
+
+    const handleAL = () => {
+        window.location = "https://angel.co/u/adesh-pawaroo";
+    }
 
     return (
         <div className="navbar-container">
@@ -45,16 +58,17 @@ export const Navbar = () => {
                 <Link to="/rent">Rent</Link>
                 <Link to="/sell">Sell</Link>
                 <Link to="/loans">Home Loans</Link>
-                <Link to="/agent">Agent Finder</Link>
+                <Link to="/agent">Portfolio</Link>
             </div>
 
             <img src={window.logo} className="logo" onClick={handleHome}/>
         
             <div className="navbar-right">
-                <Link to="rentals">Manage Rentals</Link>
-                <Link to="advertise">Advertise</Link>
-                <Link to="/help">Help</Link>
-                {handleRender()}
+                <span onClick={handleGH}>GitHub</span>
+                <span onClick={handleLI}>LinkedIn</span>
+                <span onClick={handleAL}>AngelList</span>
+                <span onClick={handleClick}>Sign In</span>
+                {/* <button onClick={handleClick}>Sign In</button> */}
             </div>
         </div>
     )
