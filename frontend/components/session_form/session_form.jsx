@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,12 +8,20 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  handleDemo() {
+    this.setState({
+      email: "demo@demo.com",
+      password: "demo123"
+    })
   }
 
   handleSubmit(e) {
@@ -48,13 +55,14 @@ class SessionForm extends React.Component {
          <p className="welcome">Welcome to Zillo</p>
           <br/>
           <div className="modal-type">
-            {/* {this.props.otherForm} */}
-            {this.props.formType}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.otherForm}
+            {this.props.loginForm} {this.props.signupForm}
           </div>
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
           <div className="login-form">
             <br/>
-            <label>Email:
+            <br/>
+            <label>Email
+              < br/>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
@@ -63,7 +71,9 @@ class SessionForm extends React.Component {
             </label>
             {this.handleEmailErr()}
             <br/>
-            <label>Password:
+            <br/>
+            <label>Password
+              <br />
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -72,7 +82,17 @@ class SessionForm extends React.Component {
             </label>
             {this.handlePasswordErr()}
             <br/>
+            <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <br/>
+            <br/>
+            <br/>
+            <div className="demo-container">
+              <p>Or connect with:</p>
+              <br/>
+              <br/>
+              <button onClick={this.handleDemo} className="demo-btn">Demo User</button>
+            </div>
           </div>
         </form>
       </div>
