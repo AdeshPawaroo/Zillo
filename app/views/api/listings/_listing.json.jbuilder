@@ -1,0 +1,1 @@
+json.extract! listing, :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :description, :lat, :lng
