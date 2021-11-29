@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_042850) do
+ActiveRecord::Schema.define(version: 2021_11_29_045342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "listings", force: :cascade do |t|
-    t.integer "price", null: false
     t.string "address", null: false
     t.integer "beds", null: false
     t.integer "baths", null: false
@@ -25,14 +24,12 @@ ActiveRecord::Schema.define(version: 2021_11_28_042850) do
     t.string "realator", null: false
     t.string "style", null: false
     t.text "description", null: false
-    t.integer "state_id", null: false
-    t.integer "city_id", null: false
     t.float "lat", null: false
     t.float "lng", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["city_id"], name: "index_listings_on_city_id"
-    t.index ["state_id"], name: "index_listings_on_state_id"
+    t.integer "sqft", null: false
+    t.string "price", null: false
   end
 
   create_table "users", force: :cascade do |t|
