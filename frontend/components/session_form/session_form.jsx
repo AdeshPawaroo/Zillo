@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
   handlePasswordErr() { 
     if (this.props.errors["password"]) {
       return (
-        "Password is too short!"
+        <h2 className="password-err">Password is too short!</h2>
       )
     }
   }
@@ -41,14 +41,14 @@ class SessionForm extends React.Component {
   handleEmailErr() {
     if (this.props.errors["email"]) {
       return (
-        "Email has already been taken!"
+        <h2 className="email-err">Email has already been taken!</h2>
       )
     }
   }
 
   render() {
-    console.log(this.props);
-    if (!this.props.errors) return null;
+    // console.log(this.props);
+    // if (!this.props.errors) return null;
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
