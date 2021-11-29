@@ -1,4 +1,4 @@
-class Api:ListingsController < ApplicationRecord
+class Api::ListingsController < ApplicationController
 
     def create
         @listing = Listing.new(listing_params)
@@ -14,7 +14,7 @@ class Api:ListingsController < ApplicationRecord
         @listing = Listing.find(params[:id])
     end
 
-    def inded
+    def index
         @listings = Listing.all
         render "/api/listings/index"
     end

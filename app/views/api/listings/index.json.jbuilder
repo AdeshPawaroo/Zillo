@@ -1,5 +1,5 @@
-@listings.each do |index|
+@listings.each do |listing|
     json.set! listing.id do 
-        json.partial! "api/listings/listing", listing: @listing
+        json.extract! listing, :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng
     end
 end
