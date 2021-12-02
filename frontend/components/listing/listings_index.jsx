@@ -14,11 +14,13 @@ export const ListingsIndex = () => {
      const _listings = useSelector(state => state.entities.listings);
 
      const listings = Object.values(_listings);
-     console.log(listings);
-     
 
     return (
-        <h2>here</h2>
+        <div className="listings-index">
+            {listings.map((listing, i) => (
+                console.log(listing.price)
+            ))}
+        </div>
     )
 
 }
