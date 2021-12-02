@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux"; 
-
 import { fetchListings } from "../../actions/listing_actions";
+import { Listing } from "./listing";
 
 export const ListingsIndex = () => {
     
@@ -18,7 +18,7 @@ export const ListingsIndex = () => {
     return (
         <div className="listings-index">
             {listings.map((listing, i) => (
-                console.log(listing.price)
+                <Listing listing={listing} key={i} />
             ))}
         </div>
     )
