@@ -5,11 +5,17 @@ import { fetchListings } from "../../actions/listing_actions";
 
 export const ListingsIndex = () => {
     
-    // const listings = useSelector(state => state.entities.listings);
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(fetchListings());
-    });
+    }, []);
+
+     const _listings = useSelector(state => state.entities.listings);
+
+     const listings = Object.values(_listings);
+     console.log(listings);
+     
 
     return (
         <h2>here</h2>
