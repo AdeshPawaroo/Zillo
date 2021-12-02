@@ -1,3 +1,29 @@
 .listing-item-container {
     border: black solid;
+    width: 30%;
 }
+
+.listing-item-container > p {
+    font-family: 'Antic Slab', serif;
+    text-align: center;
+    padding: .3rem;
+}
+
+.listing-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.listing-stats {
+
+}
+
+.listing-address {
+    // font-weight: bold;
+}
+
+.listing-realator {
+    font-size: .85rem;
+}
+
+// border bottom

@@ -2,19 +2,24 @@ import React from "react";
 
 export const Listing = (props) => {
 
+    console.log(props);
+
     return(
         <div className="listing-item-container">
-            <p>{props.listing.price}</p>
-            <br />
-            <p>
-               {props.listing.beds} 
-               {props.listing.baths} 
-               {props.listing.sqft} 
+            <p className="listing-price">
+                {props.listing.price}
+            </p>
+            <p className="listing-stats">
+               {props.listing.beds} {" bds "}
+               {props.listing.baths} {" ba "}
+               {props.listing.sqft} {" sqft -"}
                {props.listing.status} 
             </p>
-            <br />
-            <p>
+            <p className="listing-address">
                 {props.listing.address}
+            </p>
+            <p className="listing-realator">
+                {props.listing.realator}
             </p>
         </div>
     )
