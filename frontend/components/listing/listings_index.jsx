@@ -6,7 +6,7 @@ import { fetchListings } from "../../actions/listing_actions";
 export const ListingsIndex = () => {
     
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         dispatch(fetchListings());
     });
