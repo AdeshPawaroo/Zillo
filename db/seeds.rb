@@ -68,22 +68,6 @@ realator = [
     'Eastside Real Estate',
 ];
 
-#cooling options
-cooling = [
-    'central air',
-    'ductless',
-    'evaporitive',
-    'portable'
-];
-
-#heating options
-heating = [
-    'hybrid',
-    'furnace',
-    'radiant',
-    'heaters',
-];
-
 style = [
     'shack',
     'ranch',
@@ -106,7 +90,7 @@ description = [
 # Listings in Queens
 listing1 = Listing.create!({
     price: '$2,627,528',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000),
     status: status.sample, 
@@ -121,7 +105,7 @@ listing1 = Listing.create!({
 
 listing2 = Listing.create!({
     price: '$1,971,174',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000),
     status: status.sample, 
@@ -136,7 +120,7 @@ listing2 = Listing.create!({
 
 listing3 = Listing.create!({
     price: '$2,714,625',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -151,7 +135,7 @@ listing3 = Listing.create!({
 
 listing4 = Listing.create!({
     price: '$1,781,049',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -167,7 +151,7 @@ listing4 = Listing.create!({
 # Listings in Brooklyn
 listing5 = Listing.create!({
     price: '$1,323,962',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -182,7 +166,7 @@ listing5 = Listing.create!({
 
 listing6 = Listing.create!({
     price: '$1,098,618',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -197,7 +181,7 @@ listing6 = Listing.create!({
 
 listing7 = Listing.create!({
     price: '$1,576,239',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -212,7 +196,7 @@ listing7 = Listing.create!({
 
 listing8 = Listing.create!({
     price: '$450,542',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -229,7 +213,7 @@ listing8 = Listing.create!({
 
 listing9 = Listing.create!({
     price: '$1,200,343',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -244,7 +228,7 @@ listing9 = Listing.create!({
 
 listing10 = Listing.create!({
     price: '$765,329',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -259,7 +243,7 @@ listing10 = Listing.create!({
 
 listing11 = Listing.create!({
     price: '$3,458,211',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -274,7 +258,7 @@ listing11 = Listing.create!({
 
 listing12 = Listing.create!({
     price: '$558,412',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -291,7 +275,7 @@ listing12 = Listing.create!({
 
 listing13 = Listing.create!({
     price: '$6,798,221',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -306,7 +290,7 @@ listing13 = Listing.create!({
 
 listing14 = Listing.create!({
     price: '$654,212',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -320,8 +304,8 @@ listing14 = Listing.create!({
 });
 
 listing15 = Listing.create!({
-    price: '$5,400,212',
-    beds: rand(5), 
+    price: '$2..6,400,212',
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -336,7 +320,7 @@ listing15 = Listing.create!({
 
 listing16 = Listing.create!({
     price: '$650,212',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -353,7 +337,7 @@ listing16 = Listing.create!({
 
 listing17 = Listing.create!({
     price: '$1,523,112',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -368,7 +352,7 @@ listing17 = Listing.create!({
 
 listing18 = Listing.create!({
     price: '$421,546',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -383,7 +367,7 @@ listing18 = Listing.create!({
 
 listing19 = Listing.create!({
     price: '$2,563,221',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
@@ -398,7 +382,7 @@ listing19 = Listing.create!({
 
 listing20 = Listing.create!({
     price: '$4,161,231',
-    beds: rand(5), 
+    beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
