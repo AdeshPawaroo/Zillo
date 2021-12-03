@@ -20,9 +20,24 @@
       window.rent = "<%= image_url("rent.png") %>"
       window.footer = "<%= image_url("footer.png") %>"
     </script>
+
+    
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
   </head>
 
   <body>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWRlc2hwIiwiYSI6ImNrd3BrcDRvMTBiZ2UycG8wcGRzOHJhb3UifQ.M2qFGl7PNe9nqCf1C59Ohw';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    </script>
     <%= yield %> 
   </body>
 </html>

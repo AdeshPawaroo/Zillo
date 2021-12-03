@@ -2,8 +2,6 @@ import React from "react";
 
 export const Listing = (props) => {
 
-    console.log(props);
-
     return(
         <div className="listing-item-container">
             <p className="listing-price">
