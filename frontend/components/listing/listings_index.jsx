@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux"; 
 import { fetchListings } from "../../actions/listing_actions";
 import { Listing } from "./listing";
@@ -14,6 +14,8 @@ export const ListingsIndex = () => {
      const _listings = useSelector(state => state.entities.listings);
 
      const listings = Object.values(_listings);
+
+    // const listings = useSelector(state => state.entities.listings);
 
     return (
         <div className="listings-index">
