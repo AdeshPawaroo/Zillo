@@ -31,7 +31,7 @@ export const Splash = () => {
                     <p>
                         No matter what path you take to sell your home, we can help you navigate a successful sale.
                     </p>
-                    <button>See your options</button>
+                    <button className="sell-panel-btn">See your options</button>
                 </div>
                 <div className="rent-panel">
                     <div className="rent-img"></div>

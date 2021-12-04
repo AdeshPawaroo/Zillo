@@ -12,8 +12,8 @@ const App = () => {
             <Modal />
             <Navbar />
             <Routes>
-                <Route path="/" element={<Splash />}  />
-                <Route path="/buy" element={<ListingsIndex />}  />
+                <Route path="/" element={<Splash />} />
+                <Route path="/buy" element={<ListingsIndex />} />
             </Routes>
         </div>
     )
