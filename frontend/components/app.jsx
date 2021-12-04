@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
-import { ListingsIndex } from './listing/listings_index';
+import { ListingsMap } from './map/listing_map';
 import Modal from './modal/modal';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Splash />} />
-                <Route path="/buy" element={<ListingsIndex />} />
+                <Route path="/buy" element={<ListingsMap />} />
             </Routes>
         </div>
     )

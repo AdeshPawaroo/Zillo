@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleMap, Marker } from "@react-google-maps/api"
 
-export const ListingMap = (props) => {
+export const ListingsMap = (props) => {
 
     const mapOptions = {
         height: "785px",
