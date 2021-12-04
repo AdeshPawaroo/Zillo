@@ -15,8 +15,6 @@ export const GoogleMap = (props) => {
 
     const locations = [];
 
-    const itemId = 
-
     const handleClick = (item) => {
         props.history.push(`/listings/${item.id}`);
     }
@@ -25,7 +23,7 @@ export const GoogleMap = (props) => {
         <GoogleMap>
             mapContainerStyle={mapOptions}
             zoom={11}
-            cetner={center}
+            center={center}
             {locations.map(item => {
                 return (
                     <Marker
