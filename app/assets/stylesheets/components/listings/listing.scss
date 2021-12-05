@@ -1,6 +1,17 @@
+.listings-index {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 760px;
+}
+
+
+
+// listing item
 .listing-item-container {
     border: black solid;
-    width: 30%;
+    width: 45%;
 }
 
 .listing-item-container > p {
@@ -17,5 +28,3 @@
 .listing-realator {
     font-size: .85rem;
 }
-
-// border bottom

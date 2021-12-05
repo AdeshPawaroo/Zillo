@@ -1,8 +1,11 @@
 .buy-nav-container {
-    border: black solid;
     padding: .55rem;
     width: 100%;
     display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-width: thin;
+    
 }
 
 .buy-nav-container > button {
@@ -17,6 +20,7 @@
     margin-left: .50rem;
     height: 1.9rem;
     width: 6%;
+    border-radius: .20rem;
 }
 
 .buy-nav-container > button:hover {

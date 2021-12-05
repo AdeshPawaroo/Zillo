@@ -4,8 +4,8 @@ import { GoogleMap, Marker } from "@react-google-maps/api"
 export const ListingsMap = (props) => {
 
     const mapOptions = {
-        height: "785px",
-        width: "1150px"
+        height: "760px",
+        width: "1080px"
     }
 
     const center = {
