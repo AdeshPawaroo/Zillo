@@ -7,6 +7,9 @@ export const ListingsMap = (props) => {
     const _listings = useSelector(state => state.entities.listings);
     const listings = Object.values(_listings);
 
+    // if flag -> redCircle / if true -> greenCircle
+    let flag = false;
+
     const redCircle = {
         path: google.maps.SymbolPath.CIRCLE,
         fillColor: "red",
@@ -24,6 +27,10 @@ export const ListingsMap = (props) => {
         strokeColor: "white",
         strokeWeight: 3
     }
+
+    const infoWindow = new google.maps.InfoWindow({
+        content: "<h2>test</h2>"
+    });
 
     const mapOptions = {
         height: "760px",
@@ -50,6 +57,15 @@ export const ListingsMap = (props) => {
         locations.push(listingObj);
     });
 
+    //determines which circle to render
+    const handleRender = () => {
+        if (flag === false) {
+            return redCircle;
+        } else {
+            return greenCircle;
+        }
+    }
+
     return (
         <GoogleMap
             mapContainerStyle={mapOptions}
@@ -62,7 +78,7 @@ export const ListingsMap = (props) => {
                         <Marker 
                             id={item.id}
                             position={item.location}
-                            icon={redCircle}
+                            icon={handleRender()}
                         />
                     )
                 })
