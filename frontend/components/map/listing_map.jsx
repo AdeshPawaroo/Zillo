@@ -1,13 +1,29 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import { GoogleMap, Marker } from "@react-google-maps/api";
-import { fetchListings } from "../../actions/listing_actions";
 
 export const ListingsMap = (props) => {
 
-    const dispatch = useDispatch();
     const _listings = useSelector(state => state.entities.listings);
     const listings = Object.values(_listings);
+
+    const redCircle = {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: "red",
+        fillOpacity: 10,
+        scale: 7.5,
+        strokeColor: "white",
+        strokeWeight: 3
+    }
+
+    const greenCircle = {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: "green",
+        fillOpacity: 10,
+        scale: 7.5,
+        strokeColor: "white",
+        strokeWeight: 3
+    }
 
     const mapOptions = {
         height: "760px",
@@ -46,6 +62,7 @@ export const ListingsMap = (props) => {
                         <Marker 
                             id={item.id}
                             position={item.location}
+                            icon={redCircle}
                         />
                     )
                 })
