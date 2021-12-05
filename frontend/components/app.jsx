@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
-import { ListingsMap } from './map/listing_map';
+import { BuyPage } from './buy_page/buy';
 import Modal from './modal/modal';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Splash />} />
-                <Route path="/buy" element={<ListingsMap />} />
+                <Route path="/buy" element={<BuyPage />} />
             </Routes>
         </div>
     )
