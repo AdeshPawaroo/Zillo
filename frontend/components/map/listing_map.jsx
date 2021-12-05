@@ -5,7 +5,7 @@ export const ListingsMap = (props) => {
 
     const mapOptions = {
         height: "760px",
-        width: "1080px"
+        width: "1150px"
     }
 
     const center = {

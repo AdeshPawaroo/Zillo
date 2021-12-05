@@ -4,6 +4,11 @@ export const Listing = (props) => {
 
     return(
         <div className="listing-item-container">
+
+            <div className="listing-photo">
+                
+            </div>
+
             <p className="listing-price">
                 {props.listing.price}
             </p>
