@@ -34,7 +34,6 @@ export const Navbar = () => {
     const handleHome = (e) => {
         e.preventDefault();
         
-        //refactor this later ?
         window.location = "/";
     }   
 

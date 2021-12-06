@@ -7,8 +7,15 @@ export const ListingsMap = (props) => {
     const _listings = useSelector(state => state.entities.listings);
     const listings = Object.values(_listings);
 
-    // if flag -> redCircle / if true -> greenCircle
-    let flag = false;
+    const mapOptions = {
+        height: "760px",
+        width: "1150px"
+    }
+
+    const center = {
+        lat: 40.6892,
+        lng: -74.0445
+    }
 
     const redCircle = {
         path: google.maps.SymbolPath.CIRCLE,
@@ -16,7 +23,7 @@ export const ListingsMap = (props) => {
         fillOpacity: 10,
         scale: 7.5,
         strokeColor: "white",
-        strokeWeight: 3
+        strokeWeight: 3,
     }
 
     const greenCircle = {
@@ -26,20 +33,6 @@ export const ListingsMap = (props) => {
         scale: 7.5,
         strokeColor: "white",
         strokeWeight: 3
-    }
-
-    const infoWindow = new google.maps.InfoWindow({
-        content: "<h2>test</h2>"
-    });
-
-    const mapOptions = {
-        height: "760px",
-        width: "1150px"
-    }
-
-    const center = {
-        lat: 40.6892,
-        lng: -74.0445
     }
 
     const locations = [];
@@ -57,15 +50,6 @@ export const ListingsMap = (props) => {
         locations.push(listingObj);
     });
 
-    //determines which circle to render
-    const handleRender = () => {
-        if (flag === false) {
-            return redCircle;
-        } else {
-            return greenCircle;
-        }
-    }
-
     return (
         <GoogleMap
             mapContainerStyle={mapOptions}
@@ -74,14 +58,13 @@ export const ListingsMap = (props) => {
         >
             {
                 locations.map(item => {
-                    return (
-                        <Marker 
-                            id={item.id}
-                            position={item.location}
-                            icon={handleRender()}
-                        />
-                    )
-                })
+                return (
+                    <Marker 
+                        id={item.id}
+                        position={item.location}
+                        icon={redCircle}
+                    />
+                )})
             }
         </GoogleMap>
     )
