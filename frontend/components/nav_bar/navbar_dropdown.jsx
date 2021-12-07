@@ -26,7 +26,6 @@ export const NavbarDropdown = (props) => {
         document.getElementById("theDropdown").classList.toggle("show");
 
         window.onclick = function(event) {
-            console.log("here")
             if (!event.target.matches(".dropdown-img")) {
                 let dropdowns = document.getElementsByClassName("dropdown-items");
                 
@@ -34,7 +33,6 @@ export const NavbarDropdown = (props) => {
                     let opened = dropdowns[i];
     
                     if (opened.classList.contains("show")) {
-                        console.log("here")
                         opened.classList.remove("show");
                     }
                 }
@@ -47,8 +45,10 @@ export const NavbarDropdown = (props) => {
             <img src={window.icon} onClick={handleClick} className="dropdown-img"/>
             <div id="theDropdown" className="dropdown-items">
                 <span onClick={handleHouses}>Your Sales</span>
+                <br />
                 <span onClick={handleSaved}>Your Saves</span>
-                <span onClick={handleLogout}>Logout</span>
+                <br />
+                <span onClick={handleLogout} className="nav-logout">Sign Out</span>
             </div>
         </div>
     )
