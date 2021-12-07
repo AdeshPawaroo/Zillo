@@ -1,0 +1,30 @@
+.buy-nav-container {
+    padding: .55rem;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-width: thin;
+    
+}
+
+.buy-nav-container > button {
+    border-color: blue;
+    border-width: thin;
+    color: blue;
+    background-color: white;
+    font-size: .7rem;
+    font-family: 'Antic Slab', serif;
+    font-weight: bold;
+    margin-right: .50rem;
+    margin-left: .50rem;
+    height: 1.9rem;
+    width: 6%;
+    border-radius: .20rem;
+}
+
+.buy-nav-container > button:hover {
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}

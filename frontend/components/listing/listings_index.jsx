@@ -15,12 +15,10 @@ export const ListingsIndex = () => {
 
      const listings = Object.values(_listings);
 
-    // const listings = useSelector(state => state.entities.listings);
-
     return (
         <div className="listings-index">
             {listings.map((listing, i) => (
-                <Listing listing={listing} key={i} />
+            <Listing listing={listing} key={i} />
             ))}
         </div>
     )
