@@ -69,8 +69,6 @@ export const Navbar = () => {
                 <span onClick={handleLI}>LinkedIn</span>
                 <span onClick={handleAL}>AngelList</span>
                 {handleRender()}
-                {/* <span onClick={handleClick}>Sign In</span> */}
-                {/* <button onClick={handleClick}>Sign In</button> */}
             </div>
         </div>
     )

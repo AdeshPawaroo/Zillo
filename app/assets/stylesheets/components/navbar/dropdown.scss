@@ -9,7 +9,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     width: 8vw;
-    height: 7vh;
+    height: 10vh;
     padding: 1.5rem;
 }
 
@@ -22,6 +22,10 @@
     justify-content: space-evenly;
 }
 
+.dropdown-items > span:hover {
+    cursor: pointer;
+}
+
 .nav-logout {
     border-top: gray solid;
     border-width: thin;
@@ -32,4 +36,8 @@
 .show {
     display: block;
     background-color: white;
+}
+
+.dropdown-image:hover {
+    cursor: pointer;
 }

@@ -18,7 +18,7 @@ export const ListingsIndex = () => {
     return (
         <div className="listings-index">
             {listings.map((listing, i) => (
-            <Listing listing={listing} key={i} />
+                <Listing listing={listing} key={i} />
             ))}
         </div>
     )
