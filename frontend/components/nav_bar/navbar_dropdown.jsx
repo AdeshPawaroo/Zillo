@@ -16,16 +16,40 @@ export const NavbarDropdown = (props) => {
 
     const handleLogout = (e) => {
         e.preventDefault();
+
         dispatch(logout());
+    }
+
+    const handleClick = (e) => {
+        e.preventDefault();
+
+        document.getElementById("theDropdown").classList.toggle("show");
+
+        window.onclick = function(event) {
+            console.log("here")
+            if (!event.target.matches(".dropdown-img")) {
+                let dropdowns = document.getElementsByClassName("dropdown-items");
+                
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let opened = dropdowns[i];
+    
+                    if (opened.classList.contains("show")) {
+                        console.log("here")
+                        opened.classList.remove("show");
+                    }
+                }
+            }
+        }
     }
 
     return (
         <div className="dropdown-container">
-            <select className="nav-dropdown" name="nav_dropdown">
-                <option>Your houses for sale</option>
-                <option>Your saved houses</option>
-                <option onClick={handleLogout}>Log Out</option>
-            </select>
+            <img src={window.icon} onClick={handleClick} className="dropdown-img"/>
+            <div id="theDropdown" className="dropdown-items">
+                <span onClick={handleHouses}>Your Sales</span>
+                <span onClick={handleSaved}>Your Saves</span>
+                <span onClick={handleLogout}>Logout</span>
+            </div>
         </div>
     )
 }
