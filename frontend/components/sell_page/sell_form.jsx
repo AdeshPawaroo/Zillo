@@ -1,12 +1,13 @@
 import React from "react";
+import { Page1 } from "./page1";
+import { Page2 } from "./page2";
 
 export class SellForm extends React.Component {
-    
     constructor(props) {
         super(props);
 
         this.state = {
-            step = 1,
+            step: 1,
             price: "",
             address: "",
             beds: "",
@@ -75,13 +76,23 @@ export class SellForm extends React.Component {
         switch(step) {
             case 1:
                 return (
-                    <div>
-                        here
-                    </div>
+                    <Page1 
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
                 )
-        }
-    }
+            case 2:
+                return (
+                    <Page2 
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+        }  
 
+    }
 }
 
 
