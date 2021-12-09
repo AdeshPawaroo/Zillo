@@ -17,6 +17,7 @@ export class SellForm extends React.Component {
             zipcode: "",
             realator: "",
             style: "",
+            sqft: "",
             description: "",
             lat: "",
             lng: ""
@@ -55,6 +56,7 @@ export class SellForm extends React.Component {
             zipcode,
             realator,
             style,
+            sqft,
             description,
             lat,
             lng
@@ -69,6 +71,7 @@ export class SellForm extends React.Component {
             zipcode,
             realator,
             style,
+            sqft,
             description,
             lat,
             lng

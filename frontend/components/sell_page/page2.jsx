@@ -32,6 +32,13 @@ export class Page2 extends React.Component {
                         defaultValue={values.style}
                     />
                     <br />
+                    <label>Sqft:</label>
+                    <input type="textarea" 
+                        placeholder={values.sqft}
+                        onChange={handleChange("sqft")}
+                        defaultValue={values.sqft}
+                    />
+                    <br />
                     <label>Description:</label>
                     <input type="text" 
                         placeholder={values.description}
