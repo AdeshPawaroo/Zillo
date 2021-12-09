@@ -38,6 +38,20 @@ export class Page1 extends React.Component {
                         defaultValue={values.address}
                     />
                     <br />
+                    <label>Latitude:</label>
+                    <input type="textarea"
+                        placeholder={values.lat}
+                        onChange={handleChange("lat")}
+                        defaultValue={values.lat}
+                    />
+                    <br />
+                    <label>Longitude:</label>
+                    <input type="textarea"
+                        placeholder={values.lng}
+                        onChange={handleChange("lng")}
+                        defaultValue={values.lng}
+                    />
+                    <br />
                     <label>Zipcode:</label>
                     <input type="textarea"
                         placeholder={values.zipcode}

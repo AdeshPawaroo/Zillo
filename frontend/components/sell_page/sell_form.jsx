@@ -1,6 +1,7 @@
 import React from "react";
 import { Page1 } from "./page1";
 import { Page2 } from "./page2";
+import { Confirmation } from "./confirmation";
 
 export class SellForm extends React.Component {
     constructor(props) {
@@ -86,7 +87,15 @@ export class SellForm extends React.Component {
                 return (
                     <Page2 
                         prevStep={this.prevStep}
+                        nextStep={this.nextStep}
                         handleChange={this.handleChange}
+                        values={values}
+                    />
+                )
+            case 3:
+                return (
+                    <Confirmation 
+                        prevStep={this.prevStep}
                         values={values}
                     />
                 )
