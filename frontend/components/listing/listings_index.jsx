@@ -11,9 +11,9 @@ export const ListingsIndex = () => {
         dispatch(fetchListings());
     }, []);
 
-     const _listings = useSelector(state => state.entities.listings);
+    const _listings = useSelector(state => state.entities.listings);
 
-     const listings = Object.values(_listings);
+    const listings = Object.values(_listings);
 
     return (
         <div className="listings-index">
