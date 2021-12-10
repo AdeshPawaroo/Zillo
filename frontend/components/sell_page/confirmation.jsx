@@ -21,20 +21,17 @@ export const Confirmation = (props) => {
         zipcode: parseInt(props.values.zipcode)
     }
 
-    const newListing = Object.values(_newListing);
+    // const newListing = Object.values(_newListing);
+    // console.log(newListing);
    
     const handleClick = (e) => {
         e.preventDefault();
-        dispatch(createListing(newListing));
+        dispatch(createListing(_newListing));
     }
 
     return (
         <div>
             <p>Please confirm this information is correct. If not please go back and correct it.</p>
-            {newListing.map((value, i) => (
-                <span key={i}>{value} <br /> </span> 
-                    
-            ))}
             <button onClick={props.prevStep}>Go Back</button>
             <button onClick={handleClick}>Submit</button>
             <h2>confirmation</h2>
