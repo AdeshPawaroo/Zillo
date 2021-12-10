@@ -100,7 +100,8 @@ listing1 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.683264, 
-    lng: -73.823070 
+    lng: -73.823070,
+    owner_id: 0 
 });
 
 listing2 = Listing.create!({
@@ -115,7 +116,8 @@ listing2 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.773173, 
-    lng: -73.796870 
+    lng: -73.796870, 
+    owner_id: 0 
 });
 
 listing3 = Listing.create!({
@@ -130,7 +132,8 @@ listing3 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.718040, 
-    lng: -73.872761 
+    lng: -73.872761,
+    owner_id: 0  
 });
 
 listing4 = Listing.create!({
@@ -145,7 +148,8 @@ listing4 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.760969, 
-    lng: -73.924221 
+    lng: -73.924221,
+    owner_id: 0  
 });
 
 # Listings in Brooklyn
@@ -161,7 +165,8 @@ listing5 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.667754, 
-    lng: -73.892690
+    lng: -73.892690,
+    owner_id: 0 
 });
 
 listing6 = Listing.create!({
@@ -176,7 +181,8 @@ listing6 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.603624, 
-    lng: -73.969673 
+    lng: -73.969673,
+    owner_id: 0  
 });
 
 listing7 = Listing.create!({
@@ -191,7 +197,8 @@ listing7 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.652825, 
-    lng: -73.956939 
+    lng: -73.956939,
+    owner_id: 0  
 });
 
 listing8 = Listing.create!({
@@ -206,7 +213,8 @@ listing8 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.625154, 
-    lng: -73.997457 
+    lng: -73.997457,
+    owner_id: 0  
 });
 
 # Listings in Manhattan
@@ -223,7 +231,8 @@ listing9 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.768854, 
-    lng: -73.984858 
+    lng: -73.984858,
+    owner_id: 0  
 });
 
 listing10 = Listing.create!({
@@ -238,7 +247,8 @@ listing10 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.808369, 
-    lng: -73.952831 
+    lng: -73.952831,
+    owner_id: 0  
 });
 
 listing11 = Listing.create!({
@@ -253,7 +263,8 @@ listing11 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.718033, 
-    lng: -73.993611 
+    lng: -73.993611,
+    owner_id: 0  
 });
 
 listing12 = Listing.create!({
@@ -269,6 +280,7 @@ listing12 = Listing.create!({
     description: description.sample, 
     lat: 40.757390, 
     lng: -73.984686, 
+    owner_id: 0 
 });
 
 # Listings in Bronx
@@ -285,7 +297,8 @@ listing13 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.819716, 
-    lng: -73.811143 
+    lng: -73.811143,
+    owner_id: 0  
 });
 
 listing14 = Listing.create!({
@@ -301,10 +314,11 @@ listing14 = Listing.create!({
     description: description.sample, 
     lat: 40.843017, 
     lng: -73.911607, 
+    owner_id: 0 
 });
 
 listing15 = Listing.create!({
-    price: '$2..6,400,212',
+    price: '$2,400,212',
     beds: rand(2..6), 
     baths: rand(3..6), 
     sqft: rand(900..3000), 
@@ -315,7 +329,8 @@ listing15 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.899817, 
-    lng: -73.852455 
+    lng: -73.852455,
+    owner_id: 0  
 });
 
 listing16 = Listing.create!({
@@ -330,7 +345,8 @@ listing16 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.881220, 
-    lng: -73.910856
+    lng: -73.910856,
+    owner_id: 0 
 });
 
 # Listings in Staten Island
@@ -347,7 +363,8 @@ listing17 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.530540, 
-    lng: -74.202869 
+    lng: -74.202869,
+    owner_id: 0  
 });
 
 listing18 = Listing.create!({
@@ -362,7 +379,8 @@ listing18 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.624127, 
-    lng: -74.141502
+    lng: -74.141502,
+    owner_id: 0 
 });
 
 listing19 = Listing.create!({
@@ -377,7 +395,8 @@ listing19 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.559731, 
-    lng: -74.120241
+    lng: -74.120241,
+    owner_id: 0 
 });
 
 listing20 = Listing.create!({
@@ -392,6 +411,7 @@ listing20 = Listing.create!({
     style: style.sample,
     description: description.sample, 
     lat: 40.559731, 
-    lng: -74.120241
+    lng: -74.120241,
+    owner_id: 0 
 });
 
