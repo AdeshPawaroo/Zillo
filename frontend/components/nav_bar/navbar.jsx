@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../../actions/modal_actions";
 import { Link } from "react-router-dom";
+import { NavbarDropdown } from "./navbar_dropdown";
 import { logout } from "../../actions/session_actions";
 
 export const Navbar = () => {
@@ -12,7 +13,8 @@ export const Navbar = () => {
     const handleRender = () => {
         if (currUser) {
             return (
-                <span onClick={handleLogout}>Logout</span>
+                // <span onClick={handleLogout}>Logout</span>
+               <NavbarDropdown />
             )
         }else {
             return (
@@ -67,8 +69,6 @@ export const Navbar = () => {
                 <span onClick={handleLI}>LinkedIn</span>
                 <span onClick={handleAL}>AngelList</span>
                 {handleRender()}
-                {/* <span onClick={handleClick}>Sign In</span> */}
-                {/* <button onClick={handleClick}>Sign In</button> */}
             </div>
         </div>
     )

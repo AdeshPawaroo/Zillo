@@ -10,7 +10,9 @@ export const Signup = () => {
         email: "",
         password: ""
     });
+
     const dispatch = useDispatch();
+    
     const _email = useRef(null);
     const _password = useRef(null);
 

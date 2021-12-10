@@ -3,7 +3,6 @@
 # Table name: listings
 #
 #  id          :bigint           not null, primary key
-#  price       :integer          not null
 #  address     :string           not null
 #  beds        :integer          not null
 #  baths       :integer          not null
@@ -16,6 +15,8 @@
 #  lng         :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  sqft        :integer          not null
+#  price       :string           not null
 #
 class Listing < ApplicationRecord
     validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, presence: true
