@@ -1,10 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createListing } from "../../actions/listing_actions";
 
 export const Confirmation = (props) => {
 
     const dispatch = useDispatch();
+
+    const currentUser = useSelector(state => state.session.currentUser);
 
     const _newListing = {
         price: props.values.price,
@@ -18,8 +20,12 @@ export const Confirmation = (props) => {
         sqft: parseInt(props.values.sqft),
         status: props.values.status,
         style: props.values.style,
-        zipcode: parseInt(props.values.zipcode)
+        zipcode: parseInt(props.values.zipcode),
+        owner_id: currentUser
     }
+
+    console.log(_newListing);
+
 
     // const newListing = Object.values(_newListing);
     // console.log(newListing);

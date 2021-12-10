@@ -26,6 +26,21 @@
     cursor: pointer;
 }
 
+.dropdown-items > a {
+    font-family: 'Antic Slab', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-items > a:hover {
+    cursor: pointer;
+}
+
 .nav-logout {
     border-top: gray solid;
     border-width: thin;
