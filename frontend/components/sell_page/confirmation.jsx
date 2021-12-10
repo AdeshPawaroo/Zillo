@@ -6,7 +6,7 @@ export const Confirmation = (props) => {
 
     const dispatch = useDispatch();
 
-    const newListing = {
+    const _newListing = {
         price: props.values.price,
         baths: parseInt(props.values.baths),
         beds: parseInt(props.values.beds),
@@ -21,8 +21,8 @@ export const Confirmation = (props) => {
         zipcode: parseInt(props.values.zipcode)
     }
 
-    console.log(newListing);
-
+    const newListing = Object.values(_newListing);
+   
     const handleClick = (e) => {
         e.preventDefault();
         dispatch(createListing(newListing));
@@ -30,6 +30,12 @@ export const Confirmation = (props) => {
 
     return (
         <div>
+            <p>Please confirm this information is correct. If not please go back and correct it.</p>
+            {newListing.map((value, i) => (
+                <span key={i}>{value} <br /> </span> 
+                    
+            ))}
+            <button onClick={props.prevStep}>Go Back</button>
             <button onClick={handleClick}>Submit</button>
             <h2>confirmation</h2>
         </div>
