@@ -63,6 +63,7 @@ export const ListingsMap = (props) => {
                         id={item.id}
                         position={item.location}
                         icon={redCircle}
+            
                     />
                 )})
             }
