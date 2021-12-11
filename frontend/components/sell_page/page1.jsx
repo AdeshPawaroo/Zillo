@@ -77,7 +77,7 @@ export class Page1 extends React.Component {
                         onChange={handleChange("realator")}
                         defaultValue={values.realator}
                     />
-                    <button onClick={nextStep} className="sell-cont-btn">continue</button>
+                    <button onClick={nextStep} className="sell-cont-btn">Continue</button>
                 </form>
             </div>
             
