@@ -16,7 +16,7 @@ export class Page1 extends React.Component {
         return ( 
             <div className="page1-container">
                 <form className="page1-form">
-                    <label>Price:</label>
+                    <label>Price: (Please include a "$" and ","s)</label>
                     <br />
                     <input type="textarea"
                         placeholder={values.price}

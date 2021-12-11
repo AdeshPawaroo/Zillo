@@ -24,23 +24,79 @@ export const Confirmation = (props) => {
         owner_id: currentUser
     }
 
-    console.log(_newListing);
-
-
-    // const newListing = Object.values(_newListing);
-    // console.log(newListing);
-   
     const handleClick = (e) => {
         e.preventDefault();
         dispatch(createListing(_newListing));
     }
 
     return (
-        <div>
-            <p>Please confirm this information is correct. If not please go back and correct it.</p>
-            <button onClick={props.prevStep}>Go Back</button>
-            <button onClick={handleClick}>Submit</button>
-            <h2>confirmation</h2>
+        <div className="confirmation-container">
+            <div className="sell-confirmation">
+                <p>Please confirm that this information is correct. If not please go back and correct it.</p>
+                <br />
+                <br />
+                <label>Price:</label>
+                <br />
+                <span>{_newListing.price}</span>
+                <br />
+                <br />
+                <label>Status:</label>
+                <br />
+                <span>{_newListing.status}</span>
+                <br />
+                <br />
+                <label>Address:</label>
+                <br />
+                <span>{_newListing.address}</span>
+                <br />
+                <br />
+                <label>Latitude:</label>
+                <br />
+                <span>{_newListing.ltd}</span>
+                <br />
+                <br />
+                <label>Longitude:</label>
+                <br />
+                <span>{_newListing.lng}</span>
+                <br />
+                <br />
+                <label>Zipcode:</label>
+                <br />
+                <span>{_newListing.zipcode}</span>
+                <br />
+                <br />
+                <label>Realator:</label>
+                <br />
+                <span>{_newListing.realator}</span>
+                <br />
+                <br />
+                <label>Beds:</label>
+                <br />
+                <span>{_newListing.beds}</span>
+                <br />
+                <br />
+                <label>Baths:</label>
+                <br />
+                <span>{_newListing.baths}</span>
+                <br />
+                <br />
+                <label>Style:</label>
+                <br />
+                <span>{_newListing.style}</span>
+                <br />
+                <br />
+                <label>Sqft:</label>
+                <br />
+                <span>{_newListing.sqft}</span>
+                <br />
+                <br />
+                <label>Description:</label>
+                <br />
+                <span>{_newListing.description}</span>
+                <br />
+                <button onClick={props.prevStep} className="sell-prev-btn">Go Back</button>
+                <button onClick={handleClick} className="sell-confirm-btn">Submit</button>
+            </div>
         </div>
     )
 }
