@@ -23,7 +23,10 @@ export const UserListings = (props) => {
     }
 
     return (
-        <div>
+        <div className="user-listings-container">
+            <span>Your currently posted listings: </span>
+            <br />
+            <br />
             {userListings.map((listing, i) => (
                 <Listing 
                     listing={listing}

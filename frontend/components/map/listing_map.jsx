@@ -40,7 +40,7 @@ export const ListingsMap = (props) => {
     // map through listings adding the correct locations for existing listings
     listings.map((listing, i) => {
         const listingObj = {
-            id: i + 1,
+            key: i,
             location: {
                 lat: listing.lat,
                 lng: listing.lng
@@ -49,6 +49,8 @@ export const ListingsMap = (props) => {
 
         locations.push(listingObj);
     });
+
+    console.log(locations);
 
     return (
         <GoogleMap
@@ -60,7 +62,7 @@ export const ListingsMap = (props) => {
                 locations.map(item => {
                 return (
                     <Marker 
-                        id={item.id}
+                        key={item.key}
                         position={item.location}
                         icon={redCircle}
             
