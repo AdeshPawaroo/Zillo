@@ -6,6 +6,7 @@ export const ListingsMap = (props) => {
 
     const _listings = useSelector(state => state.entities.listings);
     const listings = Object.values(_listings);
+    const listingIds = Object.keys(_listings)  
 
     const mapOptions = {
         height: "760px",
@@ -40,7 +41,7 @@ export const ListingsMap = (props) => {
     // map through listings adding the correct locations for existing listings
     listings.map((listing, i) => {
         const listingObj = {
-            key: i,
+            key: listingIds[i],
             location: {
                 lat: listing.lat,
                 lng: listing.lng
@@ -50,7 +51,7 @@ export const ListingsMap = (props) => {
         locations.push(listingObj);
     });
 
-    console.log(locations);
+    console.log(locations, "locations");
 
     return (
         <GoogleMap
@@ -65,7 +66,6 @@ export const ListingsMap = (props) => {
                         key={item.key}
                         position={item.location}
                         icon={redCircle}
-            
                     />
                 )})
             }
