@@ -13,9 +13,8 @@ export class Page1 extends React.Component {
 
     render() {
         const { values, nextStep, handleChange } = this.props
-        console.log(this.props);
-        return (
-            <div>
+        return ( 
+            <div className="page1-container">
                 <form className="page1-form">
                     <label>Price:</label>
                     <br />
@@ -78,10 +77,10 @@ export class Page1 extends React.Component {
                         onChange={handleChange("realator")}
                         defaultValue={values.realator}
                     />
+                    <button onClick={nextStep} className="sell-cont-btn">continue</button>
                 </form>
-                <button onClick={nextStep}>Continue</button>
-                <h2>page1</h2>
             </div>
+            
         )
     }
 }
