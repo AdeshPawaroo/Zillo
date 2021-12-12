@@ -5,9 +5,7 @@ export const Listing = (props) => {
     return(
         <div className="listing-item-container">
 
-            <div className="listing-photo">
-                {/* <button>Save this listing</button> */}
-            </div>
+            <div className="listing-photo"></div>
 
             <p className="listing-price">
                 {props.listing.price}

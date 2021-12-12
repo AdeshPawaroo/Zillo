@@ -17,7 +17,12 @@ export const ListingShow = (props) => {
     return (
         <div className="modal-background" onClick={() => window.location = "#/buy"}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
-                COMPONENET WILL GO HERE    
+                <div className="show-container">
+                    <div className="show-photos">PHOTOS</div>
+                    <div className="show-info">
+                        INFO
+                    </div>
+                </div>   
             </div>
         </div>
     )
