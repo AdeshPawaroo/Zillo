@@ -65,9 +65,9 @@ export const ListingsMap = (props) => {
             {
                 locations.map(item => {
                 return (
-                    <Marker a
-                        key={item.key}a
-                        position={item.location}a
+                    <Marker 
+                        key={item.key}
+                        position={item.location}
                         icon={redCircle}   
                         onClick={() => handleClick(item.key)}                   
                     />
