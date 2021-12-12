@@ -83,7 +83,16 @@ export const ListingShow = (props) => {
                                 />
                             </GoogleMap>
                         </div>
-
+                        <br />
+                        <div className="show-overview-container">
+                            <span className="overview-title">Overview</span>
+                            <br />
+                            <br />
+                            <span className="overview-realator">Listing by: {currListing.listing.realator}</span>
+                            <br />
+                            <br />
+                            <span className="overview-description">{currListing.listing.description}</span>
+                        </div>
                     </div>
                 </div>   
             </div>
