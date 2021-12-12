@@ -2,15 +2,48 @@
     height: 85vh;
     width: 50vw;
     display: flex;
-    justify-content: space-between;
 }
 
-.show-info {
-    height: 100%;
+.show-info-container {
+    height: 67vh;
     width: 50%;
 }
 
-.show-info {
+.show-photos-container {
     height: 100%;
     width: 50%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.photo1 {
+    width: 100%;
+    height: 50%;
+    background-image: url("room-1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.photo2 {
+    width: 100%;
+    height: 50%;
+    background-image: url("room-2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.photo3 {
+    width: 100%;
+    height: 50%;
+    background-image: url("room-3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.photo4 {
+    width: 100%;
+    height: 50%;
+    background-image: url("room-4.jpg");
+    background-position: center;
+    background-size: cover;
 }
