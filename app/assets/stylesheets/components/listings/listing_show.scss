@@ -2,6 +2,7 @@
     height: 85vh;
     width: 50vw;
     display: flex;
+    background-color: white;
 }
 
 .show-info-container {
@@ -47,4 +48,29 @@
     background-image: url("room-4.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.show-info-header {
+    width: 100%;
+    height: 20%;
+    border: black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Antic Slab', serif;
+}
+
+.header-price {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.header-info {
+    font-size: 2rem;
+}
+
+.header-address {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
