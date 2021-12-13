@@ -17,7 +17,7 @@ export const ListingShow = (props) => {
     }
 
     const center = {
-        lat: currListing.listing.lat,
+        lat: currListing.listing.lat,   
         lng: currListing.listing.lng
     }
 

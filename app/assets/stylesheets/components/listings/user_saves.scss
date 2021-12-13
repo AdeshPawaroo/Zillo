@@ -1,0 +1,14 @@
+.user-saves-container {
+    height: 67vh;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.user-saves-container > span {
+    font-size: 3rem;
+    font-family: 'Antic Slab', serif;
+    font-weight: bold;
+    width: 100%;
+}

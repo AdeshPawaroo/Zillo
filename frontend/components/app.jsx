@@ -6,6 +6,7 @@ import { BuyPage } from './buy_page/buy';
 import { SellForm } from './sell_page/sell_form';
 import { UserListings } from './listing/user_listings';
 import { ListingShow } from './listing/listing_show';
+import { UserSaves } from "./listing/user_saves";
 import { Footer } from './footer/footer';
 import Modal from './modal/modal';
 
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/sell" element={<SellForm />} />
                 <Route path="/listings/:listingid" element={<ListingShow />} />
                 <Route path="/user/listings" element={<UserListings />} />
+                <Route path="/user/saves" element={<UserSaves />} />
             </Routes>
             <Footer />
         </div>
