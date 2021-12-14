@@ -1,3 +1,4 @@
+
 class Api::ListingsController < ApplicationController
 
     def create
