@@ -1,4 +1,4 @@
-class Api::ListingsController < ApplicationController
+class Api::SavesController < ApplicationController
 
     def create
         @save = Save.new(save_params)
@@ -15,7 +15,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def index
-        @save = Save.all
+        @saves = Save.all
         render "/api/saves/index"
     end
 

@@ -8,7 +8,7 @@ require "faker";
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# listing = Listing.new({price: 1, beds: 1, baths: 1, sqft: 1, status: 'sold', address: '1', state_id: 1, city_id: 1, zipcode: 1, realator: 'testing', cooling: 'a/c', heating: 'indoor', price_sqft: 1, description: 'tsting', lat: 1, lng: 1, style: 'ranch'})
+# save = Save.new({price: 1, beds: 1, baths: 1, sqft: 1, status: 'sold', address: '1', zipcode: 1, realator: 'testing', description: 'tsting', lat: 1, lng: 1, style: 'ranch'})
 
 # Dropping existing databases
 User.delete_all

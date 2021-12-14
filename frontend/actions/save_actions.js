@@ -1,17 +1,15 @@
 import * as SaveApiUtil from "../util/save_api_util";
-
 export const RECEIVE_ALL_SAVES = "RECEIVE_ALL_SAVES";
 export const RECEIVE_SAVE = "RECEIVE_SAVE";
 
 const receiveSaves = (saves) => ({
     type: RECEIVE_ALL_SAVES,
-    listings
-
+    saves
 });
 
 const receiveSave = (save) => ({
     type: RECEIVE_SAVE,
-    listing
+    save
 });
 
 export const fetchSaves = () => dispatch => {
