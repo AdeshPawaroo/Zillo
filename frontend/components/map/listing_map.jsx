@@ -1,11 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { GoogleMap, Marker } from "@react-google-maps/api";
 
 export const ListingsMap = (props) => {
 
+    const dispatch = useDispatch();
     const _listings = useSelector(state => state.entities.listings);
     const listings = Object.values(_listings);
+    const listingIds = Object.keys(_listings)  
 
     const mapOptions = {
         height: "760px",
@@ -40,7 +42,7 @@ export const ListingsMap = (props) => {
     // map through listings adding the correct locations for existing listings
     listings.map((listing, i) => {
         const listingObj = {
-            id: i + 1,
+            key: listingIds[i],
             location: {
                 lat: listing.lat,
                 lng: listing.lng
@@ -49,6 +51,10 @@ export const ListingsMap = (props) => {
 
         locations.push(listingObj);
     });
+
+    const handleClick = (listingId) => {
+        window.location = `#/listings/${listingId}`;
+    }
 
     return (
         <GoogleMap
@@ -60,9 +66,10 @@ export const ListingsMap = (props) => {
                 locations.map(item => {
                 return (
                     <Marker 
-                        id={item.id}
+                        key={item.key}
                         position={item.location}
-                        icon={redCircle}
+                        icon={redCircle}   
+                        onClick={() => handleClick(item.key)}                   
                     />
                 )})
             }

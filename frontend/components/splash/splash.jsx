@@ -9,7 +9,7 @@ export const Splash = () => {
                 <h1 className='img-slogan'>Change starts here</h1>
                 <Searchbar />
             </div>
-
+            
             <br/ >  <br/ >  <br/ >  <br/ >
 
             <div className="slogan-container">
@@ -19,22 +19,22 @@ export const Splash = () => {
             <br/ >  <br/ >  
 
             <div className="panel-container">
-                <div className="buy-panel">
-                    <div className="buy-img"></div>
+                <div className="buy-panel">                 
+                    <img src={window.buy} />
                     <p>
                         Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.
                     </p>
                     <button>Search Homes</button>
                 </div>
                 <div className="sell-panel">
-                    <div className="sell-img"></div>
+                    <img src={window.sell} />
                     <p>
                         No matter what path you take to sell your home, we can help you navigate a successful sale.
                     </p>
                     <button className="sell-panel-btn">See your options</button>
                 </div>
                 <div className="rent-panel">
-                    <div className="rent-img"></div>
+                    <img src={window.rent} />
                     <p>
                         We're creating a seamless online experience - from shopping on the largest rental network, to applying, to paying rent.
                     </p>
@@ -51,11 +51,6 @@ export const Splash = () => {
             </div>
 
             <br/ >  <br/ >  <br/ >  <br/ >
-
-            <div className="footer-container">
-                <div className="footer"></div>
-            </div>
-
         </div>
     ) 
 }

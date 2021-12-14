@@ -1,0 +1,42 @@
+.page1-container {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 67vh;
+    width: 100%;
+}
+
+.page1-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1-form > label {
+    font-family: 'Antic Slab', serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.page1-form > input {
+    width: 20%;
+    height: 6vh;
+    font-size: 1.5rem;
+    font-family: 'Antic Slab', serif;
+}
+
+.sell-cont-btn {
+    margin-top: 2rem;
+    width: 15%;
+    height: 5vh;
+    font-family: 'Antic Slab', serif;
+    color: blue;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: .50rem;
+}
+
+.sell-cont-btn:hover {
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}

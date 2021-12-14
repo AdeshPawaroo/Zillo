@@ -1,14 +1,13 @@
 import React from "react";
+import { ListingShow } from "./listing_show";
 
 export const Listing = (props) => {
 
+    console.log(props);
+
     return(
-        <div className="listing-item-container">
-
-            <div className="listing-photo">
-                
-            </div>
-
+        <div className="listing-item-container" onClick={() => window.location = `/#/listings/${props.listingId}`}>
+            <div className="listing-photo"></div>
             <p className="listing-price">
                 {props.listing.price}
             </p>
@@ -27,3 +26,7 @@ export const Listing = (props) => {
         </div>
     )
 }
+
+
+
+// onClick={() => window.location = `/#/listings/${props.listingId}`}

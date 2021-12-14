@@ -1,5 +1,6 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { logout } from "../../actions/session_actions";
 
 export const NavbarDropdown = (props) => {
@@ -8,6 +9,8 @@ export const NavbarDropdown = (props) => {
 
     const handleHouses = (e) => {
         e.preventDefault();
+
+        window.location = "/#/users/listings"
     }
 
     const handleSaved = (e) => {
@@ -44,9 +47,9 @@ export const NavbarDropdown = (props) => {
         <div className="dropdown-container">
             <img src={window.icon} onClick={handleClick} className="dropdown-img"/>
             <div id="theDropdown" className="dropdown-items">
-                <span onClick={handleHouses}>Your Sales</span>
+                <Link to="/user/listings">Your Sales</Link>
                 <br />
-                <span onClick={handleSaved}>Your Saves</span>
+                <Link to="/user/saves">Your Saves</Link>
                 <br />
                 <span onClick={handleLogout} className="nav-logout">Sign Out</span>
             </div>

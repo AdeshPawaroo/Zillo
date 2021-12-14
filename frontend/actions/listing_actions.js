@@ -17,7 +17,7 @@ const receiveListing = (listing) => ({
 export const fetchListings = () => dispatch => {
     return (
         ListingApiUtil.fetchListings()
-        .then(listings => dispatch(receiveListings(listings)))
+            .then(listings => dispatch(receiveListings(listings)))
     )
 };
 

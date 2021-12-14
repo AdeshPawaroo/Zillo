@@ -13,11 +13,10 @@ export class Page1 extends React.Component {
 
     render() {
         const { values, nextStep, handleChange } = this.props
-        console.log(this.props);
-        return (
-            <div>
+        return ( 
+            <div className="page1-container">
                 <form className="page1-form">
-                    <label>Price:</label>
+                    <label>Price: (Please include a "$" and ","s)</label>
                     <br />
                     <input type="textarea"
                         placeholder={values.price}
@@ -78,10 +77,10 @@ export class Page1 extends React.Component {
                         onChange={handleChange("realator")}
                         defaultValue={values.realator}
                     />
+                    <button onClick={nextStep} className="sell-cont-btn">Continue</button>
                 </form>
-                <button onClick={nextStep}>Continue</button>
-                <h2>page1</h2>
             </div>
+            
         )
     }
 }

@@ -17,7 +17,8 @@
 #  updated_at  :datetime         not null
 #  sqft        :integer          not null
 #  price       :string           not null
+#  owner_id    :integer          not null
 #
 class Listing < ApplicationRecord
-    validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, presence: true
+    validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, presence: true
 end
