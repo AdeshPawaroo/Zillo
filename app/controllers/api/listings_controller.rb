@@ -1,4 +1,3 @@
-
 class Api::ListingsController < ApplicationController
 
     def create
@@ -17,6 +16,15 @@ class Api::ListingsController < ApplicationController
 
     def index
         @listings = Listing.all
+        render "/api/listings/index"
+    end
+
+    def destroy
+        @listing = Listing.find(params[:id])
+
+        if @listing && @listing.destroy
+        end
+
         render "/api/listings/index"
     end
 

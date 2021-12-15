@@ -11,8 +11,9 @@ require "faker";
 # save = Save.new({price: 1, beds: 1, baths: 1, sqft: 1, status: 'sold', address: '1', zipcode: 1, realator: 'testing', description: 'tsting', lat: 1, lng: 1, style: 'ranch'})
 
 # Dropping existing databases
-User.delete_all
-Listing.delete_all
+User.destroy_all
+Listing.destroy_all
+Save.destroy_all
 
 #demo user
 demo = User.create!(email: 'demo@demo.com', password: 'demo123')

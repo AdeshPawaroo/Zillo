@@ -9,18 +9,35 @@ export const Listing = (props) => {
     const currListing = props.listing
     const currListingId = props.listingId;
 
+    const saveListing = {
+        address: currListing.address,
+        baths: currListing.baths,
+        beds: currListing.beds,
+        description: currListing.description,
+        lat: currListing.lat,
+        lng: currListing.lng,
+        owner_id: currListing.owner_id,
+        price: currListing.price,
+        realator: currListing.realator,
+        sqft: currListing.sqft,
+        status: currListing.status,
+        style: currListing.style,
+        zipcode: currListing.zipcode,
+        listing_id: parseInt(currListingId)
+    }
+
     const handleSave = (e) => {
         e.preventDefault();
 
-        dispatch(createSave(currListing));
+        dispatch(createSave(saveListing));
     }
 
     const handleDelete = (e) => {
         e.preventDefault();
 
+        console.log(currListingId);
         dispatch(deleteSave(currListingId));
     }
-
 
     return(
         // <div className="listing-item-container" onClick={() => window.location = `/#/listings/${currListingId}`}>
