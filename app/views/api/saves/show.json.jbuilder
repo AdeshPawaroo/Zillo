@@ -1,1 +1,1 @@
-json.partial! "api/saves/saves", save: @save 
+json.partial! "api/saves/save", save: @save 

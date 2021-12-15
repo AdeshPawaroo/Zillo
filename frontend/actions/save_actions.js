@@ -1,4 +1,5 @@
 import * as SaveApiUtil from "../util/save_api_util";
+
 export const RECEIVE_ALL_SAVES = "RECEIVE_ALL_SAVES";
 export const RECEIVE_SAVE = "RECEIVE_SAVE";
 
@@ -31,5 +32,5 @@ export const createSave = (save) => dispatch => (
 
 export const deleteSave = (saveId) => dispatch => (
     SaveApiUtil.deleteSave(saveId)
-    .then(() => dispatch(deleteSave(saveId)))
+        .then(() => dispatch(deleteSave(saveId)))
 ); 

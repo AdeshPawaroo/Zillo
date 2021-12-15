@@ -13,7 +13,6 @@ export const Listing = (props) => {
         e.preventDefault();
 
         dispatch(createSave(currListing));
-
     }
 
     const handleDelete = (e) => {
@@ -22,8 +21,10 @@ export const Listing = (props) => {
         dispatch(deleteSave(currListingId));
     }
 
+
     return(
-        <div className="listing-item-container" onClick={() => window.location = `/#/listings/${currListingId}`}>
+        // <div className="listing-item-container" onClick={() => window.location = `/#/listings/${currListingId}`}>
+        <div className="listing-item-container" >
             <div className="listing-photo"></div>
             <p className="listing-price">
                 {currListing.price}
@@ -40,6 +41,7 @@ export const Listing = (props) => {
             <p className="listing-realator">
                 {currListing.realator}
             </p>
+
             <button onClick={handleSave}>SAVE</button>
             <button onClick={handleDelete}>DELETE</button>
         </div>
