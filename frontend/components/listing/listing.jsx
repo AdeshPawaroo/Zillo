@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { createSave } from "../../actions/save_actions";
-import { deleteSave } from "../../actions/save_actions";
+import { fetchSaves, createSave,  deleteSave } from "../../actions/save_actions";
 
 export const Listing = (props) => {
 
     const dispatch = useDispatch();
     const currListing = props.listing
     const currListingId = props.listingId;
+
+    useEffect(() => {
+        dispatch(fetchSaves())
+            .then(res => console.log(res, "saves"));
+    }, [])
 
     const saveListing = {
         address: currListing.address,
@@ -35,7 +39,6 @@ export const Listing = (props) => {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        console.log(currListingId);
         dispatch(deleteSave(currListingId));
     }
 
@@ -58,7 +61,6 @@ export const Listing = (props) => {
             <p className="listing-realator">
                 {currListing.realator}
             </p>
-
             <button onClick={handleSave}>SAVE</button>
             <button onClick={handleDelete}>DELETE</button>
         </div>

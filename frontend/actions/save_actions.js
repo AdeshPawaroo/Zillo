@@ -15,7 +15,7 @@ const receiveSave = (save) => ({
 
 export const fetchSaves = () => dispatch => {
     return (
-        SaveApiUtil.fetchSave()
+        SaveApiUtil.fetchSaves()
             .then(saves => dispatch(receiveSaves(saves)))
     )
 };
