@@ -45,7 +45,10 @@ export const Listing = (props) => {
             <p className="listing-realator" onClick={() => window.location = `/#/listings/${currListingId}`}>
                 {currListing.realator}
             </p>
-            <ListingButton />
+            <ListingButton 
+                saveObj={saveObj}
+                
+            />
         </div>
     )
 }
