@@ -4,11 +4,17 @@ import { fetchSaves, createSave } from "../../actions/save_actions";
 
 export const ListingButton = (props) => {
 
+    const [saves, setSaves] = useState({
+        saves: {}
+    })
+
     const dispatch = useDispatch();
-    let flag = false;
 
     useEffect(() => {
-        dispatch(fetchSaves());
+        dispatch(fetchSaves())
+            .then(res => setSaves({
+                saves: res.saves
+            }))
     }, []);
 
     const handleSave = (e) => {
@@ -28,16 +34,23 @@ export const ListingButton = (props) => {
     )
 
     const handleButton = () => {
-        if (flag === false) {
-            return (
-                saveButton
-            )
-        } else {
+        if (props.saveObj === saves.saves) {
             return (
                 deleteButton
             )
+        } else {
+            return (
+                saveButton
+            )
         }
     }
+
+    console.log(props.saveObj, "PROPS");
+    console.log(saves.saves, "STATE");
+
+    // FIGURE OUT HOW TO CHECK IF AN OBJECT CONTAINS A SPECIFIC VALUE
+
+    // console.log(props.saveObj.hasOwnProperty(saves.saves)); DOES NOT WORK
 
     return (
         handleButton()
