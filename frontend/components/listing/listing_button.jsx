@@ -51,8 +51,41 @@ export const ListingButton = (props) => {
     }
 
     const handleButton = () => {
+        const arrOfSaves = Object.values(saves.saves);
+        let arrOfKeys = {};
         let ele2 = {};
+
+        for (let i = 0; i < arrOfSaves.length; i++) {
+            let currentSave = arrOfSaves[i];
+            ele2 = {
+                address: currentSave.address,
+                baths: currentSave.baths,
+                beds: currentSave.beds,
+                description: currentSave.description,
+                lat: currentSave.lat,
+                lng: currentSave.lng,
+                price: currentSave.price,
+                realator: currentSave.realator,
+                sqft: currentSave.sqft,
+                status: currentSave.status,
+                style: currentSave.style,
+                zipcode: currentSave.zipcode
+            }
+            arrOfKeys = Object.keys(ele2);
+
+            for (let j = 0; j < arrOfKeys.length; j++) {
+                let currentKey = arrOfKeys[j];
+
+                if (ele1[currentKey] !== ele2[currentKey]) {
+                    return false;
+                }
+            }  
+        }
+
+        return true;
     }
+
+    console.log(handleButton());
 
     return (
         saveButton
@@ -162,4 +195,4 @@ export const ListingButton = (props) => {
 //         handleButton()
 //     )
 
-// }
+// }p
