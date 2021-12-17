@@ -9,21 +9,22 @@ export const Listing = (props) => {
     const currListing = props.listing
     const currListingId = props.listingId;
 
+    // 1
     const saveObj = {
+        price: currListing.price,
         address: currListing.address,
         baths: currListing.baths,
         beds: currListing.beds,
+        status: currListing.status,
+        zipcode: currListing.zipcode,
+        realator: currListing.realator,
+        style: currListing.style,
+        sqft: currListing.sqft,
         description: currListing.description,
         lat: currListing.lat,
         lng: currListing.lng,
         owner_id: currentUser,
-        price: currListing.price,
-        realator: currListing.realator,
-        sqft: currListing.sqft,
-        status: currListing.status,
-        style: currListing.style,
-        zipcode: currListing.zipcode,
-        listing_id: currListingId
+        listing_id: parseInt(currListingId)
        }
 
 
