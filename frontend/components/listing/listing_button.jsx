@@ -17,12 +17,6 @@ export const ListingButton = (props) => {
             }));
     }, []);
 
-    const handleSave = (e) => {
-        e.preventDefault();
-
-        dispatch(createSave(props.saveObj))
-    }
-
     const saveButton = (
         <button onClick={handleSave}>
             Save
@@ -48,6 +42,18 @@ export const ListingButton = (props) => {
         status: props.saveObj.status,
         style: props.saveObj.style,
         zipcode: props.saveObj.zipcode
+    }
+
+    const handleSave = (e) => {
+        e.preventDefault();
+
+        dispatch(createSave(props.saveObj))
+    }
+
+    const handleDelete = (e) => {
+        e.preventDefault();
+
+        dispatch()
     }
 
     const handleButton = () => {
@@ -77,18 +83,16 @@ export const ListingButton = (props) => {
                 let currentKey = arrOfKeys[j];
 
                 if (ele1[currentKey] !== ele2[currentKey]) {
-                    return false;
+                    return saveButton
                 }
             }  
         }
 
-        return true;
+        return deleteButton
     }
 
-    console.log(handleButton());
-
     return (
-        saveButton
+        handleButton()
     )
 }
 
