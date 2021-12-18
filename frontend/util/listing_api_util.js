@@ -21,3 +21,10 @@ export const createListing = (listing) => (
         }
     })
 )
+
+export const deleteListing = (listingId) => (
+    $.ajax({
+        method: "DELETE",
+        url: `/api/listings/${listingId}`
+    })
+) 

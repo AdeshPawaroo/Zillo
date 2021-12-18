@@ -1,28 +1,55 @@
 import React from "react";
-import { ListingShow } from "./listing_show";
+import { useDispatch, useSelector } from "react-redux";
+import { ListingButton } from "./listing_button";
 
 export const Listing = (props) => {
 
-    console.log(props);
+    const dispatch = useDispatch();
+    const currentUser = useSelector(state => state.session.currentUser)
+    const currListing = props.listing
+    const currListingId = props.listingId;
+
+    // 1
+    const saveObj = {
+        price: currListing.price,
+        address: currListing.address,
+        baths: currListing.baths,
+        beds: currListing.beds,
+        status: currListing.status,
+        zipcode: currListing.zipcode,
+        realator: currListing.realator,
+        style: currListing.style,
+        sqft: currListing.sqft,
+        description: currListing.description,
+        lat: currListing.lat,
+        lng: currListing.lng,
+        owner_id: currentUser,
+        listing_id: parseInt(currListingId) 
+       }
+
 
     return(
-        <div className="listing-item-container" onClick={() => window.location = `/#/listings/${props.listingId}`}>
-            <div className="listing-photo"></div>
+        <div className="listing-item-container" >
+            <div className="listing-photo" onClick={() => window.location = `/#/listings/${currListingId}`}></div>
             <p className="listing-price">
-                {props.listing.price}
+                {currListing.price}
             </p>
-            <p className="listing-stats">
-               {props.listing.beds} {" bds "}
-               {props.listing.baths} {" ba "}
-               {props.listing.sqft} {" sqft -"}
-               {props.listing.status} 
+            <p className="listing-stats" onClick={() => window.location = `/#/listings/${currListingId}`}>
+               {currListing.beds} {" bds "}
+               {currListing.baths} {" ba "}
+               {currListing.sqft} {" sqft -"}
+               {currListing.status} 
             </p>
-            <p className="listing-address">
-                {props.listing.address}
+            <p className="listing-address" onClick={() => window.location = `/#/listings/${currListingId}`}>
+                {currListing.address}
             </p>
-            <p className="listing-realator">
-                {props.listing.realator}
+            <p className="listing-realator" onClick={() => window.location = `/#/listings/${currListingId}`}>
+                {currListing.realator}
             </p>
+            <ListingButton 
+                saveObj={saveObj}
+                
+            />
         </div>
     )
 }

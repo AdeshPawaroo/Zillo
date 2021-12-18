@@ -36,8 +36,6 @@ export const ListingShow = (props) => {
         strokeWeight: 3,
     }
 
-    console.log(currListing.listing.lat, "currListing");
-
     const params = useParams();
     const dispatch = useDispatch();
     const listingId = params.listingid;

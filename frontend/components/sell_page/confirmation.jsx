@@ -24,6 +24,7 @@ export const Confirmation = (props) => {
         owner_id: currentUser
     }
 
+
     const handleClick = (e) => {
         e.preventDefault();
         dispatch(createListing(_newListing));
@@ -52,7 +53,7 @@ export const Confirmation = (props) => {
                 <br />
                 <label>Latitude:</label>
                 <br />
-                <span>{_newListing.ltd}</span>
+                <span>{_newListing.lat}</span>
                 <br />
                 <br />
                 <label>Longitude:</label>

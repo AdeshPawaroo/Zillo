@@ -18,7 +18,10 @@
 #  owner_id    :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  listing_id  :integer          not null
 #
 class Save < ApplicationRecord
-    validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, presence: true
+    # validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, :listing_id, presence: true
+    validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, :listing_id, presence: true
+    # validates :address, :listing_id, presence: true, uniqueness: true
 end
