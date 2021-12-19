@@ -23,8 +23,7 @@ export const Listing = (props) => {
         description: currListing.description,
         lat: currListing.lat,
         lng: currListing.lng,
-        owner_id: currentUser,
-        listing_id: parseInt(currListingId) 
+        owner_id: currentUser
     }
 
 

@@ -1,24 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { fetchSaves, createSave } from "../../actions/save_actions";
 
 export const ListingButton = (props) => {
     const dispatch = useDispatch();
     const saves = props.saves;
-    const ele1 = props.saveObj;
+    const currentListing = props.saveObj;
     let ele2 = {};
     
     const handleSave = (e) => {
         e.preventDefault();
 
-        dispatch(createSave(ele1));
+        dispatch(createSave(currentListing));
         dispatch(fetchSaves());
     }
 
+    //find the element within the saves array
+    //once element is found -> store the index of this element in the array
+    // then delete this element using the splice() method
+    //re-call dispatch(fetchSaves()) to udpate state
     const handleDelete = (e) => {
         e.preventDefault();
 
-        console.log("here");
+        let i;
+        let index = null;
+        for (i = 0; i < saves.length; i++) {
+            let currentSave = saves[i];
+
+            if (
+                currentListing.address === currentSave.address &&
+                currentListing.baths === currentSave.baths &&
+                currentListing.beds === currentSave.beds &&
+                currentListing.description === currentSave.description &&
+                currentListing.lat === currentSave.lat &&
+                currentListing.lng === currentSave.lng &&
+                currentListing.price === currentSave.price &&
+                currentListing.realator === currentSave.realator &&
+                currentListing.sqft === currentSave.sqft &&
+                currentListing.status === currentSave.status &&
+                currentListing.style === currentSave.style &&
+                currentListing.zipcode === currentSave.zipcode
+            ) {
+                index = i;
+            }
+        }
+        
+        //delete here -- refactor state so it deletes straight from state and not from temp arr
     }
 
     const saveButton = (
@@ -52,18 +79,18 @@ export const ListingButton = (props) => {
             }
 
             if (
-                ele1.address === ele2.address &&
-                ele1.baths === ele2.baths &&
-                ele1.beds === ele2.beds &&
-                ele1.description === ele2.description &&
-                ele1.lat === ele2.lat &&
-                ele1.lng === ele2.lng &&
-                ele1.price === ele2.price &&
-                ele1.realator === ele2.realator &&
-                ele1.sqft === ele2.sqft &&
-                ele1.status === ele2.status &&
-                ele1.style === ele2.style &&
-                ele1.zipcode === ele2.zipcode
+                currentListing.address === ele2.address &&
+                currentListing.baths === ele2.baths &&
+                currentListing.beds === ele2.beds &&
+                currentListing.description === ele2.description &&
+                currentListing.lat === ele2.lat &&
+                currentListing.lng === ele2.lng &&
+                currentListing.price === ele2.price &&
+                currentListing.realator === ele2.realator &&
+                currentListing.sqft === ele2.sqft &&
+                currentListing.status === ele2.status &&
+                currentListing.style === ele2.style &&
+                currentListing.zipcode === ele2.zipcode
             ) {
                 return deleteButton;
             }
