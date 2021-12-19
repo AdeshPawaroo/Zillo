@@ -46,6 +46,8 @@ export const ListingButton = (props) => {
         }
         
         //delete here -- refactor state so it deletes straight from state and not from temp arr
+        //GET ELEMENT ITSELF AND SEND IT TO THE DELETE 
+
     }
 
     const saveButton = (
