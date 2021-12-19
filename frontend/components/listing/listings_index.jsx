@@ -5,7 +5,7 @@ import { fetchSaves } from "../../actions/save_actions";
 import { Listing } from "./listing";
 
 export const ListingsIndex = () => {
-    
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export const ListingsIndex = () => {
     }, []);
 
     useEffect(() => {
-        dispatch(fetchSaves());
+        dispatch(fetchSaves())
     }, []);
 
     const saves = Object.values(useSelector(state => state.entities.saves));

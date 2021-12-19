@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createSave } from "../../actions/save_actions";
+import { fetchSaves, createSave } from "../../actions/save_actions";
 
 export const ListingButton = (props) => {
-
     const dispatch = useDispatch();
-    const saveObj = props.saveObj;
     const saves = props.saves;
     const ele1 = props.saveObj;
     let ele2 = {};
-
+    
     const handleSave = (e) => {
         e.preventDefault();
 
-        dispatch(createSave(saveObj));
+        dispatch(createSave(ele1));
+        dispatch(fetchSaves());
     }
 
-    //handleDelete
+    const handleDelete = (e) => {
+        e.preventDefault();
+
+        console.log("here");
+    }
 
     const saveButton = (
         <button onClick={handleSave}>
@@ -25,7 +28,7 @@ export const ListingButton = (props) => {
     )
 
     const deleteButton = (
-        <button>
+        <button onClick={handleDelete}>
             Delete
         </button>
     )
