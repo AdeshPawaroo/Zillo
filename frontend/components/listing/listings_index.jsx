@@ -17,7 +17,7 @@ export const ListingsIndex = () => {
     }, []);
 
     const listings = Object.values(useSelector(state => state.entities.listings));
-    const listingIds = Object.keys(listings);
+    const listingIds = Object.keys(useSelector(state => state.entities.listings));
 
     return (
         <div className="listings-index">

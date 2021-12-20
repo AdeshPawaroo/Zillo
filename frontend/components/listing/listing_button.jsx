@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSaves, createSave, deleteSave } from "../../actions/save_actions";
 
@@ -7,7 +7,6 @@ export const ListingButton = (props) => {
     const dispatch = useDispatch();
     const saves = useSelector(state => state.entities.saves);
     const saveIds = Object.keys(saves);
-    // console.log(saveIds);
 
     const currentListing = props.saveObj;
     let ele2 = {};
@@ -22,11 +21,10 @@ export const ListingButton = (props) => {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        console.log(currentListing);
         for (let i = 0; i < saveIds.length; i++) {
             let id = saveIds[i];
 
-            if(
+            if (
                 currentListing.address === saves[id].address &&
                 currentListing.baths === saves[id].baths &&
                 currentListing.beds === saves[id].beds &&
@@ -40,7 +38,8 @@ export const ListingButton = (props) => {
                 currentListing.style === saves[id].style &&
                 currentListing.zipcode === saves[id].zipcode
             ) {
-                dispatch(deleteSave(id))
+                dispatch(deleteSave(id));
+                dispatch(fetchSaves());
             }
         }
     }
@@ -347,4 +346,4 @@ export const ListingButton = (props) => {
 //         handleButton()
 //     )
 
-// }p
+// }
