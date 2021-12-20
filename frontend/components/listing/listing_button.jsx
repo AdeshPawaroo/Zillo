@@ -1,10 +1,14 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { fetchSaves, createSave } from "../../actions/save_actions";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSaves, createSave, deleteSave } from "../../actions/save_actions";
 
 export const ListingButton = (props) => {
+
     const dispatch = useDispatch();
-    const saves = props.saves;
+    const saves = useSelector(state => state.entities.saves);
+    const saveIds = Object.keys(saves);
+    // console.log(saveIds);
+
     const currentListing = props.saveObj;
     let ele2 = {};
     
@@ -15,39 +19,30 @@ export const ListingButton = (props) => {
         dispatch(fetchSaves());
     }
 
-    //find the element within the saves array
-    //once element is found -> store the index of this element in the array
-    // then delete this element using the splice() method
-    //re-call dispatch(fetchSaves()) to udpate state
     const handleDelete = (e) => {
         e.preventDefault();
 
-        let i;
-        let index = null;
-        for (i = 0; i < saves.length; i++) {
-            let currentSave = saves[i];
+        console.log(currentListing);
+        for (let i = 0; i < saveIds.length; i++) {
+            let id = saveIds[i];
 
-            if (
-                currentListing.address === currentSave.address &&
-                currentListing.baths === currentSave.baths &&
-                currentListing.beds === currentSave.beds &&
-                currentListing.description === currentSave.description &&
-                currentListing.lat === currentSave.lat &&
-                currentListing.lng === currentSave.lng &&
-                currentListing.price === currentSave.price &&
-                currentListing.realator === currentSave.realator &&
-                currentListing.sqft === currentSave.sqft &&
-                currentListing.status === currentSave.status &&
-                currentListing.style === currentSave.style &&
-                currentListing.zipcode === currentSave.zipcode
+            if(
+                currentListing.address === saves[id].address &&
+                currentListing.baths === saves[id].baths &&
+                currentListing.beds === saves[id].beds &&
+                currentListing.description === saves[id].description &&
+                currentListing.lat === saves[id].lat &&
+                currentListing.lng === saves[id].lng &&
+                currentListing.price === saves[id].price &&
+                currentListing.realator === saves[id].realator &&
+                currentListing.sqft === saves[id].sqft &&
+                currentListing.status === saves[id].status &&
+                currentListing.style === saves[id].style &&
+                currentListing.zipcode === saves[id].zipcode
             ) {
-                index = i;
+                dispatch(deleteSave(id))
             }
         }
-        
-        //delete here -- refactor state so it deletes straight from state and not from temp arr
-        //GET ELEMENT ITSELF AND SEND IT TO THE DELETE 
-
     }
 
     const saveButton = (
@@ -63,8 +58,9 @@ export const ListingButton = (props) => {
     )
 
     const handleButton = () => {
-        for (let i = 0; i < saves.length; i++) {
-            let currentSave = saves[i];
+        let temp = Object.values(saves)
+        for (let i = 0; i < temp.length; i++) {
+            let currentSave = temp[i];
             ele2 = {
                 address: currentSave.address,
                 baths: currentSave.baths,
@@ -109,7 +105,18 @@ export const ListingButton = (props) => {
 
 
 
-
+// currentListing.address === currentSave.address &&
+// currentListing.baths === currentSave.baths &&
+// currentListing.beds === currentSave.beds &&
+// currentListing.description === currentSave.description &&
+// currentListing.lat === currentSave.lat &&
+// currentListing.lng === currentSave.lng &&
+// currentListing.price === currentSave.price &&
+// currentListing.realator === currentSave.realator &&
+// currentListing.sqft === currentSave.sqft &&
+// currentListing.status === currentSave.status &&
+// currentListing.style === currentSave.style &&
+// currentListing.zipcode === currentSave.zipcode
 
 
 

@@ -16,7 +16,6 @@ export const ListingsIndex = () => {
         dispatch(fetchSaves())
     }, []);
 
-    const saves = Object.values(useSelector(state => state.entities.saves));
     const listings = Object.values(useSelector(state => state.entities.listings));
     const listingIds = Object.keys(listings);
 
@@ -27,7 +26,6 @@ export const ListingsIndex = () => {
                     key={i} 
                     listing={listing} 
                     listingId={listingIds[i]}
-                    saves={saves}
                 />
             ))}
         </div>
