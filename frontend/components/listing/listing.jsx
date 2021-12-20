@@ -8,7 +8,6 @@ export const Listing = (props) => {
     const currentUser = useSelector(state => state.session.currentUser)
     const currListing = props.listing
     const currListingId = props.listingId;
-    const saves = props.saves;
 
     const saveObj = {
         price: currListing.price,
@@ -47,7 +46,6 @@ export const Listing = (props) => {
             </p>
             <ListingButton 
                 saveObj={saveObj}
-                saves={saves}
             />
         </div>
     )

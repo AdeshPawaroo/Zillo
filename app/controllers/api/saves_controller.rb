@@ -24,9 +24,9 @@ class Api::SavesController < ApplicationController
 
         if @save && @save.destroy
             p "success"
+        else
+            render json: @save.errors, status: 422
         end
-
-        render "/api/saves/index"
     end
 
     private
