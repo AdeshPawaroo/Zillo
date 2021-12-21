@@ -57,12 +57,6 @@ export const ListingButton = (props) => {
         <FontAwesomeIcon icon={fasFaHeart} onClick={handleDelete} />
     )
 
-    // const deleteButton = (
-    //     <button onClick={handleDelete}>
-    //         Delete
-    //     </button>
-    // )
-
     const handleButton = () => {
         let temp = Object.values(saves)
         for (let i = 0; i < temp.length; i++) {
