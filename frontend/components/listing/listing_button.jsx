@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSaves, createSave, deleteSave } from "../../actions/save_actions";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 export const ListingButton = (props) => {
 
@@ -45,10 +47,14 @@ export const ListingButton = (props) => {
     }
 
     const saveButton = (
-        <button onClick={handleSave}>
-            Save
-        </button>
+        <FontAwesomeIcon icon={faHeart}/>
     )
+
+    // const saveButton = (
+    //     <button onClick={handleSave}>
+    //         Save
+    //     </button>
+    // )
 
     const deleteButton = (
         <button onClick={handleDelete}>
