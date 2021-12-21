@@ -19,14 +19,20 @@ class Api::SavesController < ApplicationController
         render "/api/saves/index"
     end
 
+    # def destroy
+    #     @save = Save.find(params[:id])
+
+    #     if @save && @save.destroy
+    #         p "success"
+    #     else
+    #         render json: @save.errors, status: 422
+    #     end
+    # end
+
     def destroy
         @save = Save.find(params[:id])
-
-        if @save && @save.destroy
-            p "success"
-        else
-            render json: @save.errors, status: 422
-        end
+        @save.destroy
+        
     end
 
     private

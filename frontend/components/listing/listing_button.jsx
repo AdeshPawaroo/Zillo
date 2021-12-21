@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSaves, createSave, deleteSave } from "../../actions/save_actions";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHeart as farFaHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart as fasFaHeart} from "@fortawesome/free-solid-svg-icons";
 
 export const ListingButton = (props) => {
 
+    library.add(fasFaHeart, farFaHeart);
     const dispatch = useDispatch();
     const saves = useSelector(state => state.entities.saves);
     const saveIds = Object.keys(saves);
@@ -45,16 +50,18 @@ export const ListingButton = (props) => {
     }
 
     const saveButton = (
-        <button onClick={handleSave}>
-            Save
-        </button>
+        <FontAwesomeIcon icon={farFaHeart} onClick={handleSave} />
     )
 
     const deleteButton = (
-        <button onClick={handleDelete}>
-            Delete
-        </button>
+        <FontAwesomeIcon icon={fasFaHeart} onClick={handleDelete} />
     )
+
+    // const deleteButton = (
+    //     <button onClick={handleDelete}>
+    //         Delete
+    //     </button>
+    // )
 
     const handleButton = () => {
         let temp = Object.values(saves)
