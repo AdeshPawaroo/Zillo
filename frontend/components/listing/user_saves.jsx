@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSaves } from "../../actions/save_actions";
+import { ListingSaves } from "./listing_save";
 
 export const UserSaves = (props) => {
 
@@ -23,7 +24,17 @@ export const UserSaves = (props) => {
 
     return (
         <div className="user-saves-container">
-            <span>Your currently saved listings: </span>
+            <span className="saves-slogan">Your currently saved listings: </span>
+            <br />
+            <br />
+            <div className="save-listing-container">
+                {userSaves.map((save, i) => (
+                    <ListingSaves 
+                        currentSave={save}
+                        key={i}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

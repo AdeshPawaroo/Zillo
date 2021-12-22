@@ -25,7 +25,6 @@ export const Listing = (props) => {
         owner_id: currentUser
     }
 
-
     return(
         <div className="listing-item-container" >
             <div className="listing-photo" onClick={() => window.location = `/#/listings/${currListingId}`}></div>
