@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListings } from "../../actions/listing_actions";
-import { Listing } from "./listing";
+import { Listing } from "../listing/listing";
 import { ListingSell } from "./listing_sell";
 
 export const UserSales = (props) => {

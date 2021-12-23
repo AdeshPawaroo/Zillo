@@ -4,9 +4,9 @@ import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
 import { BuyPage } from './buy_page/buy';
 import { SellForm } from './sell_page/sell_form';
-import { UserSales } from './listing/user_sells';
+import { UserSales } from './user_listings/user_sells';
 import { ListingShow } from './listing/listing_show';
-import { UserSaves } from "./listing/user_saves";
+import { UserSaves } from "./user_listings/user_saves";
 import { Footer } from './footer/footer';
 import Modal from './modal/modal';
 
