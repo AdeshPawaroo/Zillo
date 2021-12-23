@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListings } from "../../actions/listing_actions";
 import { Listing } from "./listing";
+import { ListingSell } from "./listing_sell";
 
-export const UserListings = (props) => {
+export const UserSales = (props) => {
 
     const dispatch = useDispatch();
     const listings = Object.values(useSelector(state => state.entities.listings));
@@ -24,15 +25,17 @@ export const UserListings = (props) => {
 
     return (
         <div className="user-listings-container">
-            <span>Your currently posted listings: </span>
+            <span className="sells-slogan">Your currently posted listings: </span>
             <br />
             <br />
-            {userListings.map((listing, i) => (
-                <Listing 
-                    listing={listing}
-                    key={i}
-                />
-            ))}
+            <div className="sell-listing-container">
+                {userListings.map((listing, i) => (
+                    <ListingSell 
+                        currentSell={listing}
+                        key={i}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

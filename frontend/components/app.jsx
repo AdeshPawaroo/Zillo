@@ -4,7 +4,7 @@ import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
 import { BuyPage } from './buy_page/buy';
 import { SellForm } from './sell_page/sell_form';
-import { UserListings } from './listing/user_listings';
+import { UserSales } from './listing/user_sells';
 import { ListingShow } from './listing/listing_show';
 import { UserSaves } from "./listing/user_saves";
 import { Footer } from './footer/footer';
@@ -20,7 +20,7 @@ const App = () => {
                 <Route path="/buy" element={<BuyPage />} />
                 <Route path="/sell" element={<SellForm />} />
                 <Route path="/listings/:listingid" element={<ListingShow />} />
-                <Route path="/user/listings" element={<UserListings />} />
+                <Route path="/user/listings" element={<UserSales />} />
                 <Route path="/user/saves" element={<UserSaves />} />
             </Routes>
             <Footer />
