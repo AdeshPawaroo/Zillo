@@ -23,8 +23,6 @@ export const ListingsForRent = () => {
         }
     }
 
-    console.log(listingsForRent);
-
     return (
         <div className="listings-index">
             {listingsForRent.map((listing, i) => (
