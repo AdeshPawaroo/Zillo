@@ -2,7 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
-import { BuyPage } from './buy_page/buy';
+import { BuyPage } from './listings_index/buy';
+import { RentPage } from './listings_index/rent';
 import { SellForm } from './sell_page/sell_form';
 import { UserSales } from './user_listings/user_sells';
 import { ListingShow } from './listing/listing_show';
@@ -18,6 +19,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Splash />} />
                 <Route path="/buy" element={<BuyPage />} />
+                <Route path="/rent" element={<RentPage />} />
                 <Route path="/sell" element={<SellForm />} />
                 <Route path="/listings/:listingid" element={<ListingShow />} />
                 <Route path="/user/listings" element={<UserSales />} />
