@@ -1,5 +1,5 @@
 import React from "react";
-import { ListingsMap } from "../map/listing_map";
+import { RentMap } from '../map/rent_map'
 import { IndexPageNav } from "./index_page_nav";
 import { ListingsForRent } from "../listing/listings_rent";
 
@@ -11,11 +11,10 @@ export const RentPage = (props) => {
 
             <div className="buy-page-contents">
                 <div className="buy-page-left">
-                    <ListingsMap />
+                    <RentMap />
                 </div>
 
-                <div className="buy-page-right">
-                    {/* <ListingsIndex /> */}
+                <div className="buy-page-right">                  
                     <ListingsForRent />
                 </div>
             </div>
