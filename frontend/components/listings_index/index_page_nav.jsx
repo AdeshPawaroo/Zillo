@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BuyPageNav = (props) => {
+export const IndexPageNav = (props) => {
 
     return (
         <div className="buy-nav-container">

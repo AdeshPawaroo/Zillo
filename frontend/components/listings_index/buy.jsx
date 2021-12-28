@@ -1,21 +1,21 @@
 import React from "react";
-import { ListingsMap } from "../map/listing_map";
-import { ListingsIndex } from "../listing/listings_index";
-import { BuyPageNav } from "./buy_page_nav";
+import { BuyMap } from '../map/buy_map'
+import { IndexPageNav } from "./index_page_nav";
+import { ListingsForSale } from "../listing/listings_buy";
 
 export const BuyPage = (props) => {
 
     return (
         <div className="buy-page-container">
-            <BuyPageNav />
+            <IndexPageNav />
 
             <div className="buy-page-contents">
                 <div className="buy-page-left">
-                    <ListingsMap />
+                    <BuyMap />
                 </div>
 
                 <div className="buy-page-right">
-                    <ListingsIndex />
+                    <ListingsForSale />
                 </div>
             </div>
         </div>
