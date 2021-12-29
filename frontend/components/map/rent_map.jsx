@@ -9,7 +9,7 @@ export const RentMap = (props) => {
     const stateListings = Object.values(useSelector(state => state.entities.listings)) ;
     const stateIds = Object.keys(useSelector(state => state.entities.listings)) ;
     const listingsForRent = [];
-    const listingIds = [];
+    const listingsForRentIds = [];
     const locations = [];
     
     const mapOptions = {
@@ -49,6 +49,7 @@ export const RentMap = (props) => {
 
         if (currentListing.status === "for rent") {
             listingsForRent.push(currentListing);
+            listingsForRentIds.push(stateIds[i])
         }
     }
 
@@ -63,7 +64,11 @@ export const RentMap = (props) => {
 
         locations.push(listingObj);
     });
-    
+
+    const handleClick = (id) => {
+        window.location = `/#/listings/${id}`;
+    }
+
     return (
         <GoogleMap
             mapContainerStyle={mapOptions}
@@ -71,13 +76,13 @@ export const RentMap = (props) => {
             center={center}
         >
             {
-                locations.map(item => {
+                locations.map((item, i) => {
                     return (
                         <Marker 
-                            key={item.key}
+                            key={i}
                             position={item.location}
                             icon={redCircle}   
-                            onClick={() => handleClick(item.key)}                   
+                            onClick={() => handleClick(listingsForRentIds[i])}                   
                         />
                     )})
             }

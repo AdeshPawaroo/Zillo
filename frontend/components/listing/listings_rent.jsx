@@ -10,6 +10,7 @@ export const ListingsForRent = () => {
     const listings = Object.values(useSelector(state => state.entities.listings));
     const listingIds = Object.keys(useSelector(state => state.entities.listings));
     const listingsForRent = [];
+    const listingsForRentIds = [];
 
     useEffect(() => {
         dispatch(fetchListings());
@@ -24,6 +25,7 @@ export const ListingsForRent = () => {
 
         if (currentListing.status === "for rent") {
             listingsForRent.push(currentListing);
+            listingsForRentIds.push(listingIds[i]);
         }
     }
 
@@ -33,6 +35,7 @@ export const ListingsForRent = () => {
                 <Listing 
                     key={i}
                     listing={listing}
+                    listingId={listingsForRentIds[i]}
                 />
             ))}
         </div>
