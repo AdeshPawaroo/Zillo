@@ -17,7 +17,7 @@ export const ListingsForSale = () => {
 
     useEffect(() => {
         dispatch(fetchSaves());
-    }, [])
+    }, []);
 
     for (let i = 0; i < listings.length; i++) {
         let currentListing = listings[i];

@@ -30,6 +30,152 @@ export const Confirmation = (props) => {
         dispatch(createListing(_newListing));
     }
 
+    const handlePrice = () => {
+        if (_newListing.price.length === 0) {
+            return (
+                <p className="err-message">The price can't be empty</p>
+            )
+        } else {
+            return (
+                <span>{_newListing.price}</span>
+            )
+        }
+    }
+
+    const handleStatus = () => {
+        if (_newListing.status.length === 0) {
+            return (
+                <p className="err-message">The status can't be empty</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.status}</span>
+            )
+        }
+    }
+
+    const handleAddress = () => {
+        if (_newListing.address.length === 0) {
+            return (
+                <p className="err-message">The address can't be empty</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.address}</span>
+            )
+        }
+    }
+
+    const handleLat = () => {
+        if (isNaN(_newListing.lat)) {
+            return (
+                <p className="err-message">The latitude is not a number</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.lat}</span>
+            )
+        }
+    }
+
+    
+    const handleLng = () => {
+        if (isNaN(_newListing.lng)) {
+            return (
+                <p className="err-message">The longitude is not a number</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.lng}</span>
+            )
+        }
+    }
+
+    
+    const handleZipcode = () => {
+        if (isNaN(_newListing.zipcode)) {
+            return (
+                <p className="err-message">The zipcode is not a number</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.zipcode}</span>
+            )
+        }
+    }
+
+    const handleRealator = () => {
+        if (_newListing.realator.length === 0) {
+            return (
+                <p className="err-message">The realator can't be empty</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.realator}</span>
+            )
+        }
+    }
+
+    const handleBeds = () => {
+        if (isNaN(_newListing.beds)) {
+            return (
+                <p className="err-message">The amount of beds is not a number</p>
+            )
+        } else {
+            reutrn (
+                <span className="err-message">{_newListing.beds}</span>
+            )
+        }
+    }
+
+    const handleBaths = () => {
+        if (isNaN(_newListing.baths)) {
+            return (
+                <p className="err-message">The amount of baths is not a number</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.baths}</span>
+            )
+        }
+    }
+ 
+    const handleStyle = () => {
+        if (_newListing.style.length === 0) {
+            return (
+                <p className="err-message">The style can't be empty</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.style}</span>
+            )
+        }
+    }
+
+    const handleSqft = () => {
+        if (isNaN(_newListing.sqft)) {
+            return (
+                <p className="err-message">The sqft is not a number</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.sqft}</span>
+            )
+        }
+    }
+
+    const handleDescription = () => {
+        if (_newListing.description.length === 0) {
+            return (
+                <p className="err-message">The description can't be empty</p>
+            )
+        } else {
+            reutrn (
+                <span>{_newListing.description}</span>
+            )
+        }
+    }
+
     return (
         <div className="confirmation-container">
             <div className="sell-confirmation">
@@ -38,62 +184,62 @@ export const Confirmation = (props) => {
                 <br />
                 <label>Price:</label>
                 <br />
-                <span>{_newListing.price}</span>
+                {handlePrice()}
                 <br />
                 <br />
                 <label>Status:</label>
                 <br />
-                <span>{_newListing.status}</span>
+                {handleStatus()}
                 <br />
                 <br />
                 <label>Address:</label>
                 <br />
-                <span>{_newListing.address}</span>
+                {handleAddress()}
                 <br />
                 <br />
                 <label>Latitude:</label>
                 <br />
-                <span>{_newListing.lat}</span>
+                {handleLat()}
                 <br />
                 <br />
                 <label>Longitude:</label>
                 <br />
-                <span>{_newListing.lng}</span>
+                {handleLng()}
                 <br />
                 <br />
                 <label>Zipcode:</label>
                 <br />
-                <span>{_newListing.zipcode}</span>
+                {handleZipcode()}
                 <br />
                 <br />
                 <label>Realator:</label>
                 <br />
-                <span>{_newListing.realator}</span>
+                {handleRealator()}
                 <br />
                 <br />
                 <label>Beds:</label>
                 <br />
-                <span>{_newListing.beds}</span>
+                {handleBeds()}
                 <br />
                 <br />
                 <label>Baths:</label>
                 <br />
-                <span>{_newListing.baths}</span>
+                {handleBaths()}
                 <br />
                 <br />
                 <label>Style:</label>
                 <br />
-                <span>{_newListing.style}</span>
+                {handleStyle()}
                 <br />
                 <br />
                 <label>Sqft:</label>
                 <br />
-                <span>{_newListing.sqft}</span>
+                {handleSqft()}
                 <br />
                 <br />
                 <label>Description:</label>
                 <br />
-                <span>{_newListing.description}</span>
+                {handleDescription()}
                 <br />
                 <button onClick={props.prevStep} className="sell-prev-btn">Go Back</button>
                 <button onClick={handleClick} className="sell-confirm-btn">Submit</button>
