@@ -10,6 +10,7 @@ export const ListingsForSale = () => {
     const listings = Object.values(useSelector(state => state.entities.listings));
     const listingIds = Object.keys(useSelector(state => state.entities.listings));
     const listingsForSale = [];
+    const listingsForSaleIds = [];
 
     useEffect(() => {
         dispatch(fetchListings());
@@ -24,6 +25,7 @@ export const ListingsForSale = () => {
 
         if (currentListing.status === "for sale") {
             listingsForSale.push(currentListing);
+            listingsForSaleIds.push(listingIds[i])
         }
     }
 
@@ -33,6 +35,7 @@ export const ListingsForSale = () => {
                 <Listing 
                     key={i}
                     listing={listing}
+                    listingId={listingsForSaleIds[i]}
                 />
             ))}
         </div>

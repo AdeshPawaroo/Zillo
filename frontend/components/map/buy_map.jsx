@@ -9,7 +9,7 @@ export const BuyMap = (props) => {
     const stateListings = Object.values(useSelector(state => state.entities.listings)) ;
     const stateIds = Object.keys(useSelector(state => state.entities.listings)) ;
     const listingsForSale = [];
-    const listingIds = [];
+    const listingsForSaleIds = [];
     const locations = [];
     
     const mapOptions = {
@@ -49,6 +49,7 @@ export const BuyMap = (props) => {
 
         if (currentListing.status === "for sale") {
             listingsForSale.push(currentListing);
+            listingsForSaleIds.push(stateIds[i]);
         }
     }
 
@@ -64,6 +65,10 @@ export const BuyMap = (props) => {
         locations.push(listingObj);
     });
     
+    const handleClick = (id) => {
+        window.location = `/#/listings/${id}`;
+    }
+
     return (
         <GoogleMap
             mapContainerStyle={mapOptions}
@@ -71,13 +76,13 @@ export const BuyMap = (props) => {
             center={center}
         >
             {
-                locations.map(item => {
+                locations.map((item, i) => {
                     return (
                         <Marker 
-                            key={item.key}
+                            key={i}
                             position={item.location}
                             icon={redCircle}   
-                            onClick={() => handleClick(item.key)}                   
+                            onClick={() => handleClick(listingsForSaleIds[i])}                   
                         />
                     )})
             }
