@@ -12,7 +12,6 @@ export const ListingButton = (props) => {
     const dispatch = useDispatch();
     const saves = useSelector(state => state.entities.saves);
     const saveIds = Object.keys(saves);
-
     const currentListing = props.saveObj;
     let ele2 = {};
     
@@ -20,7 +19,7 @@ export const ListingButton = (props) => {
         e.preventDefault();
 
         dispatch(createSave(currentListing));
-        dispatch(fetchSaves());
+        // dispatch(fetchSaves());
     }
 
     const handleDelete = (e) => {
@@ -44,7 +43,7 @@ export const ListingButton = (props) => {
                 currentListing.zipcode === saves[id].zipcode
             ) {
                 dispatch(deleteSave(id));
-                dispatch(fetchSaves());
+                // dispatch(fetchSaves());
             }
         }
     }

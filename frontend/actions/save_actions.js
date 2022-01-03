@@ -2,6 +2,7 @@ import * as SaveApiUtil from "../util/save_api_util";
 
 export const RECEIVE_ALL_SAVES = "RECEIVE_ALL_SAVES";
 export const RECEIVE_SAVE = "RECEIVE_SAVE";
+export const REMOVE_SAVE = "REMOVE_SAVE";
 
 const receiveSaves = (saves) => ({
     type: RECEIVE_ALL_SAVES,
@@ -13,12 +14,16 @@ const receiveSave = (save) => ({
     save
 });
 
-export const fetchSaves = () => dispatch => {
-    return (
-        SaveApiUtil.fetchSaves()
-            .then(saves => dispatch(receiveSaves(saves)))
-    )
-};
+const removeSave = (save) => ({
+    type: REMOVE_SAVE,
+    save
+});
+
+export const fetchSaves = () => dispatch => (
+    SaveApiUtil.fetchSaves()
+        .then(saves => dispatch(receiveSaves(saves)))
+    
+);
 
 export const fetchSave = (saveId) => dispatch => (
     SaveApiUtil.fetchSave(saveId)
@@ -32,5 +37,5 @@ export const createSave = (save) => dispatch => (
 
 export const deleteSave = (saveId) => dispatch => (
     SaveApiUtil.deleteSave(saveId)
-        .then(() => dispatch(deleteSave(saveId)))
+        .then((save) => dispatch(removeSave(save)))
 ); 
