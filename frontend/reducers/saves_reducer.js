@@ -1,6 +1,7 @@
 import {
     RECEIVE_ALL_SAVES,
-    RECEIVE_SAVE    
+    RECEIVE_SAVE,
+    REMOVE_SAVE    
 } from '../actions/save_actions';
 
 const SavesReducer = (oldState = {}, action) => {
@@ -13,6 +14,10 @@ const SavesReducer = (oldState = {}, action) => {
 
         case RECEIVE_SAVE:
             nextState[action.save.id] = action.save
+            return nextState
+
+        case REMOVE_SAVE:
+            delete nextState[action.save.id]
             return nextState
 
         default:
