@@ -83,8 +83,8 @@
     padding: 1rem;
     background-color: white;
     display: flex;
-    display: flex;
-
+    align-items: center;
+    flex-direction: column;
 }
 
 .page1-form > label {
