@@ -1,5 +1,5 @@
 import React from "react";
-import { Page1 } from "./page1";
+import { Page1 } from "./page_1";
 import { Page2 } from "./page2";
 import { Confirmation } from "./confirmation";
 
@@ -107,21 +107,104 @@ export class SellForm extends React.Component {
     }
 }
 
+// import React, { useState } from "react";
+// import { Page1 } from "./page_1";
+// import { Page2 } from "./page2";
+// import { Confirmation } from "./confirmation";
 
-// FORM 1
-// - PRICE
-// - STATUS 
-// - ADDRESS 
-// - ZIPCODE
-// - REALATOR
+// export const SellForm = () => {
+    
+//     const [values, setValues] = useState({
+//         step: 1,
+//         price: "",
+//         address: "",
+//         beds: "",
+//         baths: "",
+//         status: "",
+//         zipcode: "",
+//         realator: "",
+//         style: "",
+//         sqft: "",
+//         description: "",
+//         lat: "",
+//         lng: ""
+//     });
 
-// FORM 2
-// - BEDS
-// - BATHS 
-// - STYLE 
-// - DESCRIPTION 
+//     const nextStep = () => {
+//         const { step } = values;
+//         setValues({
+//             step: step + 1
+//         });
+//     }
 
-// FORM 3
-// - CONFIRMATION
-// - LAT 
-// - LNG
+//     const prevStep = () => {
+//         const { step } = values;
+//         setValues({
+//             step: step - 1
+//         });
+//     }
+
+//     const handleChange = (input) => {
+//         setValues({
+//             [input]: e.target.value
+//         });
+//     }
+
+//     const {
+//         price,
+//         address,
+//         beds,
+//         baths,
+//         status,
+//         zipcode,
+//         realator,
+//         style,
+//         sqft,
+//         description,
+//         lat,
+//         lng
+//     } = values;
+
+//     const elements = {
+//         price,
+//         address,
+//         beds,
+//         baths,
+//         status,
+//         zipcode,
+//         realator,
+//         style,
+//         sqft,
+//         description,
+//         lat,
+//         lng
+//     };
+
+//     switch(step) {
+//         case 1:
+//             return (
+//                 <Page1 
+//                     nextStep={this.nextStep}
+//                     handleChange={this.handleChange}
+//                     values={values}
+//                 />
+//             )
+//         case 2:
+//             return (
+//                 <Page2 
+//                     prevStep={this.prevStep}
+//                     nextStep={this.nextStep}
+//                     handleChange={this.handleChange}
+//                     values={values}
+//                 />
+//             )
+//         case 3:
+//             return (
+//                 <Confirmation 
+//                     prevStep={this.prevStep}
+//                     values={values}
+//                 />
+//             )
+//     }  
+
+// }

@@ -84,22 +84,3 @@ export class Page1 extends React.Component {
         )
     }
 }
-
-
-// FORM 1
-// - PRICE
-// - STATUS 
-// - ADDRESS 
-// - ZIPCODE
-// - REALATOR
-
-// FORM 2
-// - BEDS
-// - BATHS 
-// - STYLE 
-// - DESCRIPTION 
-
-// FORM 3
-// - CONFIRMATION
-// - LAT 
-// - LNG
