@@ -69,7 +69,7 @@ export const Page1 = (props) => {
                     onChange={handleChange("realator")}
                     defaultValue={values.realator}
                 />
-                {/* <button onClick={nextStep} className="sell-cont-btn">Continue</button> */}
+                <button onClick={nextStep} className="sell-cont-btn">Continue</button>
             </form>
         </div>
     )

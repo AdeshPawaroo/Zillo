@@ -1,6 +1,6 @@
 import React from "react";
 import { Page1 } from "./page_1";
-import { Page2 } from "./page2";
+import { Page2 } from "./page_2";
 import { Confirmation } from "./confirmation";
 
 export class SellForm extends React.Component {
