@@ -6,7 +6,6 @@ export class Page2 extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         const { values, prevStep, nextStep, handleChange } = this.props;
         return (
             <div className="page2-container">
