@@ -46,7 +46,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The status can't be empty</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.status}</span>
             )
         }
@@ -70,7 +70,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The latitude is not a number</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.lat}</span>
             )
         }
@@ -82,7 +82,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The longitude is not a number</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.lng}</span>
             )
         }
@@ -95,7 +95,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The zipcode is not a number</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.zipcode}</span>
             )
         }
@@ -107,7 +107,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The realator can't be empty</p>
             )
         } else {
-           reutrn (
+           return (
                 <span>{newListing.realator}</span>
             )
         }
@@ -119,7 +119,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The amount of beds is not a number</p>
             )
         } else {
-            reutrn (
+            return (
                 <span className="err-message">{newListing.beds}</span>
             )
         }
@@ -131,7 +131,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The amount of baths is not a number</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.baths}</span>
             )
         }
@@ -143,7 +143,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The style can't be empty</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.style}</span>
             )
         }
@@ -155,7 +155,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The sqft is not a number</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.sqft}</span>
             )
         }
@@ -167,7 +167,7 @@ export const Confirm = (props) => {
                 <p className="err-message">The description can't be empty</p>
             )
         } else {
-            reutrn (
+            return (
                 <span>{newListing.description}</span>
             )
         }
@@ -176,7 +176,7 @@ export const Confirm = (props) => {
     return (
         <div className="confirm-container">
             <div className="confirm-sell">
-            <p>Please confirm that this information is correct. If not please go back and correct it.</p>
+            <h1>Please confirm that this information is correct. If not please go back and correct it.</h1>
                 <br />
                 <br />
                 <label>Price:</label>
@@ -238,10 +238,8 @@ export const Confirm = (props) => {
                 <br />
                 {handleDescription()}
                 <br />
-                <div className="button-container">
-                    <button onClick={handleClick} className="sell-confirm-btn">Submit</button>
-                    <button onClick={props.prevStep} className="sell-prev-btn">Go Back</button>
-                </div>
+                <button onClick={handleClick} className="sell-confirm-btn">Submit</button>
+                <button onClick={props.prevStep} className="sell-prev-btn">Go Back</button>
             </div>
         </div>
     )

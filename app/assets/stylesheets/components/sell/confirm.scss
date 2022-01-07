@@ -10,12 +10,31 @@
 }
 
 .confirm-sell {
-    height: 67vh;
-    width: 100%;
-    background-color: lightblue;
+    width: 70%;
+    height: 70%;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.confirm-sell > h1 {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.5rem;
+    font-weight: bold
+}
+
+.confirm-sell > p {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.2rem;
+    font-weight: bold
+}
+
+.confirm-sell > label {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.2rem;
 }
