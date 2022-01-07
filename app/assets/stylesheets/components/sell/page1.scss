@@ -38,16 +38,19 @@
     font-family: 'Antic Slab', serif;
 }
 
-.sell-cont-btn {
+.sell-prev-btn {
+    margin-top: 2rem;
+    width: 10%;
+    height: 5vh;
     font-family: 'Antic Slab', serif;
-    margin-top: 1rem;
     color: blue;
-    background-color: white;
-    border-color: black;
-    border-width: 1px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: .50rem;
 }
 
-.sell-cont-btn:hover { 
+.sell-prev-btn:hover {
     color: white;
     background-color: blue;
+    cursor: pointer;
 }
