@@ -2,13 +2,12 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createListing } from "../../actions/listing_actions";
 
-export const Confirmation = (props) => {
-
+export const Confirm = (props) => {
+    
     const dispatch = useDispatch();
-
     const currentUser = useSelector(state => state.session.currentUser);
 
-    const _newListing = {
+    const newListing = {
         price: props.values.price,
         baths: parseInt(props.values.baths),
         beds: parseInt(props.values.beds),
@@ -24,161 +23,160 @@ export const Confirmation = (props) => {
         owner_id: currentUser
     }
 
-
     const handleClick = (e) => {
         e.preventDefault();
-        dispatch(createListing(_newListing));
+        dispatch(createListing(newListing));
     }
 
     const handlePrice = () => {
-        if (_newListing.price.length === 0) {
+        if (newListing.price.length === 0) {
             return (
                 <p className="err-message">The price can't be empty</p>
             )
         } else {
             return (
-                <span>{_newListing.price}</span>
+                <span>{newListing.price}</span>
             )
         }
     }
 
     const handleStatus = () => {
-        if (_newListing.status.length === 0) {
+        if (newListing.status.length === 0) {
             return (
                 <p className="err-message">The status can't be empty</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.status}</span>
+            return (
+                <span>{newListing.status}</span>
             )
         }
     }
 
     const handleAddress = () => {
-        if (_newListing.address.length === 0) {
+        if (newListing.address.length === 0) {
             return (
                 <p className="err-message">The address can't be empty</p>
             )
         } else {
             return (
-                <span>{_newListing.address}</span>
+                <span>{newListing.address}</span>
             )
         }
     }
     
     const handleLat = () => {
-        if (isNaN(_newListing.lat)) {
+        if (isNaN(newListing.lat)) {
             return (
                 <p className="err-message">The latitude is not a number</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.lat}</span>
+            return (
+                <span>{newListing.lat}</span>
             )
         }
     }
 
     const handleLng = () => {
-        if (isNaN(_newListing.lng)) {
+        if (isNaN(newListing.lng)) {
             return (
                 <p className="err-message">The longitude is not a number</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.lng}</span>
+            return (
+                <span>{newListing.lng}</span>
             )
         }
     }
 
     
     const handleZipcode = () => {
-        if (isNaN(_newListing.zipcode)) {
+        if (isNaN(newListing.zipcode)) {
             return (
                 <p className="err-message">The zipcode is not a number</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.zipcode}</span>
+            return (
+                <span>{newListing.zipcode}</span>
             )
         }
     }
 
     const handleRealator = () => {
-        if (_newListing.realator.length === 0) {
+        if (newListing.realator.length === 0) {
             return (
                 <p className="err-message">The realator can't be empty</p>
             )
         } else {
-           reutrn (
-                <span>{_newListing.realator}</span>
+           return (
+                <span>{newListing.realator}</span>
             )
         }
     }
 
     const handleBeds = () => {
-        if (isNaN(_newListing.beds)) {
+        if (isNaN(newListing.beds)) {
             return (
                 <p className="err-message">The amount of beds is not a number</p>
             )
         } else {
-            reutrn (
-                <span className="err-message">{_newListing.beds}</span>
+            return (
+                <span className="err-message">{newListing.beds}</span>
             )
         }
     }
 
     const handleBaths = () => {
-        if (isNaN(_newListing.baths)) {
+        if (isNaN(newListing.baths)) {
             return (
                 <p className="err-message">The amount of baths is not a number</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.baths}</span>
+            return (
+                <span>{newListing.baths}</span>
             )
         }
     }
  
     const handleStyle = () => {
-        if (_newListing.style.length === 0) {
+        if (newListing.style.length === 0) {
             return (
                 <p className="err-message">The style can't be empty</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.style}</span>
+            return (
+                <span>{newListing.style}</span>
             )
         }
     }
 
     const handleSqft = () => {
-        if (isNaN(_newListing.sqft)) {
+        if (isNaN(newListing.sqft)) {
             return (
                 <p className="err-message">The sqft is not a number</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.sqft}</span>
+            return (
+                <span>{newListing.sqft}</span>
             )
         }
     }
 
     const handleDescription = () => {
-        if (_newListing.description.length === 0) {
+        if (newListing.description.length === 0) {
             return (
                 <p className="err-message">The description can't be empty</p>
             )
         } else {
-            reutrn (
-                <span>{_newListing.description}</span>
+            return (
+                <span>{newListing.description}</span>
             )
         }
     }
 
     return (
-        <div className="confirmation-container">
-            <div className="sell-confirmation">
-                <p>Please confirm that this information is correct. If not please go back and correct it.</p>
+        <div className="confirm-container">
+            <div className="confirm-sell">
+            <h1>Please confirm that this information is correct. If not please go back and correct it.</h1>
                 <br />
                 <br />
                 <label>Price:</label>

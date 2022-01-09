@@ -6,7 +6,7 @@ export const Page2 = (props) => {
 
     return (
         <div className="page2-container">
-             <h1>Sell Form - Page 2</h1>
+            <h1>Sell Form - Page 2</h1>
             <form className="page2-form">
                 <label>Beds:</label>
                 <br />

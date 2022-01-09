@@ -1,4 +1,4 @@
-.page2-container {
+.confirm-container {
     height: 67vh;
     width: 100%;
     background-color: lightblue;
@@ -9,13 +9,7 @@
     justify-content: space-evenly;
 }
 
-.page2-container > h1 { 
-    font-family: 'Antic Slab', serif;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-.page2-form {
+.confirm-sell {
     width: 70%;
     height: 70%;
     border-radius: 1rem;
@@ -28,29 +22,19 @@
     overflow-x: hidden;
 }
 
-.page2-form > label {
+.confirm-sell > h1 {
     font-family: 'Antic Slab', serif;
     font-size: 1.5rem;
+    font-weight: bold
 }
 
-.page2-form > input {
-    width: 20%;
+.confirm-sell > p {
     font-family: 'Antic Slab', serif;
+    font-size: 1.2rem;
+    font-weight: bold
 }
 
-.sell-prev-btn {
-    margin-top: 2rem;
-    width: 10%;
-    height: 5vh;
+.confirm-sell > label {
     font-family: 'Antic Slab', serif;
-    color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: .50rem;
-}
-
-.sell-prev-btn:hover {
-    color: white;
-    background-color: blue;
-    cursor: pointer;
+    font-size: 1.2rem;
 }
