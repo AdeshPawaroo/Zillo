@@ -86,10 +86,6 @@ export class SellForm extends React.Component {
                         handleChange={this.handleChange}
                         values={values}
                     />
-                    // <Confirm
-                    //     prevStep={this.prevStep}
-                    //     values={values}
-                    // />
                 )
             case 2:
                 return (
