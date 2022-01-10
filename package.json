@@ -53,5 +53,8 @@
   },
   "devDependencies": {
     "webpack-livereload-plugin": "^3.0.2"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
