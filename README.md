@@ -1,7 +1,7 @@
 # Zillo
 Zillo is a clone of Zillow. Zillo is a housing marketing website where users can browse houses for sale / rent.
 
-# Live Site - [Zillo](https://zilloh-2.herokuapp.com/#/)
+# Live Site - [Zillo](https://zillo-fs.herokuapp.com/)
 
 # Technologies
 - Ruby
