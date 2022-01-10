@@ -13,8 +13,7 @@ export const Navbar = () => {
     const handleRender = () => {
         if (currUser) {
             return (
-                // <span onClick={handleLogout}>Logout</span>
-               <NavbarDropdown />
+                <NavbarDropdown />
             )
         }else {
             return (
