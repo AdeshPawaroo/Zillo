@@ -23,7 +23,6 @@
 }
 
 .sell-photo {
-    // background-color: lightblue;
     background-image: url("listing.jpg");
     background-position: center;
     background-size: cover;
@@ -33,10 +32,6 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
-// .user-sells-container {
-//     transform: translate(25%)
-// }
 
 .sell-listing-container {
     display: flex;

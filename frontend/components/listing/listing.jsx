@@ -49,7 +49,3 @@ export const Listing = (props) => {
         </div>
     )
 }
-
-
-
-// onClick={() => window.location = `/#/listings/${props.listingId}`}

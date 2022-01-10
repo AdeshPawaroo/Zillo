@@ -25,7 +25,6 @@ export const Login = () => {
     
     const handleSubmit = () => {
         dispatch(login(user));
-        console.log("Success");
     }
 
     return (

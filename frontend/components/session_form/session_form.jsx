@@ -47,8 +47,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    // console.log(this.props);
-    // if (!this.props.errors) return null;
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -100,5 +98,4 @@ class SessionForm extends React.Component {
   }
 }
 
-// export default withRouter(SessionForm);
 export default SessionForm;
