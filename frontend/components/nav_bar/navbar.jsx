@@ -58,7 +58,7 @@ export const Navbar = () => {
                 <Link to="/rent">Rent</Link>
                 <Link to="/sell">Sell</Link>
                 <Link to="/loans">Home Loans</Link>
-                <Link to="/agent">Portfolio</Link>
+                <Link to="/agent">Portfolio Site</Link>
             </div>
 
             <img src={window.logo} className="logo" onClick={handleHome}/>

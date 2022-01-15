@@ -8,10 +8,10 @@
 #  beds        :integer          not null
 #  baths       :integer          not null
 #  status      :string           not null
-#  zipcode     :integer          not null
-#  realator    :string           not null
-#  style       :string           not null
-#  description :text             not null
+#  zipcode     :integer          not null   
+#  realator    :string           not null   
+#  style       :string           not null   
+#  description :text             not null   
 #  sqft        :integer          not null
 #  lat         :float            not null
 #  lng         :float            not null
@@ -21,7 +21,5 @@
 #  listing_id  :integer          not null
 #
 class Save < ApplicationRecord
-    # validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, :listing_id, presence: true
     validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, presence: true
-    # validates :address, :listing_id, presence: true, uniqueness: true
 end

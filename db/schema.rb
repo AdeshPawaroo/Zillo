@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_030453) do
     t.float "lng", null: false
     t.integer "owner_id", null: false
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", null: 
     t.index ["owner_id"], name: "index_saves_on_owner_id"
   end
 
