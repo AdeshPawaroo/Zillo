@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     resources :listings, only: [:create, :show, :index, :destroy]
     resources :saves, only: [:create, :show, :index, :destroy]
 
+    # resources :listings do
+    #   resources :users, only: :index
+    # end
+
     resources :users do 
       resources :listings, only: :index
     end
