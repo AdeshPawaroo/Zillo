@@ -1,5 +1,5 @@
 .sell-greeting-container {
-    height: 100rem;
+    height: 100vh;
     width: 100%;
 }
 
@@ -29,3 +29,56 @@
     background-position: center;
     background-size: cover;
 }
+
+.sell-info-container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: flex;
+    height: 40vh;
+}
+
+.sell-info-contents {
+    display: flex;
+    flex-direction: column;
+//   align-items: center;
+    justify-content: center;
+}
+
+.sell-info-button {
+    width: 15vw;
+    height: 6vh;
+    // font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    background-color: blue;
+    font-family: 'Antic Slab', serif;
+    border-radius: 5px;
+    border: none;
+}
+
+.sell-info-button:hover {
+    background-color: darkblue;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.sell-info-contents > h1 {
+    font-family: 'Antic Slab', serif;
+    font-weight: bold;
+    font-size: 2.7rem;
+}
+
+.sell-info-contents > p {
+    font-family: 'Antic Slab', serif;
+    font-size: 1.3rem;
+}
+
+// .sell-info-picture {
+//     background-image: url("sell_info_pic.png");
+//     background-position: center;
+//     background-size: cover;
+//     border: black solid;
+//     width: 50%;
+// }
