@@ -88,7 +88,6 @@
 .page1-contents {
     width: 100%;
     height: 60%;
-    border: red solid;
 }
 
 .page1-info {
@@ -96,7 +95,6 @@
     height: 30%;
     display: flex;
     justify-content: space-evenly;
-    border: pink solid;
 }
 
 .page1-panel {
@@ -106,5 +104,8 @@
     font-family: 'Antic Slab', serif;
     font-size: 1.5rem;
     text-align: center;
-    border: black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
