@@ -1,73 +1,110 @@
+// .page1-container {
+//     height: 67vh;
+//     width: 100%;
+//     background-color: lightblue;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+// }
+
+// .page1-container > h1 { 
+//     font-family: 'Antic Slab', serif;
+//     font-weight: bold;
+//     font-size: 2rem;
+// }
+
+// .page1-form {
+//     width: 70%;
+//     height: 70%;
+//     border-radius: 1rem;
+//     padding: 1rem;
+//     background-color: white;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     overflow: scroll;
+//     overflow-x: hidden;
+// }
+
+// .page1-form > label {
+//     font-family: 'Antic Slab', serif;
+//     font-size: 1.5rem;
+// }
+
+// .page1-form > input {
+//     width: 20%;
+//     font-family: 'Antic Slab', serif;
+// }
+
+// .sell-cont-btn {
+//     margin-top: 2rem;
+//     width: 10%;
+//     height: 5vh;
+//     font-family: 'Antic Slab', serif;
+//     color: blue;
+//     font-size: 1rem;
+//     font-weight: bold;
+//     border-radius: .50rem;
+// }
+
+// .sell-cont-btn:hover {
+//     color: white;
+//     background-color: blue;
+//     cursor: pointer;
+// }
+
+// .sell-prev-btn {
+//     margin-top: 2rem;
+//     width: 10%;
+//     height: 5vh;
+//     font-family: 'Antic Slab', serif;
+//     color: blue;
+//     font-size: 1rem;
+//     font-weight: bold;
+//     border-radius: .50rem;
+// }
+
+// .sell-prev-btn:hover {
+//     color: white;
+//     background-color: blue;
+//     cursor: pointer;
+// }
+
 .page1-container {
-    height: 67vh;
     width: 100%;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+    height: 80vh;
+    border: black solid;
 }
 
-.page1-container > h1 { 
+.page1-container > h1 {
     font-family: 'Antic Slab', serif;
     font-weight: bold;
     font-size: 2rem;
+    text-align: center;
 }
 
-.page1-form {
-    width: 70%;
-    height: 70%;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: white;
+.page1-contents {
+    width: 100%;
+    height: 60%;
+    border: red solid;
+}
+
+.page1-info {
+    width: 100%;
+    height: 30%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    overflow: scroll;
-    overflow-x: hidden;
+    justify-content: space-evenly;
+    border: pink solid;
 }
 
-.page1-form > label {
+.page1-panel {
+    width: 28%;
+    height: 100%;
+    font-weight: bold;
     font-family: 'Antic Slab', serif;
     font-size: 1.5rem;
-}
-
-.page1-form > input {
-    width: 20%;
-    font-family: 'Antic Slab', serif;
-}
-
-.sell-cont-btn {
-    margin-top: 2rem;
-    width: 10%;
-    height: 5vh;
-    font-family: 'Antic Slab', serif;
-    color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: .50rem;
-}
-
-.sell-cont-btn:hover {
-    color: white;
-    background-color: blue;
-    cursor: pointer;
-}
-
-.sell-prev-btn {
-    margin-top: 2rem;
-    width: 10%;
-    height: 5vh;
-    font-family: 'Antic Slab', serif;
-    color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: .50rem;
-}
-
-.sell-prev-btn:hover {
-    color: white;
-    background-color: blue;
-    cursor: pointer;
+    text-align: center;
+    border: black solid;
 }

@@ -1,5 +1,5 @@
 .sell-greeting-container {
-    height: 100vh;
+    height: 110vh;
     width: 100%;
 }
 
@@ -36,6 +36,7 @@
     margin-left: 10rem;
     margin-right: 10rem;
     display: flex;
+    justify-content: space-evenly;
     height: 40vh;
 }
 
@@ -74,11 +75,3 @@
     font-family: 'Antic Slab', serif;
     font-size: 1.3rem;
 }
-
-// .sell-info-picture {
-//     background-image: url("sell_info_pic.png");
-//     background-position: center;
-//     background-size: cover;
-//     border: black solid;
-//     width: 50%;
-// }
