@@ -10,6 +10,7 @@ import { UserSales } from './user_listings/user_sells';
 import { ListingShow } from './listing/listing_show';
 import { UserSaves } from "./user_listings/user_saves";
 import { Footer } from './footer/footer';
+import { ScrollToTop } from './scroll/scroll';
 import Modal from './modal/modal';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <div>
             <Modal />
             <Navbar />
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Splash />} />
                 <Route path="/buy" element={<BuyPage />} />
