@@ -1,9 +1,17 @@
 import React from "react";
-import { SellForm } from "./sell_form";
+import { useDispatch, useSelector } from "react-redux";
+import { openModal } from "../../actions/modal_actions";
 
 export const SellGreeting = () => {
+    const currUser = useSelector(state => state.session.currentUser)
+    const dispatch = useDispatch();
+
     const handleClick = () => {
-        window.location = "#/sell"
+        if (currUser === null) {
+            dispatch(openModal("login"))
+        } else {
+            window.location = "#/sell"
+        }
     }
 
     return (
@@ -33,7 +41,6 @@ export const SellGreeting = () => {
                     <br />
                     <button className="sell-info-button" onClick={handleClick}>Post a listing</button>
                 </div>
-                {/* <div className="sell-info-picture"></div> */}
                 <div>
                     <img src={window.sell_info_pic} />    
                 </div>
