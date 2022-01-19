@@ -60,6 +60,12 @@ export const ListingButton = (props) => {
     )
 
     const handleButton = () => {
+        if (currUser === null) {
+            return (
+                saveButton
+            )
+        }
+        
         let temp = Object.values(saves)
         for (let i = 0; i < temp.length; i++) {
             let currentSave = temp[i];
