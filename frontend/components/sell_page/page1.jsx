@@ -1,56 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const Page1 = () => {
-    const [values, setValues] = useState({
-        step: 1,
-        price: "",
-        address: "",
-        beds: "",
-        baths: "",
-        zipcode: "",
-        sqft: "",
-        description: "",
-        lat: "",
-        lng: "",
-        status: "",
-        stlye: "",
-        realator: ""
-    });
-
-    const newListing = {
-        price: values.price,
-        address: values.address,
-        beds: values.beds,
-        baths: values.baths,
-        zipcode: values.zipcode,
-        sqft: values.sqft,
-        description: values.description,
-        lat: values.lat,
-        lng: values.lng,
-        status: values.status,
-        style: values.style,
-        realator: values.realator
-    }
-
-    const nextStep = () => {
-        const { step } = this.state;
-        setValues({
-            step: step + 1
-        });
-    };
-
-    const prevStep = () => {
-        const { step } = this.state;
-        setValues({
-            step: step - 1
-        });
-    };
-
-    const handleChange = input => e => {
-        setValues({
-            [input]: e.target.value
-        });
-    };
+export const Page1 = (props) => {
+    const { values, nextStep, handleChange } = props;
 
     return(
         <div className="page1-container">
@@ -66,7 +17,8 @@ export const Page1 = () => {
                         />
                         <br />
                         <label>Status:</label>
-                        <select name="status" id="select1" onChange={handleChange("status")}>
+                        <select className="realator-select" name="status" id="select2" onChange={handleChange("status")}>
+                        <option value="none" selected disabed hidden>Select an Option</option>
                             <option value="for sale">For Sale</option>
                             <option value="for rent">For Rent</option>
                         </select>
@@ -86,7 +38,8 @@ export const Page1 = () => {
                         />
                         <br />
                         <label>Realator:</label>
-                        <select className="realator-select" name="status" id="select2" onChange={handleRealator}>
+                        <select className="realator-select" name="status" id="select2" onChange={handleChange("realator")}>
+                        <option value="none" selected disabed hidden>Select an Option</option>
                             <option value="Crown Realators">Crown Realators</option>
                             <option value="Empire Estates">Empire Estates</option>
                             <option value="Royalty Regals">Royalty Regals</option>
@@ -106,6 +59,10 @@ export const Page1 = () => {
                             onChange={handleChange("lng")}
                             defaultValue={values.lng}
                         />
+                        <br />
+                        <div className="page1-buttons">
+                            <button onClick={nextStep} className="sell-cont-btn">Continue</button>
+                        </div>
                     </form>
                 </div>
             </div>

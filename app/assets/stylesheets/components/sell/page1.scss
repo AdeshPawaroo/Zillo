@@ -99,3 +99,53 @@
     height: 2rem;
     width: 18%;
 }
+
+.page1-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sell-cont-btn {
+    color: blue;
+    background-color: white;
+    font-family: 'Antic Slab', serif;
+    width: 14%;
+    font-size: 1.5rem;
+}
+
+.sell-cont-btn:hover    {
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.page2-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sell-prev-btn {
+    color: blue;
+    background-color: white;
+    font-family: 'Antic Slab', serif;
+    width: 14%;
+    font-size: 1.5rem;
+}
+
+.sell-prev-btn:hover    {
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.confirm-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-sell > p {
+    color: red;
+}   

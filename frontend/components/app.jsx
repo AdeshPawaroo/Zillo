@@ -4,8 +4,8 @@ import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
 import { BuyPage } from './listings_index/buy';
 import { RentPage } from './listings_index/rent';
-// import { SellGreeting } from "./sell_page/sell_greeting";
-import { Page1 } from './sell_page/page1';
+import { SellGreeting } from "./sell_page/sell_greeting";
+import { SellForm } from './sell_page/sell_form';
 import { UserSales } from './user_listings/user_sells';
 import { ListingShow } from './listing/listing_show';
 import { UserSaves } from "./user_listings/user_saves";
@@ -21,8 +21,8 @@ const App = () => {
                 <Route path="/" element={<Splash />} />
                 <Route path="/buy" element={<BuyPage />} />
                 <Route path="/rent" element={<RentPage />} />
-                {/* <Route path="/sell" element={<SellGreeting />} /> */}
-                <Route path="/sell" element={<Page1 />} />
+                <Route path="/sell/greeting" element={<SellGreeting />} />
+                <Route path="/sell" element={<SellForm />} />
                 <Route path="/listings/:listingid" element={<ListingShow />} />
                 <Route path="/user/listings" element={<UserSales />} />
                 <Route path="/user/saves" element={<UserSaves />} />

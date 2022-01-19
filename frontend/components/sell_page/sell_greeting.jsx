@@ -1,6 +1,11 @@
 import React from "react";
+import { SellForm } from "./sell_form";
 
 export const SellGreeting = () => {
+    const handleClick = () => {
+        window.location = "#/sell"
+    }
+
     return (
         <div className="sell-greeting-container">
             <div className="sell-greeting-slogan">
@@ -26,7 +31,7 @@ export const SellGreeting = () => {
                     </p>
                     <br />
                     <br />
-                    <button className="sell-info-button">Post a listing</button>
+                    <button className="sell-info-button" onClick={handleClick}>Post a listing</button>
                 </div>
                 {/* <div className="sell-info-picture"></div> */}
                 <div>
