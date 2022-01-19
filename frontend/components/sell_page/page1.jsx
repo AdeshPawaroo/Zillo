@@ -18,7 +18,7 @@ export const Page1 = (props) => {
                         <br />
                         <label>Status:</label>
                         <select className="realator-select" name="status" id="select2" onChange={handleChange("status")}>
-                        <option value="none" selected disabed hidden>Select an Option</option>
+                            <option value="none" selected disabled hidden>Select an Option</option>
                             <option value="for sale">For Sale</option>
                             <option value="for rent">For Rent</option>
                         </select>
@@ -39,7 +39,7 @@ export const Page1 = (props) => {
                         <br />
                         <label>Realator:</label>
                         <select className="realator-select" name="status" id="select2" onChange={handleChange("realator")}>
-                        <option value="none" selected disabed hidden>Select an Option</option>
+                        <option value="none" selected disabled hidden>Select an Option</option>
                             <option value="Crown Realators">Crown Realators</option>
                             <option value="Empire Estates">Empire Estates</option>
                             <option value="Royalty Regals">Royalty Regals</option>
@@ -66,6 +66,7 @@ export const Page1 = (props) => {
                     </form>
                 </div>
             </div>
+            <br />
             <br />
             <h1>Why post on Zillo?</h1>
             <div className="page1-info">
