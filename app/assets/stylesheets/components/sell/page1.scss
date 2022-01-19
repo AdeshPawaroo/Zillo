@@ -1,7 +1,6 @@
 .page1-container {
     width: 100%;
     height: 130vh;
-    border: black solid;
 }
 
 .page1-container > h1 {
@@ -33,8 +32,7 @@
 
 .page1-contents {
     width: 100%;
-    height: 60%;
-    border: black solid;
+    height: 40%;
 }
 
 .page1-contents > h1 {
@@ -48,13 +46,56 @@
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
-.page1-form {
+.page1-form-container {
     width: 100%;
-    height: 87%;
-    background-color: lightblue;
-    border: black solid;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.page1-form {
+    width: 60%;
+    height: 80%;
+    background-image: url("page1-main.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Antic Slab', serif;
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.page1-form > input {
+    height: 2rem;
+    width: 40%;
+    font-size: 1.5rem;
+    font-family: 'Antic Slab', serif;
+}
+
+.page1-form > select {
+    height: 2rem;
+    width: 10%;
+    font-size: 1.3rem;
+}
+
+.page1-form > label {
+    color: white;
+}
+
+#select2 {
+    height: 2rem;
+    width: 18%;
 }

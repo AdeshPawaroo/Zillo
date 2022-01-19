@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 
 export const Page1 = () => {
-    const [status, setStatus] = useState({
-        status: ""
-    });
-
-    const [style, setStyle] = useState({
-        style: ""
-    });
-
-    const [realator, setRealator] = useState({
-        realator: ""
-    });
-
     const [values, setValues] = useState({
         step: 1,
         price: "",
@@ -24,7 +12,25 @@ export const Page1 = () => {
         description: "",
         lat: "",
         lng: "",
+        status: "",
+        stlye: "",
+        realator: ""
     });
+
+    const newListing = {
+        price: values.price,
+        address: values.address,
+        beds: values.beds,
+        baths: values.baths,
+        zipcode: values.zipcode,
+        sqft: values.sqft,
+        description: values.description,
+        lat: values.lat,
+        lng: values.lng,
+        status: values.status,
+        style: values.style,
+        realator: values.realator
+    }
 
     const nextStep = () => {
         const { step } = this.state;
@@ -46,45 +52,65 @@ export const Page1 = () => {
         });
     };
 
-    const handleRealator = (e) => {
-        setRealator({
-            realator: e.target.value
-        });
-    };
-
-    const handleStyle = (e) => {
-        setStyle({
-            style: e.target.value
-        });
-    };
-
-    const handleStatus = (e) => {
-        setStatus({
-            status: e.target.value
-        });
-    };
-    console.log(values.price, "asdasd");
     return(
         <div className="page1-container">
             <div className="page1-contents">
                 <h1>Post a Listing by Owner</h1>
-                <div className="page1-form">
-                    <label>Price (Please include a "$" and ","s:</label>
-                    <input type="textarea" 
-                        placeholder={values.price}
-                        onChange={handleChange("price")}
-                        defaultValue={values.price}
-                    />
-                    <label>Status</label>
-                    <select name="status" id="select1" onChange={handleStatus}>
-                        <option value="for sale">For Sale</option>
-                        <option value="for rent">For Rent</option>
-                    </select>
+                <div className="page1-form-container">
+                    <form className="page1-form">
+                        <label>Price (Please include a "$" and ","s:</label>
+                        <input type="textarea" 
+                            placeholder={values.price}
+                            onChange={handleChange("price")}
+                            defaultValue={values.price}
+                        />
+                        <br />
+                        <label>Status:</label>
+                        <select name="status" id="select1" onChange={handleChange("status")}>
+                            <option value="for sale">For Sale</option>
+                            <option value="for rent">For Rent</option>
+                        </select>
+                        <br />
+                        <label>Address:</label>
+                        <input type="textarea" 
+                            placeholder={values.address}
+                            onChange={handleChange("address")}
+                            defaultValue={values.address}
+                        />
+                        <br />
+                        <label>Zipcode:</label>
+                        <input type="textarea" 
+                            placeholder={values.zipcode}
+                            onChange={handleChange("zipcode")}
+                            defaultValue={values.zipcode}
+                        />
+                        <br />
+                        <label>Realator:</label>
+                        <select className="realator-select" name="status" id="select2" onChange={handleRealator}>
+                            <option value="Crown Realators">Crown Realators</option>
+                            <option value="Empire Estates">Empire Estates</option>
+                            <option value="Royalty Regals">Royalty Regals</option>
+                            <option value="Sunshine Agency">Sunshine Agency</option>
+                        </select>
+                        <br />
+                        <label>Latitude:</label>
+                        <input type="textarea" 
+                            placeholder={values.lat}
+                            onChange={handleChange("lat")}
+                            defaultValue={values.lat}
+                        />
+                        <br />
+                        <label>Longitude:</label>
+                        <input type="textarea" 
+                            placeholder={values.lng}
+                            onChange={handleChange("lng")}
+                            defaultValue={values.lng}
+                        />
+                    </form>
                 </div>
             </div>
             <br />
             <h1>Why post on Zillo?</h1>
-            <br />
             <div className="page1-info">
                 <div className="page1-panel">
                     <img src={window.page1img1} />
