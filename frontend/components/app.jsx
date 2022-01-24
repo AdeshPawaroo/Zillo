@@ -2,7 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
-import { BuyPage } from './listings_index/buy';
+// import { BuyPage } from './listings_index/buy';
+import { BuyPageFiltered } from './listings_index/buy_filtered';
 import { RentPage } from './listings_index/rent';
 import { SellGreeting } from "./sell_page/sell_greeting";
 import { SellForm } from './sell_page/sell_form';
@@ -21,7 +22,7 @@ const App = () => {
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Splash />} />
-                <Route path="/buy" element={<BuyPage />} />
+                <Route path="/buy" element={<BuyPageFiltered />} />
                 <Route path="/rent" element={<RentPage />} />
                 <Route path="/sell/greeting" element={<SellGreeting />} />
                 <Route path="/sell" element={<SellForm />} />

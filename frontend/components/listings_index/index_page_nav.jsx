@@ -1,7 +1,6 @@
 import React from "react";
 
-export const IndexPageNav = (props) => {
-
+export const IndexPageNav = (props) => {                                                                                                                
     return (
         <div className="buy-nav-container">
             <input type="textarea" 

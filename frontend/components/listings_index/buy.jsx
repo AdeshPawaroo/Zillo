@@ -8,12 +8,10 @@ export const BuyPage = (props) => {
     return (
         <div className="buy-page-container">
             <IndexPageNav />
-
             <div className="buy-page-contents">
                 <div className="buy-page-left">
                     <BuyMap />
                 </div>
-
                 <div className="buy-page-right">
                     <ListingsForSale />
                 </div>
