@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BuyMap } from "../map/buy_map";
+import { FilteredIndex } from "./filtered_index";
 
 export class BuyPageFiltered extends React.Component {
     constructor(props) {
@@ -137,7 +138,9 @@ export class BuyPageFiltered extends React.Component {
                     <BuyMap />
                 </div>
                 <div className="buy-page-right">
-                   
+                    <FilteredIndex 
+                        options={this.state}
+                    />
                 </div>
             </div>
             </div>
@@ -145,7 +148,6 @@ export class BuyPageFiltered extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         return(
             <div>
                 {this.handleNavBar()}

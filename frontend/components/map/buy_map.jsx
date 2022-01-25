@@ -40,9 +40,9 @@ export const BuyMap = (props) => {
         strokeWeight: 3
     }
 
-    useEffect(() => {
-        dispatch(fetchListings());
-    }, []);
+    // useEffect(() => {
+    //     dispatch(fetchListings());
+    // }, []);
 
     for (let i = 0; i < stateListings.length; i++) {
         let currentListing = stateListings[i];
