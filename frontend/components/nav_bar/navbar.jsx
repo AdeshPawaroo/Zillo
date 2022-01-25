@@ -56,7 +56,7 @@ export const Navbar = () => {
             <div className="navbar-left">
                 <Link to="/buy">Buy</Link>
                 <Link to="/rent">Rent</Link>
-                <Link to="/sell">Sell</Link>
+                <Link to="/sell/greeting">Sell</Link>
                 <Link to="/loans">Home Loans</Link>
                 <Link to="/agent">Portfolio Site</Link>
             </div>

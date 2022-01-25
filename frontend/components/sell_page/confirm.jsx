@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createListing } from "../../actions/listing_actions";
 
 export const Confirm = (props) => {
-    
+    const { prevStep } = props;
     const dispatch = useDispatch();
     const currentUser = useSelector(state => state.session.currentUser);
 
@@ -238,8 +238,11 @@ export const Confirm = (props) => {
                 <br />
                 {handleDescription()}
                 <br />
-                <button onClick={handleClick} className="sell-confirm-btn">Submit</button>
-                <button onClick={props.prevStep} className="sell-prev-btn">Go Back</button>
+                <br />
+                <div className="confirm-buttons">
+                    <button onClick={prevStep} className="sell-prev-btn">Go Back</button>
+                    <button onClick={handleClick} className="sell-cont-btn">Submit</button>
+                </div>
             </div>
         </div>
     )

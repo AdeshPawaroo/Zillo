@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSaves, createSave, deleteSave } from "../../actions/save_actions";
+import { openModal } from "../../actions/modal_actions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHeart as farFaHeart } from "@fortawesome/free-regular-svg-icons";
@@ -11,14 +12,18 @@ export const ListingButton = (props) => {
     library.add(fasFaHeart, farFaHeart);
     const dispatch = useDispatch();
     const saves = useSelector(state => state.entities.saves);
+    const currUser = useSelector(state => state.session.currentUser);
     const saveIds = Object.keys(saves);
     const currentListing = props.saveObj;
     let ele2 = {};
-    
+
     const handleSave = (e) => {
         e.preventDefault();
-
+        if (currUser === null) {
+            dispatch(openModal("login"))
+        } else {
         dispatch(createSave(currentListing));
+        }
     }
 
     const handleDelete = (e) => {
@@ -55,6 +60,12 @@ export const ListingButton = (props) => {
     )
 
     const handleButton = () => {
+        if (currUser === null) {
+            return (
+                saveButton
+            )
+        }
+        
         let temp = Object.values(saves)
         for (let i = 0; i < temp.length; i++) {
             let currentSave = temp[i];

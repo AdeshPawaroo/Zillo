@@ -70,14 +70,15 @@ realator = [
 ];
 
 style = [
-    'shack',
-    'ranch',
-    'manor',
-    'palace',
-    'mansion',
-    'castle',
+    'bungalow',
     'cottage',
-    'colonial'
+    'victorian',
+    'ranch',
+    'colonial',
+    'manor',
+    'villa',
+    'chalet',
+    'apartment'
 ];
 
 #basic description

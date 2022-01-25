@@ -1,73 +1,152 @@
 .page1-container {
-    height: 67vh;
     width: 100%;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+    // height: 130vh;
+    height: 120vh;
 }
 
-.page1-container > h1 { 
+.page1-container > h1 {
     font-family: 'Antic Slab', serif;
     font-weight: bold;
     font-size: 2rem;
+    text-align: center;
+}
+
+.page1-info {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.page1-panel {
+    width: 28%;
+    height: 100%;
+    font-weight: bold;
+    font-family: 'Antic Slab', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.page1-contents {
+    width: 100%;
+    height: 40%;
+}
+
+.page1-contents > h1 {
+    font-weight: bold;
+    font-family: 'Antic Slab', serif;
+    color: white;
+    font-size: 2rem;
+    background-color: blue;
+    width: 100%;
+    height: 4.3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.page1-form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .page1-form {
-    width: 70%;
-    height: 70%;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: white;
+    width: 60%;
+    height: 80%;
+    background-image: url("page1-main.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Antic Slab', serif;
+    font-size: 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     overflow: scroll;
     overflow-x: hidden;
-}
-
-.page1-form > label {
-    font-family: 'Antic Slab', serif;
-    font-size: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .page1-form > input {
-    width: 20%;
+    height: 2rem;
+    width: 40%;
+    font-size: 1.5rem;
     font-family: 'Antic Slab', serif;
+}
+
+.page1-form > select {
+    height: 2rem;
+    width: 10%;
+    font-size: 1.3rem;
+}
+
+.page1-form > label {
+    color: white;
+}
+
+#select2 {
+    height: 2rem;
+    width: 18%;
+}
+
+.page1-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .sell-cont-btn {
-    margin-top: 2rem;
-    width: 10%;
-    height: 5vh;
-    font-family: 'Antic Slab', serif;
     color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: .50rem;
+    background-color: white;
+    font-family: 'Antic Slab', serif;
+    width: 14%;
+    font-size: 1.5rem;
 }
 
-.sell-cont-btn:hover {
+.sell-cont-btn:hover    {
     color: white;
     background-color: blue;
     cursor: pointer;
+}
+
+.page2-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .sell-prev-btn {
-    margin-top: 2rem;
-    width: 10%;
-    height: 5vh;
-    font-family: 'Antic Slab', serif;
     color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: .50rem;
+    background-color: white;
+    font-family: 'Antic Slab', serif;
+    width: 14%;
+    font-size: 1.5rem;
 }
 
-.sell-prev-btn:hover {
+.sell-prev-btn:hover    {
     color: white;
     background-color: blue;
     cursor: pointer;
 }
+
+.confirm-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-sell > p {
+    color: red;
+}   
