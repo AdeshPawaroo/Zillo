@@ -38,12 +38,13 @@ export const FilteredIndex = (props) => {
                 flag = false;
             }
         }
+        
 
         if (flag === true) {
             filteredListings.push(currentListing);
         }
     }
-    console.log(filteredListings, "filtered");
+    console.log(filteredListings, "filtered listings");
     return (
         <div>
             here
