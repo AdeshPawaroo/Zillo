@@ -25,10 +25,14 @@ export const FilteredIndex = (props) => {
         let currentListing = listings[i];
         let currentListingId = listingIds[i];
         let flag = false;
-
+       
         for (let j = 0; j < optionsValues.length; j++) {
             let currentOptionValue = optionsValues[j];
             let currentOptionKey = optionsKeys[j];
+
+            if (currentOptionKey === "zipcode") {
+                currentOptionValue = parseInt(currentOptionValue);
+            }
 
             if (currentListing[currentOptionKey] === currentOptionValue) {
                 flag = true;

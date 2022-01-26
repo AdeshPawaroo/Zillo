@@ -15,7 +15,7 @@ export class BuyPageFiltered extends React.Component {
             baths: ""
         }
     }
-      
+     
     handleChange = input => e => {
         this.setState({
             [input]: e.target.value
@@ -79,10 +79,10 @@ export class BuyPageFiltered extends React.Component {
                 <label>Zipcode: {" "}</label>
                 <select onChange={this.handleChange("zipcode")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
-                    <option value="11111">11111</option>
-                    <option value="22222">22222</option>
-                    <option value="33333">33333</option>
-                    <option value="44444">44444</option>
+                    <option value={11111}>11111</option>
+                    <option value={22222}>22222</option>
+                    <option value={33333}>33333</option>
+                    <option value={44444}>44444</option>
                     <option value="55555">55555</option>
                     <option value="66666">66666</option>
                     <option value="77777">77777</option>
@@ -93,7 +93,7 @@ export class BuyPageFiltered extends React.Component {
             </div>
         )
     }
-
+   
     handleBedsFilter = () => {
         return (
             <div>
