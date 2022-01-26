@@ -20,26 +20,30 @@ export const FilteredIndex = (props) => {
     useEffect(() => {
         dispatch(fetchSaves());
     }, []);
+    
+    for (let i = 0; i < listings.length; i++) {
+        let currentListing = listings[i];
+        let currentListingId = listingIds[i];
+        let flag = false;
 
-    for (let i = 0; i < optionsValues.length; i++) {
-        let currentOptionValue = optionsValues[i];
-        let currentOptionKey = optionsKeys[i];
+        for (let j = 0; j < optionsValues.length; j++) {
+            let currentOptionValue = optionsValues[j];
+            let currentOptionKey = optionsKeys[j];
 
-        for (let j = 0; j < listings.length; j++) {
-            let currentListing = listings[i];
-            let currentListingId = listingIds[i];
-
-            if () {
-
+            if (currentListing[currentOptionKey] === currentOptionValue) {
+                flag = true;
+            } else if (currentOptionValue === "") {
+                continue;
+            } else {
+                flag = false;
             }
+        }
 
-            console.log(currentOptionValue, "value");
-            console.log(currentOptionKey, "key");
-            console.log(currentListing, "listing");
-            console.log(currentListingId, "listing id");
+        if (flag === true) {
+            filteredListings.push(currentListing);
         }
     }
-
+    console.log(filteredListings, "filtered");
     return (
         <div>
             here
