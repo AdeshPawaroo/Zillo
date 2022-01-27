@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListings } from "../../actions/listing_actions";
 import { fetchSaves } from "../../actions/save_actions";
-// import { Listing } from "./listing";
+import { Listing } from "../listing/listing";
 
 export const FilteredIndex = (props) => {
     const dispatch = useDispatch();
@@ -30,11 +30,9 @@ export const FilteredIndex = (props) => {
             let currentOptionValue = optionsValues[j];
             let currentOptionKey = optionsKeys[j];
 
-            if (currentOptionKey === "zipcode") {
+            if (currentOptionKey === "zipcode" || currentOptionKey === "beds" || currentOptionKey === "baths") {
                 currentOptionValue = parseInt(currentOptionValue);
-            }
-
-            if (currentListing[currentOptionKey] === currentOptionValue) {
+            } else if (currentListing[currentOptionKey] === currentOptionValue) {
                 flag = true;
             } else if (currentOptionValue === "") {
                 continue;
@@ -43,15 +41,32 @@ export const FilteredIndex = (props) => {
             }
         }
         
-
         if (flag === true) {
             filteredListings.push(currentListing);
+            filteredListingsIds.push(currentListingId);
         }
     }
-    console.log(filteredListings, "filtered listings");
+
+    const handleEmptyIndex = () => {
+        if (filteredListings.length === 0) {
+            return (
+                <div className="empty-filtered-index">
+                    <h1>No listings match your current search.</h1>
+                </div>
+            );
+        }
+    }
+    
     return (
-        <div>
-            here
+        <div className="listings-index">
+            {filteredListings.map((listing, i) => (
+                <Listing
+                    key={i}
+                    listing={listing}
+                    listingId={listingIds[i]}
+                />
+            ))}
+            {handleEmptyIndex()}
         </div>
     )
 }
