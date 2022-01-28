@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchListings } from "../../actions/listing_actions";
 import { fetchSaves } from "../../actions/save_actions";
 import { Listing } from "../listing/listing";
+import { ListingsIndex } from "../listing/listings_index";
 
 export const FilteredIndex = (props) => {
     const dispatch = useDispatch();
@@ -21,6 +22,15 @@ export const FilteredIndex = (props) => {
         dispatch(fetchSaves());
     }, []);
     
+    const handleEmptyCheck = () => {
+        for (let i = 0; i < optionsValues.length; i++) {
+            if (optionsValues[i] !== "") {
+                return false;
+            }
+        }
+        return true;
+    };
+
     for (let i = 0; i < listings.length; i++) {
         let currentListing = listings[i];
         let currentListingId = listingIds[i];
@@ -56,17 +66,51 @@ export const FilteredIndex = (props) => {
             );
         }
     }
+
+    //check to see if handleEmptyCheck is true
+    //if true, return listings index
+    //if false, return filtered listings index
+    const handleRender = () => {
+        if (handleEmptyCheck() === true) {
+            return (
+                <div>
+                    <ListingsIndex 
+                        listings={listings} 
+                        listingIds={listingIds} 
+                    />
+                </div>
+            )
+        } else {
+            return (
+                <div className="listings-index">
+                    {filteredListings.map((listing, i) => (
+                        <Listing
+                            key={i}
+                            listing={listing}
+                            listingId={listingIds[i]}
+                        />
+                    ))}
+                    {handleEmptyIndex()}
+                </div>
+            )
+        }
+    }
     
+    // return (
+        // <div className="listings-index">
+        //     {filteredListings.map((listing, i) => (
+        //         <Listing
+        //             key={i}
+        //             listing={listing}
+        //             listingId={listingIds[i]}
+        //         />
+        //     ))}
+        //     {handleEmptyIndex()}
+        // </div>
+    // )
     return (
         <div className="listings-index">
-            {filteredListings.map((listing, i) => (
-                <Listing
-                    key={i}
-                    listing={listing}
-                    listingId={listingIds[i]}
-                />
-            ))}
-            {handleEmptyIndex()}
+            {handleRender()}
         </div>
-    )
+    );
 }

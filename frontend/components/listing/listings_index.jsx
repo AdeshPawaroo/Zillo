@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from "react";
-import { useDispatch, useSelector } from "react-redux"; 
-import { fetchListings } from "../../actions/listing_actions";
-import { fetchSaves } from "../../actions/save_actions";
+import React from "react";
 import { Listing } from "./listing";
 
-export const ListingsIndex = () => {
+export const ListingsIndex = (props) => {
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchListings());
-    }, []);
+    // useEffect(() => {
+    //     dispatch(fetchListings());
+    // }, []);
 
-    useEffect(() => {
-        dispatch(fetchSaves())
-    }, []);
+    // useEffect(() => {
+    //     dispatch(fetchSaves())
+    // }, []);
 
-    const listings = Object.values(useSelector(state => state.entities.listings));
-    const listingIds = Object.keys(useSelector(state => state.entities.listings));
+    // const listings = Object.values(useSelector(state => state.entities.listings));
+    // const listingIds = Object.keys(useSelector(state => state.entities.listings));
+
+    const listings = props.listings;
+    const listingIds = props.listingIds;
 
     return (
         <div className="listings-index">
@@ -30,5 +30,4 @@ export const ListingsIndex = () => {
             ))}
         </div>
     )
-
 }
