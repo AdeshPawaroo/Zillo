@@ -30,7 +30,6 @@ export class BuyPageFiltered extends React.Component {
                     <option value="none" selected disabled hidden>Select an Option</option>
                     <option value="for sale">For Sale</option>
                     <option value="for rent">For Rent</option>
-                    <option value="''">No Preference</option>
                 </select>
             </div>
         )
@@ -46,7 +45,6 @@ export class BuyPageFiltered extends React.Component {
                     <option value="Bargain Real Estate">Bargain Real Estate</option>
                     <option value="Underground Real Estate">Underground Real Estate</option>
                     <option value="Eastside Real Estate">Eastside Real Estate</option>
-                    <option value="''">No Preference</option>
                 </select>
             </div>
         )
@@ -67,7 +65,6 @@ export class BuyPageFiltered extends React.Component {
                     <option value="villa">Villa</option>
                     <option value="chalet">Chalet</option>
                     <option value="apartment">apartment</option>
-                    <option value="''">No Preference</option>
                 </select>
             </div>
         )
@@ -79,16 +76,15 @@ export class BuyPageFiltered extends React.Component {
                 <label>Zipcode: {" "}</label>
                 <select onChange={this.handleChange("zipcode")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
-                    <option value={11111}>11111</option>
-                    <option value={22222}>22222</option>
-                    <option value={33333}>33333</option>
-                    <option value={44444}>44444</option>
+                    <option value="11111">11111</option>
+                    <option value="22222">22222</option>
+                    <option value="33333">33333</option>
+                    <option value="44444">44444</option>
                     <option value="55555">55555</option>
                     <option value="66666">66666</option>
                     <option value="77777">77777</option>
                     <option value="88888">88888</option>
                     <option value="99999">99999</option>
-                    <option value="''">No Preference</option>
                 </select>
             </div>
         )
@@ -105,7 +101,6 @@ export class BuyPageFiltered extends React.Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-                    <option value="''">No Preference</option>
                 </select>
             </div>
         )
@@ -122,7 +117,6 @@ export class BuyPageFiltered extends React.Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-                    <option value="''">No Preference</option>
                 </select>
             </div>
         )
