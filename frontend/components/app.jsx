@@ -2,9 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Splash } from './splash/splash';
 import { Navbar } from './nav_bar/navbar';
-// import { BuyPage } from './listings_index/buy';
-import { BuyPageFiltered } from './listings_index/buy_filtered';
-import { RentPage } from './listings_index/rent';
+import { FilteredNavBar } from './listings_index/filtered_navbar.jsx';
 import { SellGreeting } from "./sell_page/sell_greeting";
 import { SellForm } from './sell_page/sell_form';
 import { UserSales } from './user_listings/user_sells';
@@ -22,8 +20,8 @@ const App = () => {
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Splash />} />
-                <Route path="/buy" element={<BuyPageFiltered />} />
-                <Route path="/rent" element={<RentPage />} />
+                <Route path="/buy" element={<FilteredNavBar />} />
+                <Route path="/rent" element={<FilteredNavBar/>} />
                 <Route path="/sell/greeting" element={<SellGreeting />} />
                 <Route path="/sell" element={<SellForm />} />
                 <Route path="/listings/:listingid" element={<ListingShow />} />

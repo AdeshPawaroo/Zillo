@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { BuyMap } from "../map/buy_map";
 import { FilteredIndex } from "./filtered_index";
 
-export class BuyPageFiltered extends React.Component {
+export class FilteredNavBar extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            status: "",
             realator: "",
             style: "",
             zipcode: "",
@@ -20,19 +18,6 @@ export class BuyPageFiltered extends React.Component {
         this.setState({
             [input]: e.target.value
         })
-    }
-
-    handleStatusFilter = () => {
-        return (
-            <div>
-                <label>Status: {" "}</label>
-                <select onChange={this.handleChange("status")}>
-                    <option value="none" selected disabled hidden>Select an Option</option>
-                    <option value="for sale">For Sale</option>
-                    <option value="for rent">For Rent</option>
-                </select>
-            </div>
-        )
     }
 
     handleRealatorFilter = () => {
@@ -126,23 +111,12 @@ export class BuyPageFiltered extends React.Component {
         return (
             <div className="buy-page-container">
                 <div className="buy-nav-container">
-                    {this.handleStatusFilter()}
                     {this.handleRealatorFilter()}
                     {this.handleStyleFilter()}
                     {this.handleZipcodeFilter()}
                     {this.handleBedsFilter()}
                     {this.handleBathsFilter()}
                 </div>
-                <div className="buy-page-contents">
-                <div className="buy-page-left">
-                    <BuyMap />
-                </div>
-                <div className="buy-page-right">
-                    <FilteredIndex 
-                        options={this.state}
-                    />
-                </div>
-            </div>
             </div>
         )
     }
@@ -151,7 +125,21 @@ export class BuyPageFiltered extends React.Component {
         return(
             <div>
                 {this.handleNavBar()}
+                <FilteredIndex 
+                    options={this.state}
+                />
             </div>
         )
     }
 }
+
+  {/* <div className="buy-page-contents">
+                <div className="buy-page-left">
+                    <BuyMap />
+                </div>
+                <div className="buy-page-right">
+                    <FilteredIndex 
+                        options={this.state}
+                    />
+                </div> */}
+            {/* </div> */}
