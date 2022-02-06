@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { BuyMap } from "../map/buy_map";
 import { FilteredIndex } from "./filtered_index";
 
-export class BuyPageFiltered extends React.Component {
+export class FilteredNavBar extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            status: "",
             realator: "",
             style: "",
             zipcode: "",
@@ -15,24 +13,11 @@ export class BuyPageFiltered extends React.Component {
             baths: ""
         }
     }
-      
+     
     handleChange = input => e => {
         this.setState({
             [input]: e.target.value
         })
-    }
-
-    handleStatusFilter = () => {
-        return (
-            <div>
-                <label>Status: {" "}</label>
-                <select onChange={this.handleChange("status")}>
-                    <option value="none" selected disabled hidden>Select an Option</option>
-                    <option value="for sale">For Sale</option>
-                    <option value="for rent">For Rent</option>
-                </select>
-            </div>
-        )
     }
 
     handleRealatorFilter = () => {
@@ -89,7 +74,7 @@ export class BuyPageFiltered extends React.Component {
             </div>
         )
     }
-
+   
     handleBedsFilter = () => {
         return (
             <div>
@@ -101,6 +86,8 @@ export class BuyPageFiltered extends React.Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
                 </select>
             </div>
         )
@@ -117,6 +104,8 @@ export class BuyPageFiltered extends React.Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
                 </select>
             </div>
         )
@@ -126,23 +115,12 @@ export class BuyPageFiltered extends React.Component {
         return (
             <div className="buy-page-container">
                 <div className="buy-nav-container">
-                    {this.handleStatusFilter()}
                     {this.handleRealatorFilter()}
                     {this.handleStyleFilter()}
                     {this.handleZipcodeFilter()}
-                    {this.handleBedsFilter()}
                     {this.handleBathsFilter()}
+                    {this.handleBedsFilter()}
                 </div>
-                <div className="buy-page-contents">
-                <div className="buy-page-left">
-                    <BuyMap />
-                </div>
-                <div className="buy-page-right">
-                    <FilteredIndex 
-                        options={this.state}
-                    />
-                </div>
-            </div>
             </div>
         )
     }
@@ -151,7 +129,21 @@ export class BuyPageFiltered extends React.Component {
         return(
             <div>
                 {this.handleNavBar()}
+                <FilteredIndex 
+                    options={this.state}
+                />
             </div>
         )
     }
 }
+
+  {/* <div className="buy-page-contents">
+                <div className="buy-page-left">
+                    <BuyMap />
+                </div>
+                <div className="buy-page-right">
+                    <FilteredIndex 
+                        options={this.state}
+                    />
+                </div> */}
+            {/* </div> */}
