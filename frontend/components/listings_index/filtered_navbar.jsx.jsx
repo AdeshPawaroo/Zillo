@@ -86,6 +86,8 @@ export class FilteredNavBar extends React.Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
                 </select>
             </div>
         )
@@ -102,6 +104,8 @@ export class FilteredNavBar extends React.Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
                 </select>
             </div>
         )
@@ -114,8 +118,8 @@ export class FilteredNavBar extends React.Component {
                     {this.handleRealatorFilter()}
                     {this.handleStyleFilter()}
                     {this.handleZipcodeFilter()}
-                    {this.handleBedsFilter()}
                     {this.handleBathsFilter()}
+                    {this.handleBedsFilter()}
                 </div>
             </div>
         )
