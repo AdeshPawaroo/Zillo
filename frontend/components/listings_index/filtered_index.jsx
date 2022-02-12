@@ -26,8 +26,6 @@ export const FilteredIndex = (props) => {
         dispatch(fetchSaves());
     }, []);
 
-    //state never getting updated due to this, will never reach the else statement
-
     useEffect(() => {
         if (listings.listings.length === 0) {
             let temp1 = [];
@@ -58,33 +56,30 @@ export const FilteredIndex = (props) => {
         }else {
             let temp1 = listings.listings;
             let temp2 = listings.listingsIds;
-            for (let a = 0; a < listings.listings.length; a++) {
-                let listing = temp1[a];
-                let id = temp2[a];
-                for (let b = 0; b < optionValues.length; b++) {
-                    let value = optionValues[b];
-                    let key = optionKeys[b];
-                    if (value === '') {
-                        continue;
-                    }else if (key === "zipcode" || key === "beds" || key === "baths") {
-                        if (listing[key] === parseInt(value)) {
-                            temp1.splice(a, 1);
-                            temp2.splice(a, 1);
-                            console.log(temp1, "ONE");
-                            console.log(temp2, "TWO");
-                        }
-                    }else if (listing[key] !== value) {
-                        temp1.splice(a, 1);
-                        temp2.splice(a, 1);
-                    }
+            let flag = false;
+            for (let i = 0; i < temp1.length; i++) {
+                let listing = temp1[i];
+                let id = temp2[i];
+                for (let j = 0; j < optionValues.length; j++) {
+                    let value = optionValues[j];
+                    let key = optionKeys[j]; 
+                    if ((key === "zipcode" || key === "baths" || key === "beds") && listing[key] !== parseInt(value) && value !== '') {
+                        console.log("in the if");
+                        temp1.splice(i, 1);
+                        temp2.splice(i, 1);
+                    } else {
+                        console.log("in the else");
+                    }                                                                                                                   
                 }
             }
             setListings({
                 listings: temp1,
-                listingsIds: temp2
+                listingsIds:temp2
             });
         }
     }, [props.options]);
+
+    console.log(listings.listings, "LISTINGS");
 
     return (
         <div className="buy-page-contents">

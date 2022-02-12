@@ -49,7 +49,7 @@ export class FilteredNavBar extends React.Component {
                     <option value="manor">Manor</option>
                     <option value="villa">Villa</option>
                     <option value="chalet">Chalet</option>
-                    <option value="apartment">apartment</option>
+                    <option value="apartment">Apartment</option>
                 </select>
             </div>
         )
