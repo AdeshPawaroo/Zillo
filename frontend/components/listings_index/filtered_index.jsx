@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListings } from "../../actions/listing_actions";
 import { fetchSaves } from "../../actions/save_actions";
-import { BuyMap } from "../map/buy_map";
+import { FilteredMap } from "../map/filtered_map";
 import { ListingsIndex } from "./listings_index";
 
 export const FilteredIndex = (props) => {
@@ -113,7 +113,10 @@ export const FilteredIndex = (props) => {
     return (
         <div className="buy-page-contents">
             <div className="buy-page-left">
-                <BuyMap />
+                <FilteredMap 
+                    listings={listings.listings}
+                    listingIds={listings.listingsIds}
+                />
             </div>           
             <div className="buy-page-right">
                 <ListingsIndex 
