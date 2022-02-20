@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { ListingButton } from "./listing_button";
 
 export const Listing = (props) => {
-
     const dispatch = useDispatch();
     const currentUser = useSelector(state => state.session.currentUser)
     const currListing = props.listing
