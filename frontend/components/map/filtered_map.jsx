@@ -1,11 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { GoogleMap, Marker } from "@react-google-maps/api";
 
 export const FilteredMap = (props) => {
-    
-    const listings = Object.values(props.listings);
-    const listingIds = Object.keys(props.listingIds);
+    let listings = Object.values(props.listings);
+    let listingIds = Object.keys(props.listingIds);
     const locations = [];
+
+    if (listings.length === 0) {
+        listings = Object.values(useSelector(state => state.entities.listings));
+        listingIds = Object.keys(useSelector(state => state.entities.listings))
+    }
 
     const mapOptions = {
         height: "760px",
@@ -17,7 +22,6 @@ export const FilteredMap = (props) => {
         lng: -74.0445
     }
 
-    
     const redCircle = {
         path: google.maps.SymbolPath.CIRCLE,
         fillColor: "red",

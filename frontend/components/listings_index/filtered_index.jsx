@@ -25,7 +25,7 @@ export const FilteredIndex = (props) => {
     useEffect(() => {
         dispatch(fetchSaves());
     }, []);
-
+    
     useEffect(() => {
         if (listings.listings.length === 0) {
             let temp1 = [];
@@ -109,6 +109,8 @@ export const FilteredIndex = (props) => {
             });
         }
     }, [props.options]);
+    
+    console.log(listings.listings);
 
     return (
         <div className="buy-page-contents">
