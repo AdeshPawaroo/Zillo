@@ -22,7 +22,7 @@ export class FilteredNavBar extends React.Component {
 
     handleRealatorFilter = () => {
         return (
-            <div>
+            <div className="filter-dropdown">
                 <label>Realator: {" "}</label>
                 <select onChange={this.handleChange("realator")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
@@ -37,7 +37,7 @@ export class FilteredNavBar extends React.Component {
 
     handleStyleFilter = () => {
         return (
-            <div>
+            <div className="filter-dropdown">
                 <label>Style: {" "}</label>
                 <select onChange={this.handleChange("style")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
@@ -57,7 +57,7 @@ export class FilteredNavBar extends React.Component {
 
     handleZipcodeFilter = () => {
         return (
-            <div>
+            <div className="filter-dropdown">
                 <label>Zipcode: {" "}</label>
                 <select onChange={this.handleChange("zipcode")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
@@ -77,7 +77,7 @@ export class FilteredNavBar extends React.Component {
    
     handleBedsFilter = () => {
         return (
-            <div>
+            <div className="filter-dropdown">
                 <label>Beds: {" "}</label>
                 <select onChange={this.handleChange("beds")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
@@ -95,7 +95,7 @@ export class FilteredNavBar extends React.Component {
 
     handleBathsFilter = () => {
         return (
-            <div>
+            <div className="filter-dropdown">
                 <label>Baths: {" "}</label>
                 <select onChange={this.handleChange("baths")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
@@ -136,14 +136,3 @@ export class FilteredNavBar extends React.Component {
         )
     }
 }
-
-  {/* <div className="buy-page-contents">
-                <div className="buy-page-left">
-                    <BuyMap />
-                </div>
-                <div className="buy-page-right">
-                    <FilteredIndex 
-                        options={this.state}
-                    />
-                </div> */}
-            {/* </div> */}
