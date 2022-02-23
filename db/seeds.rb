@@ -81,19 +81,54 @@ style = [
     'apartment'
 ];
 
+prices = [
+    "$1,126,239",
+    "$2,714,625",
+    "$2,627,528",
+    "$1,098,618",
+    "$1,323,962",
+    "$1,971,174",
+    "$3,458,211",
+    "$6,798,221",
+    "$654,212",
+    "$558,412",
+    "$765,329",
+    "$650,212",
+    "$2,400,212",
+    "$1,523,112",
+    "$421,546",
+    "$4,161,231",
+    "$2,563,221",
+    "$1,523,112",
+    "$7,123,900",
+    "$10,232,123",
+    "$125,112",
+    "$1,235,534",
+    "$6,134,234",
+    "$7,125,372",
+    "$223,544",
+    "$3,458,122",
+    "$6,123,908",
+    "$2,905,121",
+    "$900,123"
+];
+
 #basic description
 description = [
-    "A rat is an exuberant crocodile? A prune is a prune's tiger. Few can name a unassuming tiger that isn't a fearless snail. 
-    The grape is a puppy; A spider is a snail's hamster?  Having been a gymnast, a honorable dog is a fish of the mind? Nowhere 
-    is it disputed that authors often misinterpret the wolf as a calm wolf, when in actuality it feels more like a selective crocodile. 
-    A blueberry is the bee of a persimmon."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+    et dolore magna aliqua. Sollicitudin tempor id eu nisl nunc. Pharetra massa massa ultricies mi quis 
+    hendrerit dolor magna. Non enim praesent elementum facilisis leo vel fringilla. Scelerisque eu ultrices vitae auctor. 
+    Et netus et malesuada fames ac turpis egestas maecenas. Arcu non sodales neque sodales ut etiam sit. 
+    Enim facilisis gravida neque convallis a cras semper auctor neque. Enim lobortis scelerisque fermentum dui faucibus. 
+    Eu volutpat odio facilisis mauris sit amet. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. 
+    Eget nullam non nisi est sit amet facilisis magna. Sit amet luctus venenatis lectus magna fringilla."
 ];
 
 # Listings in Queens
 listing1 = Listing.create!({
-    price: '$2,627,528',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000),
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -107,9 +142,9 @@ listing1 = Listing.create!({
 });
 
 listing2 = Listing.create!({
-    price: '$1,971,174',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000),
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -123,9 +158,9 @@ listing2 = Listing.create!({
 });
 
 listing3 = Listing.create!({
-    price: '$2,714,625',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -139,9 +174,9 @@ listing3 = Listing.create!({
 });
 
 listing4 = Listing.create!({
-    price: '$1,781,049',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -156,9 +191,9 @@ listing4 = Listing.create!({
 
 # Listings in Brooklyn
 listing5 = Listing.create!({
-    price: '$1,323,962',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -172,9 +207,9 @@ listing5 = Listing.create!({
 });
 
 listing6 = Listing.create!({
-    price: '$1,098,618',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -188,9 +223,9 @@ listing6 = Listing.create!({
 });
 
 listing7 = Listing.create!({
-    price: '$1,576,239',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -204,9 +239,9 @@ listing7 = Listing.create!({
 });
 
 listing8 = Listing.create!({
-    price: '$450,542',
+    price: prices.sample    
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -222,9 +257,9 @@ listing8 = Listing.create!({
 # Listings in Manhattan
 
 listing9 = Listing.create!({
-    price: '$1,200,343',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -238,9 +273,9 @@ listing9 = Listing.create!({
 });
 
 listing10 = Listing.create!({
-    price: '$765,329',
+    price: prices.sample    
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -254,9 +289,9 @@ listing10 = Listing.create!({
 });
 
 listing11 = Listing.create!({
-    price: '$3,458,211',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -270,9 +305,9 @@ listing11 = Listing.create!({
 });
 
 listing12 = Listing.create!({
-    price: '$558,412',
+    price: prices.sample    
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -288,9 +323,9 @@ listing12 = Listing.create!({
 # Listings in Bronx
 
 listing13 = Listing.create!({
-    price: '$6,798,221',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -304,9 +339,9 @@ listing13 = Listing.create!({
 });
 
 listing14 = Listing.create!({
-    price: '$654,212',
+    price: prices.sample    
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -320,9 +355,9 @@ listing14 = Listing.create!({
 });
 
 listing15 = Listing.create!({
-    price: '$2,400,212',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -336,9 +371,9 @@ listing15 = Listing.create!({
 });
 
 listing16 = Listing.create!({
-    price: '$650,212',
+    price: prices.sample    
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -354,9 +389,9 @@ listing16 = Listing.create!({
 # Listings in Staten Island
 
 listing17 = Listing.create!({
-    price: '$1,523,112',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -370,9 +405,9 @@ listing17 = Listing.create!({
 });
 
 listing18 = Listing.create!({
-    price: '$421,546',
+    price: prices.sample    
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -386,9 +421,9 @@ listing18 = Listing.create!({
 });
 
 listing19 = Listing.create!({
-    price: '$2,563,221',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -402,9 +437,9 @@ listing19 = Listing.create!({
 });
 
 listing20 = Listing.create!({
-    price: '$4,161,231',
+    price: prices.sample,
     beds: rand(2..6), 
-    baths: rand(3..6), 
+    baths: rand(2..6), 
     sqft: rand(900..3000), 
     status: status.sample, 
     address: Faker::Address.street_address, 
@@ -417,3 +452,562 @@ listing20 = Listing.create!({
     owner_id: 0 
 });
 
+listing21 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing22 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing23 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing24 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing25 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing26 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing27 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing28 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing29 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing30 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing31 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing32 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing33 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing34 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing35 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing36 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing37 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing38 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing39 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing40 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing41 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing42 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing43 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing44 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing45 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing46 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing47 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing48 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing49 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing50 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing51 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing52 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing53 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing54 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
+
+listing55 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: , 
+    lng: ,
+    owner_id: 0 
+});
