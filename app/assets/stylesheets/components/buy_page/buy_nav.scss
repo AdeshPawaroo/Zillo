@@ -1,10 +1,15 @@
 .buy-nav-container {
     padding: .55rem;
-    width: 100%;
+    width: 55%;
     display: flex;
+    justify-content: space-evenly;
     border-bottom: 1px solid black;
     border-width: thin;
-    
+    font-family: 'Antic Slab', serif;
+}
+
+.filter-dropdown > select {
+    font-family: 'Antic Slab', serif;
 }
 
 .buy-nav-container > button {
