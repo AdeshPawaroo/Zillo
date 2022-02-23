@@ -239,7 +239,7 @@ listing7 = Listing.create!({
 });
 
 listing8 = Listing.create!({
-    price: prices.sample    
+    price: prices.sample,    
     beds: rand(2..6), 
     baths: rand(2..6), 
     sqft: rand(900..3000), 
@@ -273,7 +273,7 @@ listing9 = Listing.create!({
 });
 
 listing10 = Listing.create!({
-    price: prices.sample    
+    price: prices.sample,    
     beds: rand(2..6), 
     baths: rand(2..6), 
     sqft: rand(900..3000), 
@@ -305,7 +305,7 @@ listing11 = Listing.create!({
 });
 
 listing12 = Listing.create!({
-    price: prices.sample    
+    price: prices.sample,    
     beds: rand(2..6), 
     baths: rand(2..6), 
     sqft: rand(900..3000), 
@@ -339,7 +339,7 @@ listing13 = Listing.create!({
 });
 
 listing14 = Listing.create!({
-    price: prices.sample    
+    price: prices.sample,    
     beds: rand(2..6), 
     baths: rand(2..6), 
     sqft: rand(900..3000), 
@@ -371,7 +371,7 @@ listing15 = Listing.create!({
 });
 
 listing16 = Listing.create!({
-    price: prices.sample    
+    price: prices.sample,    
     beds: rand(2..6), 
     baths: rand(2..6), 
     sqft: rand(900..3000), 
@@ -405,7 +405,7 @@ listing17 = Listing.create!({
 });
 
 listing18 = Listing.create!({
-    price: prices.sample    
+    price: prices.sample,    
     beds: rand(2..6), 
     baths: rand(2..6), 
     sqft: rand(900..3000), 
@@ -463,8 +463,8 @@ listing21 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.606619, 
+    lng: -74.135121,
     owner_id: 0 
 });
 
@@ -479,8 +479,8 @@ listing22 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.606718,
+    lng: -74.079843,
     owner_id: 0 
 });
 
@@ -495,8 +495,8 @@ listing23 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.642457, 
+    lng: -74.087304,
     owner_id: 0 
 });
 
@@ -511,8 +511,8 @@ listing24 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.710994, 
+    lng: -73.915172,
     owner_id: 0 
 });
 
@@ -527,8 +527,8 @@ listing25 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.737639, 
+    lng: -73.953995,
     owner_id: 0 
 });
 
@@ -543,8 +543,8 @@ listing26 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.728421, 
+    lng: -73.956093,
     owner_id: 0 
 });
 
@@ -559,8 +559,8 @@ listing27 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.750426, 
+    lng: -73.999191,
     owner_id: 0 
 });
 
@@ -575,8 +575,8 @@ listing28 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.812157, 
+    lng: -73.948843,
     owner_id: 0 
 });
 
@@ -591,8 +591,8 @@ listing29 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.864357, 
+    lng: -73.893964,
     owner_id: 0 
 });
 
@@ -607,8 +607,8 @@ listing30 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.872462, 
+    lng: -73.904040,
     owner_id: 0 
 });
 
@@ -623,8 +623,8 @@ listing31 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.735940, 
+    lng: -73.788453,
     owner_id: 0 
 });
 
@@ -639,8 +639,8 @@ listing32 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.706995, 
+    lng: -73.788853,
     owner_id: 0 
 });
 
@@ -655,8 +655,8 @@ listing33 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.672514, 
+    lng: -73.825068,
     owner_id: 0 
 });
 
@@ -671,8 +671,8 @@ listing34 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.678430, 
+    lng: -73.843376,
     owner_id: 0 
 });
 
@@ -687,8 +687,8 @@ listing35 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.760309, 
+    lng: -73.878706,
     owner_id: 0 
 });
 
@@ -703,8 +703,8 @@ listing36 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.795557, 
+    lng: -73.971778,
     owner_id: 0 
 });
 
@@ -719,8 +719,8 @@ listing37 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.790534, 
+    lng: -73.977821,
     owner_id: 0 
 });
 
@@ -735,8 +735,8 @@ listing38 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.844244, 
+    lng: -73.871475,
     owner_id: 0 
 });
 
@@ -751,8 +751,8 @@ listing39 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.513644, 
+    lng: -74.243534,
     owner_id: 0 
 });
 
@@ -767,8 +767,8 @@ listing40 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.549961, 
+    lng: -74.216772,
     owner_id: 0 
 });
 
@@ -783,8 +783,8 @@ listing41 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.617241, 
+    lng: -74.089820,
     owner_id: 0 
 });
 
@@ -799,8 +799,8 @@ listing42 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.667136, 
+    lng: -73.946987,
     owner_id: 0 
 });
 
@@ -815,8 +815,8 @@ listing43 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.701391, 
+    lng: 73.946112,
     owner_id: 0 
 });
 
@@ -831,8 +831,8 @@ listing44 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.718101, 
+    lng: -73.718082,
     owner_id: 0 
 });
 
@@ -847,8 +847,8 @@ listing45 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.739510, 
+    lng: -73.716122,
     owner_id: 0 
 });
 
@@ -863,8 +863,8 @@ listing46 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.691149, 
+    lng: -73.943630,
     owner_id: 0 
 });
 
@@ -879,8 +879,8 @@ listing47 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.706445, 
+    lng: -73.872942,
     owner_id: 0 
 });
 
@@ -895,8 +895,8 @@ listing48 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.813901, 
+    lng: -73.887426,
     owner_id: 0 
 });
 
@@ -911,8 +911,8 @@ listing49 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.868779, 
+    lng: -73.893261,
     owner_id: 0 
 });
 
@@ -927,8 +927,8 @@ listing50 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.776878, 
+    lng: -73.951115,
     owner_id: 0 
 });
 
@@ -943,8 +943,8 @@ listing51 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.769569, 
+    lng: -73.958888,
     owner_id: 0 
 });
 
@@ -959,8 +959,8 @@ listing52 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.706465, 
+    lng: -73.917183,
     owner_id: 0 
 });
 
@@ -975,8 +975,8 @@ listing53 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.778495, 
+    lng: -73.778131,
     owner_id: 0 
 });
 
@@ -991,8 +991,8 @@ listing54 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.785106, 
+    lng: -73.844109,
     owner_id: 0 
 });
 
@@ -1007,7 +1007,7 @@ listing55 = Listing.create!({
     realator: realator.sample, 
     style: style.sample,
     description: description.sample, 
-    lat: , 
-    lng: ,
+    lat: 40.773874, 
+    lng: -73.842586,
     owner_id: 0 
 });
