@@ -39,7 +39,7 @@ export const FilteredBuy = (props) => {
         }
     }
 
-    if (locationHash === "#rent") {
+    if (locationHash === "#/rent") {
         for (let i = 0; i < allListings.length; i++) {
             let listing = allListings[i];
             let id = allListingsIds[i];

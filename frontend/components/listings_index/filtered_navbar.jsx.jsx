@@ -1,5 +1,5 @@
 import React from "react";
-import { FilteredIndex } from "./filtered_index";
+// import { FilteredIndex } from "./filtered_index";
 import { FilteredBuy } from "./filtered_buy";
 
 export class FilteredNavBar extends React.Component {
@@ -130,7 +130,7 @@ export class FilteredNavBar extends React.Component {
         return(
             <div>
                 {this.handleNavBar()}
-                <FilteredBuy 
+                <FilteredBuy
                     options={this.state}
                 />
             </div>
