@@ -134,11 +134,15 @@ export const FilteredBuy = (props) => {
         }
     }, [props.options]);
 
+    console.log(props, "PROPS");
+    console.log(listings, "LISTINGS");
+
     return (
         <div className="buy-page-contents">
             <div className="buy-page-left">
                 <FilteredMap 
                     listingsForView={listingsForView}
+                    listingsForViewIds={listingsForViewIds}
                     listings={listings.listings}
                     listingIds={listings.listingsIds}
                 />
@@ -146,6 +150,7 @@ export const FilteredBuy = (props) => {
             <div className="buy-page-right">
                 <ListingsIndex 
                     listingsForView={listingsForView}
+                    listingsForViewIds={listingsForViewIds}
                     listings={listings.listings}
                     listingIds={listings.listingsIds}
                 />
