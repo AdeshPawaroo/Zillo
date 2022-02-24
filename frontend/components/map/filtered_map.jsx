@@ -1,16 +1,17 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { GoogleMap, Marker } from "@react-google-maps/api";
 
 export const FilteredMap = (props) => {
     let listings = Object.values(props.listings);
     let listingIds = Object.keys(props.listingIds);
-    const locations = [];
-
+    const locations = [];   
+    
     if (listings.length === 0) {
-        listings = Object.values(useSelector(state => state.entities.listings));
-        listingIds = Object.keys(useSelector(state => state.entities.listings))
+        listings = props.listingsForView;
+        listingIds = props.listingsForView;
     }
+
+    console.log(listings, "map");
 
     const mapOptions = {
         height: "760px",
