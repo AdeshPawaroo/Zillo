@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchListings } from "../../actions/listing_actions";
 import { fetchSaves } from "../../actions/save_actions";
 import { FilteredMap } from "../map/filtered_map";
 import { ListingsIndex } from "./listings_index";
 
-export const FilteredIndex = (props) => {
+export const FilteredBuy = (props) => {
     const dispatch = useDispatch();
     const optionValues = Object.values(props.options);
     const optionKeys = Object.keys(props.options);
     const allListings = Object.values(useSelector(state => state.entities.listings));
     const allListingsIds = Object.keys(useSelector(state => state.entities.listings));
+    const listingsForView = [];
+    const listingsForViewIds = [];
+    const locationHash = window.location.hash;
 
     const [listings, setListings] = useState({
         listings: [],
@@ -25,14 +27,36 @@ export const FilteredIndex = (props) => {
     useEffect(() => {
         dispatch(fetchSaves());
     }, []);
-    
+
+    if (locationHash === "#/buy") {
+        for (let i = 0; i < allListings.length; i++) {
+            let listing = allListings[i];
+            let id = allListingsIds[i];
+            if (listing.status === "for sale") {
+                listingsForView.push(listing);
+                listingsForViewIds.push(id);
+            }
+        }
+    }
+
+    if (locationHash === "#rent") {
+        for (let i = 0; i < allListings.length; i++) {
+            let listing = allListings[i];
+            let id = allListingsIds[i];
+            if (listing.status === "for rent") {
+                listingsForView.push(listing);
+                listingsForViewIds.push(id);
+            }
+        }
+    }
+
     useEffect(() => {
-        if (listings.listings.length === 0) {
+        if (listings.listings.length == 0) {
             let temp1 = [];
             let temp2 = [];
-            for (let i = 0; i < allListings.length; i++) {
-                let listing = allListings[i];
-                let id = allListingsIds[i];
+            for (let i = 0; i < listingsForView.length; i++) {
+                let listing = listingsForView[i];
+                let id = listingsForViewIds[i];
                 for (let j = 0; j < optionValues.length; j++) {
                     let value = optionValues[j];
                     let key = optionKeys[j];
@@ -114,12 +138,14 @@ export const FilteredIndex = (props) => {
         <div className="buy-page-contents">
             <div className="buy-page-left">
                 <FilteredMap 
+                    listingsForView={listingsForView}
                     listings={listings.listings}
                     listingIds={listings.listingsIds}
                 />
             </div>           
             <div className="buy-page-right">
                 <ListingsIndex 
+                    listingsForView={listingsForView}
                     listings={listings.listings}
                     listingIds={listings.listingsIds}
                 />

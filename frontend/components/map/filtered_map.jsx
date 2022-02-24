@@ -8,8 +8,8 @@ export const FilteredMap = (props) => {
     const locations = [];
 
     if (listings.length === 0) {
-        listings = Object.values(useSelector(state => state.entities.listings));
-        listingIds = Object.keys(useSelector(state => state.entities.listings))
+        listings = props.listingsForView;
+        listingIds = props.listingsForView;
     }
 
     const mapOptions = {
