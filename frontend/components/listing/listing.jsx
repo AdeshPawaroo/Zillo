@@ -33,11 +33,11 @@ export const Listing = (props) => {
             <p className="listing-stats" onClick={() => window.location = `/#/listings/${currListingId}`}>
                {currListing.beds} {" bds "}
                {currListing.baths} {" ba "}
-               {currListing.sqft} {" sqft -"}
+               {currListing.sqft} {" sqft - "}
                {currListing.status} 
             </p>
             <p className="listing-address" onClick={() => window.location = `/#/listings/${currListingId}`}>
-                {currListing.address}
+                {currListing.address}{" - "}{currListing.zipcode}{" - "}{currListing.style}
             </p>
             <p className="listing-realator" onClick={() => window.location = `/#/listings/${currListingId}`}>
                 {currListing.realator}

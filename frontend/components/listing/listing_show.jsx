@@ -66,7 +66,7 @@ export const ListingShow = (props) => {
                                 {currListing.listing.baths} {"ba - "}
                                 {currListing.listing.sqft} {" sqft"}
                             </span>
-                            <span className="header-address">{currListing.listing.address}</span>
+                            <span className="header-address">{currListing.listing.address}{" - "}{currListing.listing.zipcode}{" - "}{currListing.listing.style}</span>
                         </div>
 
                         <div className="show-map-container">
