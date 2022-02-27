@@ -6,13 +6,16 @@ export const FilteredMap = (props) => {
     let listings = Object.values(props.listings);
     let listingIds = Object.keys(props.listingIds);
     const locations = [];   
+    let emptyOptionsflag = true;
 
-    // if (listings.length === 0) {
-    //     listings = props.listingsForView;
-    //     listingIds = props.listingsForViewIds
-    // }
+    for (let i = 0; i < props.options.length; i++) {
+        let currentOption = props.options[i];
+        if (currentOption !== "") {
+            emptyOptionsflag = false;
+        }
+    }
 
-    if (listings.length === 0) {
+    if (emptyOptionsflag === true) {
         listings = Object.values(useSelector(state => state.entities.listings));
         listingIds = Object.keys(useSelector(state => state.entities.listings));
     }
