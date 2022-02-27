@@ -70,15 +70,15 @@ realator = [
 ];
 
 style = [
-    'bungalow',
-    'cottage',
-    'victorian',
-    'ranch',
-    'colonial',
-    'manor',
-    'villa',
-    'chalet',
-    'apartment'
+    'Bungalow',
+    'Cottage',
+    'Victorian',
+    'Ranch',
+    'Colonial',
+    'Manor',
+    'Villa',
+    'Chalet',
+    'Apartment'
 ];
 
 prices = [

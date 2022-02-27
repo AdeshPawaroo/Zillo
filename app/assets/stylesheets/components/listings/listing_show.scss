@@ -99,8 +99,11 @@
 
 .overview-description {
     font-size: 1.3rem;
+    height: 12rem;
     display: flex;
     text-align: center;
     padding: 2rem;
     padding-top: 0rem;
+    overflow: scroll;
+    overflow-x: hidden;
 }

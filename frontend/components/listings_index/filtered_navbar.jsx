@@ -1,6 +1,6 @@
 import React from "react";
-// import { FilteredIndex } from "./filtered_index";
-import { FilteredBuy } from "./filtered_buy";
+// import { FilteredBuy } from "./filtered_buy";
+import { FilteredIndex } from "./filtered_index"
 
 export class FilteredNavBar extends React.Component {
     constructor(props) {
@@ -42,15 +42,15 @@ export class FilteredNavBar extends React.Component {
                 <label>Style: {" "}</label>
                 <select onChange={this.handleChange("style")}>
                     <option value="none" selected disabled hidden>Select an Option</option>
-                    <option value="bungalow">Bungalow</option>
-                    <option value="cottage">Cottage</option>
-                    <option value="victorian">Victorian</option>
-                    <option value="ranch">Ranch</option>
-                    <option value="colonial">Colonial</option>
-                    <option value="manor">Manor</option>
-                    <option value="villa">Villa</option>
-                    <option value="chalet">Chalet</option>
-                    <option value="apartment">Apartment</option>
+                    <option value="Bungalow">Bungalow</option>
+                    <option value="Cottage">Cottage</option>
+                    <option value="Victorian">Victorian</option>
+                    <option value="Ranch">Ranch</option>
+                    <option value="Colonial">Colonial</option>
+                    <option value="Manor">Manor</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Chalet">Chalet</option>
+                    <option value="Apartment">Apartment</option>
                 </select>
             </div>
         )
@@ -130,7 +130,7 @@ export class FilteredNavBar extends React.Component {
         return(
             <div>
                 {this.handleNavBar()}
-                <FilteredBuy
+                <FilteredIndex
                     options={this.state}
                 />
             </div>
