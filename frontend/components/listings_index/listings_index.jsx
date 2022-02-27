@@ -19,22 +19,33 @@ export const ListingsIndex = (props) => {
         listingIds = Object.keys(useSelector(state => state.entities.listings));
     }
 
-    return (
-        <div className="listings-index">
-            {
-                listings.map((listing, i) => (
-                    <Listing 
-                        key={i}
-                        listing={listing}
-                        listingId={listingIds[i]}
-                    />
-                ))
-            }
-        </div>
-    );
-}
+    const handleRender = () => {
+        if (listings.length === 0) {
+            return (
+                <div className="no-listings-found-message">
+                    Sorry! No available listings match your search paramaters!
+                </div>
+            )
+        }else {
+            return (
+                <div className="listings-index">
+                    {
+                        listings.map((listing, i) => (
+                            <Listing 
+                                key={i}
+                                listing={listing}
+                                listingId={listingIds[i]}
+                            />
+                        ))
+                    }
+                </div>
+            )
+        }
+    }
 
- // if (listings.length === 0) {
-    //     listings = Object.values(useSelector(state => state.entities.listings));
-    //     listingIds = Object.keys(useSelector(state => state.entities.listings));
-    // }
+    return (
+        <div>
+            {handleRender()}
+        </div>
+    )
+}
