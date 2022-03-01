@@ -9,7 +9,17 @@
 
 .buy-page-right {
     width: 47%;
-    height: 25vh;
+    // height: 25vh;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-listings-found-message {
+    font-family: 'Antic Slab', serif;
+    font-size: 2rem;
+    text-align: center;
 }
 
 // listing item

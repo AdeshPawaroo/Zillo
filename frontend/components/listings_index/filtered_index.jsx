@@ -110,18 +110,22 @@ export const FilteredIndex = (props) => {
         }
     }, [props.options]);
 
+    console.log(listings.listings, "LISTINGS");
+
     return (
         <div className="buy-page-contents">
             <div className="buy-page-left">
                 <FilteredMap 
                     listings={listings.listings}
                     listingIds={listings.listingsIds}
+                    options={optionValues}
                 />
             </div>           
             <div className="buy-page-right">
                 <ListingsIndex 
                     listings={listings.listings}
                     listingIds={listings.listingsIds}
+                    options={optionValues}
                 />
             </div>
         </div>
