@@ -9,10 +9,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
-    // margin-left: auto;
-    // margin-right: auto;
-    // width: 100%;
 }
 
 .slogan-container { 
@@ -24,7 +20,7 @@
 .slogan {
     width: 25%;
     text-align: center;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -40,7 +36,7 @@
     margin-left: .8rem;
     margin-right: .8rem;
     text-align: center;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -58,7 +54,7 @@
 
 .panel-container > div > button {
     text-align: center;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
     font-weight: bolder;
     color: blue;
@@ -114,14 +110,14 @@
     height: 4vh;
     border-radius: .4rem;
     padding: 1rem;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     border: none;
 }
 
 .img-slogan {
     color: white;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 2rem;
     font-weight: bolder;
     margin-top: 6rem;
