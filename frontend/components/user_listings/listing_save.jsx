@@ -14,25 +14,26 @@ export const ListingSaves = (props) => {
 
     const handleDelete = (e) => {
         e.preventDefault();
-
-        for (let i = 0; i < saveIds.length; i++) {
-            let id = saveIds[i];
-
-            if (
-                currentSave.address === saves[id].address &&
-                currentSave.baths === saves[id].baths &&
-                currentSave.beds === saves[id].beds &&
-                currentSave.description === saves[id].description &&
-                currentSave.lat === saves[id].lat &&
-                currentSave.lng === saves[id].lng &&
-                currentSave.price === saves[id].price &&
-                currentSave.realator === saves[id].realator &&
-                currentSave.sqft === saves[id].sqft &&
-                currentSave.status === saves[id].status &&
-                currentSave.style === saves[id].style &&
-                currentSave.zipcode === saves[id].zipcode
-            ) {
-                dispatch(deleteSave(id));
+        const confirmation = confirm("Are you sure you want to un-save this listing?");
+        if (confirmation === true) {
+            for (let i = 0; i < saveIds.length; i++) {
+                let id = saveIds[i];
+                if (
+                    currentSave.address === saves[id].address &&
+                    currentSave.baths === saves[id].baths &&
+                    currentSave.beds === saves[id].beds &&
+                    currentSave.description === saves[id].description &&
+                    currentSave.lat === saves[id].lat &&
+                    currentSave.lng === saves[id].lng &&
+                    currentSave.price === saves[id].price &&
+                    currentSave.realator === saves[id].realator &&
+                    currentSave.sqft === saves[id].sqft &&
+                    currentSave.status === saves[id].status &&
+                    currentSave.style === saves[id].style &&
+                    currentSave.zipcode === saves[id].zipcode
+                ) {
+                    dispatch(deleteSave(id));
+                }
             }
         }
     }

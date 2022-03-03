@@ -110,7 +110,8 @@ export const FilteredIndex = (props) => {
         }
     }, [props.options]);
 
-    console.log(listings.listings, "LISTINGS");
+    console.log(props.options, 'PROPS');
+    console.log(listings.listings, 'LISTINGS');
 
     return (
         <div className="buy-page-contents">
