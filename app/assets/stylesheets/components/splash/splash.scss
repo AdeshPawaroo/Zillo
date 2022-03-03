@@ -67,7 +67,7 @@
     border-radius: .25rem;
 }
 
-.panel-container > div > button:hover {
+.panel-container > div:hover > button {
     color: white;
     background-color: blue;
     cursor: pointer;
