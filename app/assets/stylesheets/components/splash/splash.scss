@@ -43,7 +43,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
-    box-shadow: 0px 1px 1px 0px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px gray;
 }
 
 .panel-container > div:hover {
