@@ -124,3 +124,28 @@
     margin-top: 6rem;
     margin-bottom: 2rem;
 }
+
+.coming-soon-container {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.coming-soon-message {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coming-soon-photo {
+    height: 35rem;
+    width: 100%;
+    background-image: url("sell_background.png");
+    background-position: center;
+    background-size: cover;
+}
