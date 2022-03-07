@@ -67,8 +67,8 @@ export const Page1 = (props) => {
                 </div>
             </div>
             <br />
-            <br />
             <h1>Why post on Zillo?</h1>
+            <br />
             <div className="page1-info">
                 <div className="page1-panel">
                     <img src={window.page1img1} />
