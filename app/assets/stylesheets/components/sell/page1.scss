@@ -1,11 +1,62 @@
+// .page1-container {
+//     width: 100%;
+//     height: 120vh;
+//     border: purple solid;
+// }
+
+// .page1-contents {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// .page1-contents > h1 {
+//     border: green solid;
+//     width: 66%;
+//     height: 3rem;
+//     font-family: 'Rubik', sans-serif;
+//     font-weight: bold;
+//     font-size: 2rem;
+//     color: white;
+//     background-color: blue;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .page1-form-container {
+//     display: flex;
+//     justify-content: center;;
+// }
+
+// .page1-form {
+//     border: black solid;
+//     background-image: url("page1-main.jpg");
+//     background-position: center;
+//     background-size: cover;
+//     width: 80%;
+//     height: 40rem;
+//     display: flex;
+// }
+
+// .page1-info {
+//     border: black solid;
+// }
+
+// .page1-container > h1 {
+//     border: red solid;
+// }
+
+
+
+
 .page1-container {
     width: 100%;
-    // height: 130vh;
     height: 120vh;
 }
 
 .page1-container > h1 {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
@@ -22,7 +73,7 @@
     width: 28%;
     height: 100%;
     font-weight: bold;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.5rem;
     text-align: center;
     display: flex;
@@ -33,7 +84,7 @@
 
 .page1-contents {
     width: 100%;
-    height: 45%;
+    height: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,11 +92,11 @@
 
 .page1-contents > h1 {
     font-weight: bold;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     color: white;
     font-size: 2rem;
     background-color: blue;
-    width: 60%;
+    width: 85%;
     height: 4.3rem;
     text-align: center;
     display: flex;
@@ -57,19 +108,19 @@
 
 .page1-form-container {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
 .page1-form {
-    width: 60%;
-    height: 80%;
+    width: 85%;
+    height: 100%;
     background-image: url("page1-main.jpg");
     background-position: center;
     background-size: cover;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 2rem;
     display: flex;
     align-items: flex-start;
@@ -83,20 +134,25 @@
 }
 
 .page1-form > input {
-    height: 2rem;
-    width: 40%;
+    height: 10rem;
+    width: 60%;
+    padding: 12px 20px;
     font-size: 1.5rem;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .page1-form > select {
     height: 2rem;
     width: 10%;
+    // padding: 12px 20px;
     font-size: 1.3rem;
+    font-family: 'Rubik', sans-serif;
 }
 
 .page1-form > label {
-    color: white;
+    color: black;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
 #select2 {
@@ -113,7 +169,7 @@
 .sell-cont-btn {
     color: blue;
     background-color: white;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     width: 14%;
     font-size: 1.5rem;
 }
@@ -133,7 +189,7 @@
 .sell-prev-btn {
     color: blue;
     background-color: white;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     width: 14%;
     font-size: 1.5rem;
 }

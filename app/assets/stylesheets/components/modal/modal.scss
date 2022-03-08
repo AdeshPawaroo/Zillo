@@ -29,12 +29,12 @@
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.5rem;
   }
 
   .modal-type {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.1rem;
     display: flex;
     justify-content: left;
@@ -42,14 +42,14 @@
   }
 
   .modal-si-btn {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.1rem;
     text-decoration: underline;
     text-decoration-color: blue;
   }
 
   .modal-su-btn {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.1rem;
     text-decoration: underline;
     text-decoration-color: blue;
@@ -76,7 +76,7 @@
 
   .login-form > label {
     font-weight: bold;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
   }
 
   .login-input {
@@ -86,13 +86,13 @@
     border-radius: .35rem;
     border-width: thin;
     text-align: center;
-    font-family: 'Antic Slab', serif
+    font-family: 'Rubik', sans-serif;
   }
 
   .session-submit {
     height: 3rem;
     width: 96%;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bolder;
     font-size: 1.3rem;
     border-radius: .35rem;
@@ -109,7 +109,7 @@
   .demo-container {
     border-top: solid;
     border-width: thin;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     font-weight: bold;
     padding: 1rem;
@@ -123,7 +123,7 @@
     height: 2rem;
     background-color: blue;
     color: white;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     border-radius: .35rem;
     border-width: thin;
@@ -135,13 +135,13 @@
   }
 
   .password-err {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     color:blue;
   }
 
   .email-err {
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     color:blue;
   }

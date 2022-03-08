@@ -1,7 +1,7 @@
 .img-container {
     width: 100%;
     height: 60vh;
-    background-image: url("splash_img.jpg");
+    background-image: url("splash.jpg");
     // background-size: 100% 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,10 +9,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
-    // margin-left: auto;
-    // margin-right: auto;
-    // width: 100%;
 }
 
 .slogan-container { 
@@ -24,7 +20,7 @@
 .slogan {
     width: 25%;
     text-align: center;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -40,14 +36,15 @@
     margin-left: .8rem;
     margin-right: .8rem;
     text-align: center;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
-    box-shadow: 0px 1px 1px 0px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px gray;
 }
 
 .panel-container > div:hover {
@@ -58,7 +55,7 @@
 
 .panel-container > div > button {
     text-align: center;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
     font-weight: bolder;
     color: blue;
@@ -70,7 +67,7 @@
     border-radius: .25rem;
 }
 
-.panel-container > div > button:hover {
+.panel-container > div:hover > button {
     color: white;
     background-color: blue;
     cursor: pointer;
@@ -114,16 +111,41 @@
     height: 4vh;
     border-radius: .4rem;
     padding: 1rem;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     border: none;
 }
 
 .img-slogan {
     color: white;
-    font-family: 'Antic Slab', serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 2rem;
     font-weight: bolder;
     margin-top: 6rem;
     margin-bottom: 2rem;
+}
+
+.coming-soon-container {
+    height: 67vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.coming-soon-message {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coming-soon-photo {
+    height: 35rem;
+    width: 100%;
+    background-image: url("sell_background.png");
+    background-position: center;
+    background-size: cover;
 }
