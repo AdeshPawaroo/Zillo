@@ -11,7 +11,7 @@ export const Page2 = (props) => {
                     <form className="page1-form">
                         <label>Beds:</label>
                         <select name="status" id="select2" onChange={handleChange("beds")}>
-                        <option value="none" selected disabed hidden>Select an Option</option>
+                        <option value="none" selected disabled hidden>Select an Option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -21,7 +21,7 @@ export const Page2 = (props) => {
                         <br />
                         <label>Baths:</label>
                         <select name="status" id="select2" onChange={handleChange("baths")}>
-                        <option value="none" selected disabed hidden>Select an Option</option>
+                        <option value="none" selected disabled hidden>Select an Option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -31,7 +31,7 @@ export const Page2 = (props) => {
                         <br />
                         <label>Style:</label>
                         <select name="status" id="select2" onChange={handleChange("style")}>
-                        <option value="none" selected disabed hidden>Select an Option</option>
+                        <option value="none" selected disabled hidden>Select an Option</option>
                             <option value="bungalow">Bungalow</option>
                             <option value="cottage">Cottage</option>
                             <option value="victorian">Victorian</option>

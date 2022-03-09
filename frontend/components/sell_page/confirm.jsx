@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createListing } from "../../actions/listing_actions";
+import { openModal } from "../../actions/modal_actions";
 
 export const Confirm = (props) => {
     const { prevStep } = props;
@@ -23,11 +24,57 @@ export const Confirm = (props) => {
         owner_id: currentUser
     }
 
-    const handleClick = (e) => {
-        e.preventDefault();
-        dispatch(createListing(newListing));
+    const handleCheck = (obj) => {
+        if (newListing.price.length === 0) {
+            return false;
+        }
+        if (newListing.status.length === 0) {
+            return false;
+        }
+        if (newListing.address.length === 0) {
+            return false;
+        }
+        if (isNaN(newListing.lat)) {
+            return false;
+        }
+        if (isNaN(newListing.lng)) {
+            return false;
+        }
+        if (isNaN(newListing.zipcode)) {
+            return false;
+        }
+        if (newListing.realator.length === 0) {
+            return false;
+        }
+        if (isNaN(newListing.baths)) {
+            return false;
+        }
+        if (isNaN(newListing.beds)) {
+            return false;
+        }
+        if (isNaN(newListing.sqft)) {
+            return false;
+        }
+        if (newListing.style.length === 0) {
+            return false;
+        }
+        if (newListing.description.length === 0) {
+            return false;
+        }
+        return true;
     }
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log(handleCheck());
+        if (handleCheck === true) {
+            dispatch(createListing(newListing));
+            alert("Thanks! Your listing has been created!")
+        }else {
+           alert("Please enter the correct information.")
+        }
+    }
+  
     const handlePrice = () => {
         if (newListing.price.length === 0) {
             return (
@@ -88,7 +135,6 @@ export const Confirm = (props) => {
         }
     }
 
-    
     const handleZipcode = () => {
         if (isNaN(newListing.zipcode)) {
             return (

@@ -66,7 +66,7 @@ export const ListingButton = (props) => {
             )
         }
         
-         let temp = Object.values(saves)
+        let temp = Object.values(saves)
         for (let i = 0; i < temp.length; i++) {
             let currentSave = temp[i];
             ele2 = {
