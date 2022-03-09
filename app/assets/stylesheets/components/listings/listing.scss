@@ -5,11 +5,16 @@
     overflow-x: hidden;
     height: 760px;
     justify-content: space-evenly;
+    align-content: flex-start;
+    width: 100%;
+}
+
+.listings-index-container {
+    width: 100%;
 }
 
 .buy-page-right {
     width: 47%;
-    // height: 25vh;
     height: 80vh;
     display: flex;
     align-items: flex-start;

@@ -44,7 +44,7 @@ export const ListingsIndex = (props) => {
     }
 
     return (
-        <div>
+        <div className="listings-index-container">
             {handleRender()}
         </div>
     )
