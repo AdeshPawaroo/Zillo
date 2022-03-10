@@ -14,7 +14,7 @@ export const ListingSaves = (props) => {
   
     const handleDelete = (e) => {
         e.preventDefault();
-        const confirmation = confirm("Are you sure you want to un-save this listing?");
+        const confirmation = confirm("Are you sure you want to unsave this listing?");
         if (confirmation === true) {
             for (let i = 0; i < saveIds.length; i++) {
                 let id = saveIds[i];
