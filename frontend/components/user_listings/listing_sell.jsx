@@ -38,12 +38,17 @@ export const ListingSell = (props) => {
         }
     }
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        window.location = `/#/listings/${props.currentSellId}`
+    }
+
     const trashIcon = (
         <FontAwesomeIcon icon={faTrash} onClick={handleDelete}/>
     );
 
     return (
-        <div className="sell-item-container">
+        <div className="sell-item-container" onClick={handleClick}>
             <div className="sell-photo"></div>
             <p className="sell-price">
                 {currentSale.price}

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSaves, createSave, deleteSave } from "../../actions/save_actions";
+import { createSave, deleteSave } from "../../actions/save_actions";
 import { openModal } from "../../actions/modal_actions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'

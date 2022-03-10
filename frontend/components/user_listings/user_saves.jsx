@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSaves } from "../../actions/save_actions";
 import { ListingSaves } from "./listing_save";
 
-export const UserSaves = (props) => {
+export const UserSaves = () => {
 
     const dispatch = useDispatch();
     const saves = Object.values(useSelector(state => state.entities.saves));
     const currentUser = useSelector(state => state.session.currentUser);
     const userSaves = [];
-
+    
     useEffect(() => {
         dispatch(fetchSaves());
     }, []);
@@ -31,6 +31,7 @@ export const UserSaves = (props) => {
                 {userSaves.map((save, i) => (
                     <ListingSaves 
                         currentSave={save}
+                        currentSaveId={save.listing_id}
                         key={i}
                     />
                 ))}

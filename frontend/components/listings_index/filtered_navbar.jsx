@@ -1,5 +1,4 @@
 import React from "react";
-// import { FilteredBuy } from "./filtered_buy";
 import { FilteredIndex } from "./filtered_index"
 
 export class FilteredNavBar extends React.Component {

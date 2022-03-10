@@ -24,7 +24,7 @@ export const Confirm = (props) => {
         owner_id: currentUser
     }
 
-    const handleCheck = (obj) => {
+    const handleCheck = () => {
         if (newListing.price.length === 0) {
             return false;
         }
@@ -63,11 +63,10 @@ export const Confirm = (props) => {
         }
         return true;
     }
-
+    
     const handleClick = (e) => {
         e.preventDefault();
-        console.log(handleCheck());
-        if (handleCheck === true) {
+        if (handleCheck() === true) {
             dispatch(createListing(newListing));
             alert("Thanks! Your listing has been created!")
         }else {

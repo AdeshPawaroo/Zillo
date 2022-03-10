@@ -21,5 +21,5 @@
 #  listing_id  :integer          not null
 #
 class Save < ApplicationRecord
-    validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, presence: true
+    validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, :listing_id, presence: true
 end
