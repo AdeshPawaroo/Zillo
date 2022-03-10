@@ -8,8 +8,10 @@ export const UserSales = (props) => {
 
     const dispatch = useDispatch();
     const listings = Object.values(useSelector(state => state.entities.listings));
+    const listingIds = Object.keys(useSelector(state => state.entities.listings));
     const currentUser = useSelector(state => state.session.currentUser)
     const userListings = [];
+    const userListingsIds = [];
 
     useEffect(() => {
         dispatch(fetchListings());
@@ -17,9 +19,10 @@ export const UserSales = (props) => {
 
     for (let i = 0; i < listings.length; i++) {
         let currentListing = listings[i];
-        
+        let currentListingId = listingIds[i];
         if (currentListing.owner_id === currentUser) {
-            userListings.push(currentListing)
+            userListings.push(currentListing);
+            userListingsIds.push(currentListingId);
         } 
     }
 
@@ -32,6 +35,7 @@ export const UserSales = (props) => {
                 {userListings.map((listing, i) => (
                     <ListingSell 
                         currentSell={listing}
+                        currentSellId={userListingsIds[i]}
                         key={i}
                     />
                 ))}
