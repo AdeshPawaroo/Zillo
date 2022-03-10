@@ -66,7 +66,6 @@ export const Confirm = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        console.log(handleCheck());
         if (handleCheck === true) {
             dispatch(createListing(newListing));
             alert("Thanks! Your listing has been created!")

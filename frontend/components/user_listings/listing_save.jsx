@@ -11,7 +11,7 @@ export const ListingSaves = (props) => {
     const currentSave = props.currentSave;
     const saves = useSelector(state => state.entities.saves);
     const saveIds = Object.keys(saves);
-
+  
     const handleDelete = (e) => {
         e.preventDefault();
         const confirmation = confirm("Are you sure you want to un-save this listing?");
@@ -42,8 +42,13 @@ export const ListingSaves = (props) => {
         <FontAwesomeIcon icon={fasFaHeart} onClick={handleDelete} />
     )
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        window.location = `/#/listings/${props.currentSaveId}`
+    }
+
     return (
-        <div className="save-item-container">
+        <div className="save-item-container" onClick={handleClick}>
             <div className="save-photo"></div>
             <p className="save-price">
                 {currentSave.price}

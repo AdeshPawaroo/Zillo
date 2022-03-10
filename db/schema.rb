@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_19_030453) do
+ActiveRecord::Schema.define(version: 2022_03_09_234455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,8 @@ ActiveRecord::Schema.define(version: 2021_12_19_030453) do
     t.float "lng", null: false
     t.integer "owner_id", null: false
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: 
+    t.datetime "updated_at", null: false
+    t.integer "listing_id", null: false
     t.index ["owner_id"], name: "index_saves_on_owner_id"
   end
 
