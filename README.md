@@ -3,6 +3,9 @@ Welcome to Zillo! Zillo is a clone of the real estate marketing website Zillow. 
 
 # Live Site - [Zillo](https://zillo-fs.herokuapp.com/)
 
+![image](https://user-images.githubusercontent.com/80853626/157956749-4fa4b30f-feb3-4c5d-b362-c5fbe069b6ed.png)
+![image](https://user-images.githubusercontent.com/80853626/157956802-1e72d2dd-4681-4848-aa38-6209dae35128.png)
+
 # Technologies
 - Ruby
 - Rails
