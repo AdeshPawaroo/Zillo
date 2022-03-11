@@ -28,6 +28,7 @@ The Google Map displayed on the index page tracks all of the current listings an
 The biggest problem I faced during this project was implementing a filtering system. This filtering system would filter out listings based on the current options selected by the user. After a lot of struggling with this concept I realized I was overthinking it, and the best approach was to utilize an object of "flags" for every choice. I would then iterate every listing and check if the current listings value matches the option selected by the user.S With this approach listings would only be displayed to the user if every flag inside of this object returned true.
 
 ![image](https://user-images.githubusercontent.com/80853626/157955647-e7ffd11f-262d-4009-8b5d-92bca153ff35.png)
+![image](https://user-images.githubusercontent.com/80853626/157957974-05734cb3-4990-495b-8476-746af9ce16b6.png)
 
 # Future Plans
 My main plan for the future is to implement a functional searchbar. This will be available in multiple spots throughout the website and will allow users to search for homes filtering by zipcode, style, number of beds/baths, sqft or by realator.
