@@ -30,4 +30,4 @@ The biggest problem I faced during this project was implementing a filtering sys
 ![image](https://user-images.githubusercontent.com/80853626/157955647-e7ffd11f-262d-4009-8b5d-92bca153ff35.png)
 
 # Future Plans
-For now, my main plan for the future is to implement a working searchbar within this project. This will allow users to search up homes filtering by zipcode/style/beds/baths/sqft and more.
+My main plan for the future is to implement a functional searchbar. This will be available in multiple spots throughout the website and will allow users to search for homes filtering by zipcode, style, number of beds/baths, sqft or by realator.
