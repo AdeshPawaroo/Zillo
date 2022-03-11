@@ -20,8 +20,12 @@ export const Splash = () => {
     return (
         <div className="splash-container">
             <div className="img-container">
-                <h1 className='img-slogan'>Change starts here</h1>
-                <Searchbar />
+                <h1 className='img-slogan'>
+                    Change starts here
+                <br />
+                <br />
+                    Find your place with Zillo
+                </h1>
             </div>
             
             <br/ >  <br/ >  <br/ >  <br/ >
