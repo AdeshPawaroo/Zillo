@@ -124,7 +124,13 @@ description = [
     Eget nullam non nisi est sit amet facilisis magna. Sit amet luctus venenatis lectus magna fringilla."
 ];
 
-# Listings in Queens
+#photo options
+photoOptions = [
+        
+];
+
+
+
 listing1 = Listing.create!({
     price: prices.sample,
     beds: rand(2..6), 
