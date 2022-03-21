@@ -146,7 +146,7 @@ listing1 = Listing.create!({
     lng: -73.823070,
     owner_id: 0 
 });
-listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg");
 
 # listing2 = Listing.create!({
 #     price: prices.sample,

@@ -17,7 +17,7 @@ export const FilteredIndex = (props) => {
         listings: [],
         listingsIds: []
     });
-
+    console.log(allListings[0]);
     useEffect(() => {
         dispatch(fetchListings());
     }, []);
