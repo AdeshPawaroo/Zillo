@@ -18,7 +18,7 @@ export const ListingsIndex = (props) => {
         listings = Object.values(useSelector(state => state.entities.listings));
         listingIds = Object.keys(useSelector(state => state.entities.listings));
     }
-
+    
     const handleRender = () => {
         if (listings.length === 0) {
             return (

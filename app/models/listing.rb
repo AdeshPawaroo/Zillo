@@ -21,4 +21,6 @@
 #
 class Listing < ApplicationRecord
     validates :price, :address, :beds, :baths, :status, :zipcode, :realator, :style, :sqft, :description, :lat, :lng, :owner_id, presence: true
+
+    has_one_attached :image
 end

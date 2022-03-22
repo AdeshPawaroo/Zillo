@@ -7,8 +7,7 @@ export const Listing = (props) => {
     const currentUser = useSelector(state => state.session.currentUser)
     const currListing = props.listing
     const currListingId = props.listingId;
-
-    //add currListingId here
+    
     const saveObj = {
         price: currListing.price,
         address: currListing.address,
@@ -25,10 +24,11 @@ export const Listing = (props) => {
         owner_id: currentUser,
         listing_id: currListingId
     }
-
+    
     return(
         <div className="listing-item-container" >
-            <div className="listing-photo" onClick={() => window.location = `/#/listings/${currListingId}`}></div>
+            <div className="listing-photo" onClick={() => window.location = `/#/listings/${currListingId}`}
+            style={{backgroundImage: `url(${currListing.photoUrl})`}}></div>
             <p className="listing-price">
                 {currListing.price}
             </p>
