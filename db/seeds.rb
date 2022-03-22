@@ -18,30 +18,6 @@ Save.destroy_all
 #demo user
 demo = User.create!(email: 'demo@demo.com', password: 'demo123')
 
-#City objects
-# Queens = City.create!(name: 'queens');
-# Brooklyn = City.create!(name: 'brooklyn');
-# Manhattan = City.create!(name: 'manhattan');
-# Bronx = City.create!(name: 'bronx');
-# Staten_Island = City.create!(name: 'staten island');
-
-# #cities array
-# cities = [
-#     Queens,
-#     Brooklyn,
-#     Manhattan,
-#     Bronx,
-#     Staten_Island
-# ];
-
-#States
-# New_York = State.create!(name: 'New York');
-
-# #states array 
-# states = [
-#     New_York
-# ];
-    
 #zipcodes array
 zipcodes = [
     11111,
@@ -124,13 +100,6 @@ description = [
     Eget nullam non nisi est sit amet facilisis magna. Sit amet luctus venenatis lectus magna fringilla."
 ];
 
-#photo options
-photoOptions = [
-        
-];
-
-# a.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
-
 listing1 = Listing.create!({
     price: prices.sample,
     beds: rand(2..6), 
@@ -146,138 +115,359 @@ listing1 = Listing.create!({
     lng: -73.823070,
     owner_id: 0 
 });
-listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg");
 
-# listing2 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000),
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.773173, 
-#     lng: -73.796870, 
-#     owner_id: 0 
-# });
+num = rand(1..11);
+if num == 1
+    listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing1.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing1.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing1.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing1.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing1.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing1.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing1.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing1.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing1.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing1.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
 
-# listing3 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.718040, 
-#     lng: -73.872761,
-#     owner_id: 0  
-# });
+listing2 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000),
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.773173, 
+    lng: -73.796870, 
+    owner_id: 0 
+});
 
-# listing4 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.760969, 
-#     lng: -73.924221,
-#     owner_id: 0  
-# });
+num = rand(1..11);
+if num == 1
+    listing2.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing2.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing2.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing2.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing2.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing2.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing2.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing2.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing2.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing2.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing2.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
 
-# # Listings in Brooklyn
-# listing5 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.667754, 
-#     lng: -73.892690,
-#     owner_id: 0 
-# });
+listing3 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.718040, 
+    lng: -73.872761,
+    owner_id: 0  
+});
 
-# listing6 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.603624, 
-#     lng: -73.969673,
-#     owner_id: 0  
-# });
+num = rand(1..11);
+if num == 1
+    listing3.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing3.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing3.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing3.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing3.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing3.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing3.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing3.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing3.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing3.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing3.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
 
-# listing7 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.652825, 
-#     lng: -73.956939,
-#     owner_id: 0  
-# });
+listing4 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.760969, 
+    lng: -73.924221,
+    owner_id: 0  
+});
 
-# listing8 = Listing.create!({
-#     price: prices.sample,    
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.625154, 
-#     lng: -73.997457,
-#     owner_id: 0  
-# });
+num = rand(1..11);
+if num == 1
+    listing4.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing4.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing4.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing4.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing4.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing4.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing4.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing4.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing4.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing4.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing4.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
 
-# # Listings in Manhattan
+listing5 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.667754, 
+    lng: -73.892690,
+    owner_id: 0 
+});
 
-# listing9 = Listing.create!({
-#     price: prices.sample,
-#     beds: rand(2..6), 
-#     baths: rand(2..6), 
-#     sqft: rand(900..3000), 
-#     status: status.sample, 
-#     address: Faker::Address.street_address, 
-#     zipcode: zipcodes.sample, 
-#     realator: realator.sample, 
-#     style: style.sample,
-#     description: description.sample, 
-#     lat: 40.768854, 
-#     lng: -73.984858,
-#     owner_id: 0  
-# });
+num = rand(1..11);
+if num == 1
+    listing5.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing5.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing5.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing5.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing5.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing5.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing5.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing5.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing5.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing5.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing5.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
+
+listing6 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.603624, 
+    lng: -73.969673,
+    owner_id: 0  
+});
+
+num = rand(1..11);
+if num == 1
+    listing6.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing6.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing6.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing6.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing6.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing6.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing6.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing6.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing6.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing6.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing6.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
+
+listing7 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.652825, 
+    lng: -73.956939,
+    owner_id: 0  
+});
+
+num = rand(1..11);
+if num == 1
+    listing7.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing7.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing7.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing7.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing7.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing7.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing7.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing7.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing7.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing7.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing7.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
+
+listing8 = Listing.create!({
+    price: prices.sample,    
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.625154, 
+    lng: -73.997457,
+    owner_id: 0  
+});
+
+num = rand(1..11);
+if num == 1
+    listing8.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing8.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing8.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing8.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing8.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing8.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing8.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing8.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing8.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing8.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing8.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
+
+listing9 = Listing.create!({
+    price: prices.sample,
+    beds: rand(2..6), 
+    baths: rand(2..6), 
+    sqft: rand(900..3000), 
+    status: status.sample, 
+    address: Faker::Address.street_address, 
+    zipcode: zipcodes.sample, 
+    realator: realator.sample, 
+    style: style.sample,
+    description: description.sample, 
+    lat: 40.768854, 
+    lng: -73.984858,
+    owner_id: 0  
+});
+
+num = rand(1..11);
+if num == 1
+    listing9.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+elsif num == 2
+    listing9.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+elsif num == 3
+    listing9.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+elsif num == 4
+    listing9.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+elsif num == 5
+    listing9.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+elsif num == 6
+    listing9.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+elsif num == 7
+    listing9.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+elsif num == 8
+    listing9.image.attach(io: File.open("app/assets/images/listing8.jpg"), filename: "listing8.jpg")
+elsif num == 9
+    listing9.image.attach(io: File.open("app/assets/images/listing9.jpg"), filename: "listing9.jpg")
+elsif num == 10
+    listing9.image.attach(io: File.open("app/assets/images/listing10.jpg"), filename: "listing10.jpg")
+elsif num == 11
+    listing9.image.attach(io: File.open("app/assets/images/listing11.jpg"), filename: "listing11.jpg")
+end
 
 # listing10 = Listing.create!({
 #     price: prices.sample,    
@@ -295,6 +485,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0  
 # });
 
+# num = rand(1..11);
+# if num == 1
+#     listing10.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing10.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing10.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing10.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing10.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing10.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing10.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
+
 # listing11 = Listing.create!({
 #     price: prices.sample,
 #     beds: rand(2..6), 
@@ -310,6 +517,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     lng: -73.993611,
 #     owner_id: 0  
 # });
+
+# num = rand(1..11);
+# if num == 1
+#     listing11.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing11.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing11.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing11.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing11.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing11.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing11.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
 
 # listing12 = Listing.create!({
 #     price: prices.sample,    
@@ -327,7 +551,22 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0 
 # });
 
-# # Listings in Bronx
+# num = rand(1..11);
+# if num == 1
+#     listing12.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing12.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing12.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing12.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing12.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing12.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing12.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
 
 # listing13 = Listing.create!({
 #     price: prices.sample,
@@ -345,6 +584,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0  
 # });
 
+# num = rand(1..11);
+# if num == 1
+#     listing12.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing12.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing12.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing12.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing12.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing12.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing12.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
+
 # listing14 = Listing.create!({
 #     price: prices.sample,    
 #     beds: rand(2..6), 
@@ -360,6 +616,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     lng: -73.911607, 
 #     owner_id: 0 
 # });
+
+# num = rand(1..11);
+# if num == 1
+#     listing14.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing14.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing14.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing14.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing14.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing14.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing14.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
 
 # listing15 = Listing.create!({
 #     price: prices.sample,
@@ -377,6 +650,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0  
 # });
 
+# num = rand(1..11);
+# if num == 1
+#     listing15.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing15.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing15.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing15.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing15.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing15.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing15.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
+
 # listing16 = Listing.create!({
 #     price: prices.sample,    
 #     beds: rand(2..6), 
@@ -393,7 +683,22 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0 
 # });
 
-# # Listings in Staten Island
+# num = rand(1..11);
+# if num == 1
+#     listing16.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing16.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing16.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing16.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing16.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing16.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing16.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
 
 # listing17 = Listing.create!({
 #     price: prices.sample,
@@ -411,6 +716,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0  
 # });
 
+# num = rand(1..11);
+# if num == 1
+#     listing17.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing17.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing17.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing17.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing17.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing17.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing17.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
+
 # listing18 = Listing.create!({
 #     price: prices.sample,    
 #     beds: rand(2..6), 
@@ -426,6 +748,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     lng: -74.141502,
 #     owner_id: 0 
 # });
+
+# num = rand(1..11);
+# if num == 1
+#     listing18.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing18.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing18.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing18.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing18.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing18.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing18.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
 
 # listing19 = Listing.create!({
 #     price: prices.sample,
@@ -443,6 +782,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0 
 # });
 
+# num = rand(1..11);
+# if num == 1
+#     listing19.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing19.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing19.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing19.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing19.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing19.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing19.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
+
 # listing20 = Listing.create!({
 #     price: prices.sample,
 #     beds: rand(2..6), 
@@ -459,6 +815,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     owner_id: 0 
 # });
 
+# num = rand(1..11);
+# if num == 1
+#     listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing1.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing1.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing1.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing1.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing1.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing1.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
+
 # listing21 = Listing.create!({
 #     price: prices.sample,
 #     beds: rand(2..6), 
@@ -474,6 +847,23 @@ listing1.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: 
 #     lng: -74.135121,
 #     owner_id: 0 
 # });
+
+# num = rand(1..11);
+# if num == 1
+#     listing21.image.attach(io: File.open("app/assets/images/listing.jpg"), filename: "listing.jpg")
+# elsif num == 2
+#     listing21.image.attach(io: File.open("app/assets/images/listing2.jpg"), filename: "listing2.jpg")
+# elsif num == 3
+#     listing21.image.attach(io: File.open("app/assets/images/listing3.jpg"), filename: "listing3.jpg")
+# elsif num == 4
+#     listing21.image.attach(io: File.open("app/assets/images/listing4.jpg"), filename: "listing4.jpg")
+# elsif num == 5
+#     listing21.image.attach(io: File.open("app/assets/images/listing5.jpg"), filename: "listing5.jpg")
+# elsif num == 6
+#     listing21.image.attach(io: File.open("app/assets/images/listing6.jpg"), filename: "listing6.jpg")
+# elsif num == 7
+#     listing21.image.attach(io: File.open("app/assets/images/listing7.jpg"), filename: "listing7.jpg")
+# end
 
 # listing22 = Listing.create!({
 #     price: prices.sample,
