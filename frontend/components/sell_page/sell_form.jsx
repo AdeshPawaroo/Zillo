@@ -1,6 +1,8 @@
 import React from "react";
-import { Page1 } from "./page1";
-import { Page2 } from "./page2";
+// import { Page1 } from "./page1";
+// import { Page2 } from "./page2";
+import { Page_1 } from "./page_1";
+import { Page_2 } from "./page_2";
 import { Confirm } from "./confirm";
 
 export class SellForm extends React.Component {
@@ -80,7 +82,7 @@ export class SellForm extends React.Component {
         switch(step) {
             case 1:
                 return (
-                    <Page1 
+                    <Page_1 
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
@@ -88,7 +90,7 @@ export class SellForm extends React.Component {
                 )
             case 2:
                 return (
-                    <Page2 
+                    <Page_2 
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}

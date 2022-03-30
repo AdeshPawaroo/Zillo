@@ -3,6 +3,10 @@ import React from "react";
 export const Page2 = (props) => {
     const { values, nextStep, prevStep, handleChange } = props;
 
+    const handleFile = () => {
+
+    }
+
     return(
         <div className="page1-container">
             <div className="page1-contents">
@@ -55,6 +59,11 @@ export const Page2 = (props) => {
                             placeholder={values.description}
                             onChange={handleChange("description")}
                             defaultValue={values.description}
+                        />
+                        <br />
+                        <label>Add a photo (optional):</label>
+                        <input type="file"
+                            onChange={handleFile}
                         />
                         <br />
                         <div className="page2-buttons">
