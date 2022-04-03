@@ -4,7 +4,7 @@ export const Page2 = (props) => {
     const { values, nextStep, prevStep, handleChange } = props;
 
     const handleFile = () => {
-
+ 
     }
 
     return(
