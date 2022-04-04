@@ -10,7 +10,6 @@
 }
 
 .page-contents {
-    // height: 85%;
     height: 95%;
     width: 50%;
     background-color: white;
@@ -103,16 +102,13 @@
 }
 
 .page-form-element > select {
-    height: 2rem;
-    width: 100%;
+    border: none;
+    background-color: #e5e5e5;
+    width: 100% !important;
+    height: 3rem !important;
+    margin-top: 10px;
     font-family: 'Rubik', sans-serif;
-    // border: none;
-    // background-color: #e5e5e5;
-    // width: 100%;
-    // height: 3rem;
-    // margin-top: 10px;
-    // font-size: 100%;
-    // font-family: 'Rubik', sans-serif;
+    font-size: 100%;
 }
 
 //stand alone elements
@@ -147,13 +143,15 @@
 
 .page-form-buttons > button {
     width: 80%;
-    height: 2.5rem;
+    height: 3.1rem;
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     font-weight: bolder;
     border-radius: 10px;
     border: none;
-    background-color: black;
+    // background-color: black;
+    // color: white;
+    background-color: blue;
     color: white;
 }
 
