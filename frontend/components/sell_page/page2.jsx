@@ -25,7 +25,7 @@ export const Page2 = (props) => {
                         <br />
                         <label>Baths:</label>
                         <select name="status" id="select2" onChange={handleChange("baths")}>
-                        <option value="none" selected disabled hidden>Select an Option</option>
+                            <option value="none" selected disabled hidden>Select an Option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

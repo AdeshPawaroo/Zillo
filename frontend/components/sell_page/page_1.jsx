@@ -78,12 +78,12 @@ export const Page_1 = (props) => {
                                 />
                             </div>
                         </div>
+                        {/* <br />
                         <br />
-                        <br />
-                        <br />
+                        <br /> */}
                         <div className='page-form-buttons'>
                             <button onClick={nextStep}>CONTINUE
-                                {" "}<FontAwesomeIcon icon={faArrowRight} onClick={nextStep}/>
+                                {" "}<FontAwesomeIcon icon={faArrowRight} onClick={nextStep} />
                             </button>
                         </div>
                     </form>
