@@ -178,7 +178,10 @@
 
 //buttons
 .page-form-buttons {
+    width: 100%;
+    height: 10rem;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     padding: 10px;

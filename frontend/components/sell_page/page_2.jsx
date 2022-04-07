@@ -72,6 +72,9 @@ export const Page_2 = (props) => {
                                 />
                             </div>
                         </div>
+                        <br />
+                        <br />
+                        <br />
                         <div className="page-form-r4">
                             <div className="page-form-element-image">
                                 <h1>Add a photo of the listing (optional):</h1>
