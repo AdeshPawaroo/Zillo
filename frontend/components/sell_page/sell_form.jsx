@@ -22,7 +22,8 @@ export class SellForm extends React.Component {
             sqft: "",
             description: "",
             lat: "",
-            lng: ""
+            lng: "",
+            photoFile: null
         }
     }
 
@@ -46,9 +47,15 @@ export class SellForm extends React.Component {
         });
     }
 
+    handleFile = e => {
+        this.setState({
+            photoFile: e.target.files[0]
+        })
+    }
+
     render () {
         const { step } = this.state;
-
+        console.log(this.state, "VALUES");
         const {
             price,
             address,
@@ -85,6 +92,7 @@ export class SellForm extends React.Component {
                     <Page_1 
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
+                        handleFile={this.handleFile}
                         values={values}
                     />
                 )
@@ -94,6 +102,7 @@ export class SellForm extends React.Component {
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
+                        handleFile={this.handleFile}
                         values={values}
                     />
                 )
