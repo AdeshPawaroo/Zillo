@@ -22,7 +22,6 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Splash />} />
                 <Route path="/buy" element={<FilteredNavBar />} />
-                {/* <Route path="/rent" element={<FilteredNavBar/>} /> */}
                 <Route path="/loans" element={<ComingSoon />} />
                 <Route path="/sell/greeting" element={<SellGreeting />} />
                 <Route path="/sell" element={<SellForm />} />

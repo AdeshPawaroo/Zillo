@@ -1,6 +1,8 @@
 import React from "react";
-import { Page1 } from "./page1";
-import { Page2 } from "./page2";
+// import { Page1 } from "./page1";
+// import { Page2 } from "./page2";
+import { Page_1 } from "./page_1";
+import { Page_2 } from "./page_2";
 import { Confirm } from "./confirm";
 
 export class SellForm extends React.Component {
@@ -20,7 +22,8 @@ export class SellForm extends React.Component {
             sqft: "",
             description: "",
             lat: "",
-            lng: ""
+            lng: "",
+            photoFile: null
         }
     }
 
@@ -44,9 +47,15 @@ export class SellForm extends React.Component {
         });
     }
 
+    handleFile = e => {
+        this.setState({
+            photoFile: e.target.files[0]
+        })
+    }
+
     render () {
         const { step } = this.state;
-
+        console.log(this.state, "VALUES");
         const {
             price,
             address,
@@ -80,18 +89,20 @@ export class SellForm extends React.Component {
         switch(step) {
             case 1:
                 return (
-                    <Page1 
+                    <Page_1 
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
+                        handleFile={this.handleFile}
                         values={values}
                     />
                 )
             case 2:
                 return (
-                    <Page2 
+                    <Page_2 
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
+                        handleFile={this.handleFile}
                         values={values}
                     />
                 )
