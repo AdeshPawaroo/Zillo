@@ -246,15 +246,31 @@
     overflow: scroll;
     overflow-x: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: black solid;
 }
 
 .confirmation-information > h1 {
-
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold
 }
 
 .confirmation-information > span {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+}
 
+.confirmation-information > p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: red;
+}
+
+.confirmation-information > label {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
 }

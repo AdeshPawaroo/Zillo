@@ -227,9 +227,66 @@ export const Confirmation = (props) => {
                      If not please go back and correct it.
                 </h1>
                 <div className="confirmation-information">
+                    <label>Address:</label>
+                    <br />
+                    {handleAddress()}
+                    <br />
+                    <br />
+                    <label>Zipcode:</label>
+                    <br />
+                    {handleZipcode()}
+                    <br />
+                    <br />
                     <label>Price:</label>
                     <br />
                     {handlePrice()}
+                    <br />
+                    <br />
+                    <label>Status:</label>
+                    <br />
+                    {handleStatus()}
+                    <br />
+                    <br />
+                    <label>Realator:</label>
+                    <br />
+                    {handleRealator()}
+                    <br />
+                    <br />
+                    <label>Latitude:</label>
+                    <br />
+                    {handleLatitude()}
+                    <br />
+                    <br />
+                    <label>Longitude:</label>
+                    <br />
+                    {handleLongitude()}
+                    <br />
+                    <br />
+                    <label>Beds:</label>
+                    <br />
+                    {handleBeds()}
+                    <br />
+                    <br />
+                    <label>Baths:</label>
+                    <br />
+                    {handleBaths()}
+                    <br />
+                    <br />
+                    <label>Style:</label>
+                    <br />
+                    {handleStyle()}
+                    <br />
+                    <br />
+                    <label>Sqft:</label>
+                    <br />
+                    {handleSqft()}
+                    <br />
+                    <br />
+                    <label>Description:</label>
+                    <br />
+                    {handleDescription()}
+                    <br />
+                    <br />
                 </div>
             </div>
         </div>
