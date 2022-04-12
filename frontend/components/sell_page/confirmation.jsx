@@ -254,12 +254,12 @@ export const Confirmation = (props) => {
                     <br />
                     <label>Latitude:</label>
                     <br />
-                    {handleLatitude()}
+                    {handleLat()}
                     <br />
                     <br />
                     <label>Longitude:</label>
                     <br />
-                    {handleLongitude()}
+                    {handleLng()}
                     <br />
                     <br />
                     <label>Beds:</label>
