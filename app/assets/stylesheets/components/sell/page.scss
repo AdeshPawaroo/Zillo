@@ -204,3 +204,57 @@
 }
 
 //confirmation
+.confirmation-container {
+    height: 55rem;
+    width: 100%;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px gray;
+}
+
+.confirmation-contents {
+    height: 95%;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 10px gray;
+    border-radius: 10px;
+}
+
+.confirmation-contents > h1 {
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    font-size: 2rem;
+    width: 85%;
+    height: 12rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.confirmation-information {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid;
+}
+
+.confirmation-information > h1 {
+
+}
+
+.confirmation-information > span {
+
+}

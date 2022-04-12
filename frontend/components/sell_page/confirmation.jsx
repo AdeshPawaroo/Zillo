@@ -218,10 +218,20 @@ export const Confirmation = (props) => {
         }
     }
 
-
     return(
-        <div>
-            asda
+        <div className="confirmation-container">
+            <div className="confirmation-contents">
+                <h1>
+                    Please confirm that this information is correct. 
+                    <br />
+                     If not please go back and correct it.
+                </h1>
+                <div className="confirmation-information">
+                    <label>Price:</label>
+                    <br />
+                    {handlePrice()}
+                </div>
+            </div>
         </div>
     )
 }
