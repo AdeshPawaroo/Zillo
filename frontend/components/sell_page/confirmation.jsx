@@ -288,6 +288,10 @@ export const Confirmation = (props) => {
                     <br />
                     <br />
                 </div>
+                <div className="page-form-buttons">
+                    <button onClick={prevStep}>GO BACK</button>
+                    <button onClick={handleClick}>SUBMIT</button>
+                </div>
             </div>
         </div>
     )
