@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 export const Page_1 = (props) => {
     library.add(faArrowRight);
     const { values, nextStep, handleChange } = props;
-
+    console.log(props, 'page1');
     return (
         <div className='page-container'>
             <div className="page-contents">
