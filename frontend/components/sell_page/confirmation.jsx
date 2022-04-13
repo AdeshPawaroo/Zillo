@@ -6,23 +6,24 @@ export const Confirmation = (props) => {
     const { prevStep } = props;
     const dispatch = useDispatch();
     const currentUser = useSelector(state => state.session.currentUser);
-
-    //add photoFile
-    const newListing = {
-        price: props.values.price,
-        baths: parseInt(props.values.baths),
-        beds: parseInt(props.values.beds),
-        description: props.values.description,
-        lat: parseFloat(props.values.lat),
-        lng: parseFloat(props.values.lng),
-        address: props.values.address,
-        realator: props.values.realator,
-        sqft: parseInt(props.values.sqft),
-        status: props.values.status,
-        style: props.values.style,
-        zipcode: parseInt(props.values.zipcode),
-        owner_id: currentUser
-    }
+    console.log(props.values, 'confirm');
+    
+    // const newListing = {
+    //     price: props.values.price,
+    //     baths: parseInt(props.values.baths),
+    //     beds: parseInt(props.values.beds),
+    //     description: props.values.description,
+    //     lat: parseFloat(props.values.lat),
+    //     lng: parseFloat(props.values.lng),
+    //     address: props.values.address,
+    //     realator: props.values.realator,
+    //     sqft: parseInt(props.values.sqft),
+    //     status: props.values.status,
+    //     style: props.values.style,
+    //     zipcode: parseInt(props.values.zipcode),
+    //     photoFile: props.values.photoFile,
+    //     owner_id: currentUser
+    // }
 
     const handleCheck = () => {
         if (newListing.price.length === 0) {
@@ -64,15 +65,49 @@ export const Confirmation = (props) => {
         return true;
     }
 
-    const handleClick = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        if (handleCheck() === true) {
-            dispatch(createListing(newListing));
-            alert("Thanks! Your listing has been created!")
-        }else {
-           alert("Please enter the correct information.")
-        }
+        const formData = new FormData();
+        farmData.append('listing[price]', props.values.price);
+        farmData.append('listing[baths]', props.values.baths);
+        farmData.append('listing[beds]', props.values.beds);
+        farmData.append('listing[description]', props.values.description);
+        farmData.append('listing[lat]', props.values.lat);
+        farmData.append('listing[lng]', props.values.lng);
+        farmData.append('listing[address]', props.values.address);
+        farmData.append('listing[realator]', props.values.realator);
+        farmData.append('listing[sqft]', props.values.sqft);
+        farmData.append('listing[status]', props.values.status);
+        farmData.append('listing[style]', props.values.style);
+        farmData.append('listing[zipcode]', props.values.zipcode);
+        farmData.append('listing[owner_id]', currentUser);
+        farmData.append('listing[photoFile]', props.values.photoFile);
     }
+
+    //     price: props.values.price,
+    //     baths: parseInt(props.values.baths),
+    //     beds: parseInt(props.values.beds),
+    //     description: props.values.description,
+    //     lat: parseFloat(props.values.lat),
+    //     lng: parseFloat(props.values.lng),
+    //     address: props.values.address,
+    //     realator: props.values.realator,
+    //     sqft: parseInt(props.values.sqft),
+    //     status: props.values.status,
+    //     style: props.values.style,
+    //     zipcode: parseInt(props.values.zipcode),
+    //     photoFile: props.values.photoFile,
+    //     owner_id: currentUser
+
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+    //     if (handleCheck() === true) {
+    //         dispatch(createListing(newListing));
+    //         alert("Thanks! Your listing has been created!")
+    //     }else {
+    //        alert("Please enter the correct information.")
+    //     }
+    // }
   
     const handlePrice = () => {
         if (newListing.price.length === 0) {
@@ -289,8 +324,8 @@ export const Confirmation = (props) => {
                     <br />
                 </div>
                 <div className="page-form-buttons">
-                    <button onClick={prevStep}>GO BACK</button>
                     <button onClick={handleClick}>SUBMIT</button>
+                    <button>GO BACK</button>
                 </div>
             </div>
         </div>
