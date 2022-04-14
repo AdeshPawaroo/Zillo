@@ -8,22 +8,22 @@ export const Confirmation = (props) => {
     const currentUser = useSelector(state => state.session.currentUser);
     console.log(props.values, 'confirm');
     
-    // const newListing = {
-    //     price: props.values.price,
-    //     baths: parseInt(props.values.baths),
-    //     beds: parseInt(props.values.beds),
-    //     description: props.values.description,
-    //     lat: parseFloat(props.values.lat),
-    //     lng: parseFloat(props.values.lng),
-    //     address: props.values.address,
-    //     realator: props.values.realator,
-    //     sqft: parseInt(props.values.sqft),
-    //     status: props.values.status,
-    //     style: props.values.style,
-    //     zipcode: parseInt(props.values.zipcode),
-    //     photoFile: props.values.photoFile,
-    //     owner_id: currentUser
-    // }
+    const newListing = {
+        price: props.values.price,
+        baths: parseInt(props.values.baths),
+        beds: parseInt(props.values.beds),
+        description: props.values.description,
+        lat: parseFloat(props.values.lat),
+        lng: parseFloat(props.values.lng),
+        address: props.values.address,
+        realator: props.values.realator,
+        sqft: parseInt(props.values.sqft),
+        status: props.values.status,
+        style: props.values.style,
+        zipcode: parseInt(props.values.zipcode),
+        photoFile: props.values.photoFile,
+        owner_id: currentUser
+    }
 
     const handleCheck = () => {
         if (newListing.price.length === 0) {
@@ -65,39 +65,74 @@ export const Confirmation = (props) => {
         return true;
     }
 
+    // const handleCheck = (formData) => {
+    //     if (newListing.price.length === 0) {
+    //         return false;
+    //     }
+    //     if (newListing.status.length === 0) {
+    //         return false;
+    //     }
+    //     if (newListing.address.length === 0) {
+    //         return false;
+    //     }
+    //     if (isNaN(newListing.lat)) {
+    //         return false;
+    //     }
+    //     if (isNaN(newListing.lng)) {
+    //         return false;
+    //     }
+    //     if (isNaN(newListing.zipcode)) {
+    //         return false;
+    //     }
+    //     if (newListing.realator.length === 0) {
+    //         return false;
+    //     }
+    //     if (isNaN(newListing.baths)) {
+    //         return false;
+    //     }
+    //     if (isNaN(newListing.beds)) {
+    //         return false;
+    //     }
+    //     if (isNaN(newListing.sqft)) {
+    //         return false;
+    //     }
+    //     if (newListing.style.length === 0) {
+    //         return false;
+    //     }
+    //     if (newListing.description.length === 0) {
+    //         return false;
+    //     }
+    //     return true;
+    // }
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        farmData.append('listing[price]', props.values.price);
-        farmData.append('listing[baths]', props.values.baths);
-        farmData.append('listing[beds]', props.values.beds);
-        farmData.append('listing[description]', props.values.description);
-        farmData.append('listing[lat]', props.values.lat);
-        farmData.append('listing[lng]', props.values.lng);
-        farmData.append('listing[address]', props.values.address);
-        farmData.append('listing[realator]', props.values.realator);
-        farmData.append('listing[sqft]', props.values.sqft);
-        farmData.append('listing[status]', props.values.status);
-        farmData.append('listing[style]', props.values.style);
-        farmData.append('listing[zipcode]', props.values.zipcode);
-        farmData.append('listing[owner_id]', currentUser);
-        farmData.append('listing[photoFile]', props.values.photoFile);
+        formData.append('listing[price]', props.values.price);
+        formData.append('listing[baths]', props.values.baths);
+        formData.append('listing[beds]', props.values.beds);
+        formData.append('listing[description]', props.values.description);
+        formData.append('listing[lat]', props.values.lat);
+        formData.append('listing[lng]', props.values.lng);
+        formData.append('listing[address]', props.values.address);
+        formData.append('listing[realator]', props.values.realator);
+        formData.append('listing[sqft]', props.values.sqft);
+        formData.append('listing[status]', props.values.status);
+        formData.append('listing[style]', props.values.style);
+        formData.append('listing[zipcode]', props.values.zipcode);
+        formData.append('listing[owner_id]', currentUser);
+        formData.append('listing[photoFile]', props.values.photoFile);
+        $.ajax({
+            url: '/api/listings',
+            method: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+        }).then(
+            (res) => console.log(res.message),
+            (res) => console.log(res.responseJSON)
+        );
     }
-
-    //     price: props.values.price,
-    //     baths: parseInt(props.values.baths),
-    //     beds: parseInt(props.values.beds),
-    //     description: props.values.description,
-    //     lat: parseFloat(props.values.lat),
-    //     lng: parseFloat(props.values.lng),
-    //     address: props.values.address,
-    //     realator: props.values.realator,
-    //     sqft: parseInt(props.values.sqft),
-    //     status: props.values.status,
-    //     style: props.values.style,
-    //     zipcode: parseInt(props.values.zipcode),
-    //     photoFile: props.values.photoFile,
-    //     owner_id: currentUser
 
     // const handleClick = (e) => {
     //     e.preventDefault();
@@ -324,8 +359,8 @@ export const Confirmation = (props) => {
                     <br />
                 </div>
                 <div className="page-form-buttons">
-                    <button onClick={handleClick}>SUBMIT</button>
-                    <button>GO BACK</button>
+                    <button onClick={handleSubmit}>SUBMIT</button>
+                    <button onClick={prevStep}>GO BACK</button>
                 </div>
             </div>
         </div>
