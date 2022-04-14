@@ -1,8 +1,9 @@
 import React from "react";
+// import { Page1 } from "./page1";
+// import { Page2 } from "./page2";
 import { Page_1 } from "./page_1";
 import { Page_2 } from "./page_2";
 import { Confirmation } from "./confirmation";
-import { Confirm } from "./confirm";
 
 export class SellForm extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ export class SellForm extends React.Component {
             address: "",
             beds: "",
             baths: "",
-            status: "",
+            status: "Select an Option",
             zipcode: "",
             realator: "",
             style: "",

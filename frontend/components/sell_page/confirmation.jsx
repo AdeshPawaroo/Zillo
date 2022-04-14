@@ -121,7 +121,7 @@ export const Confirmation = (props) => {
         formData.append('listing[style]', props.values.style);
         formData.append('listing[zipcode]', props.values.zipcode);
         formData.append('listing[owner_id]', currentUser);
-        formData.append('listing[photoFile]', props.values.photoFile);
+        formData.append('listing[image]', props.values.photoFile);
         $.ajax({
             url: '/api/listings',
             method: 'POST',
