@@ -65,46 +65,6 @@ export const Confirmation = (props) => {
         return true;
     }
 
-    // const handleCheck = (formData) => {
-    //     if (newListing.price.length === 0) {
-    //         return false;
-    //     }
-    //     if (newListing.status.length === 0) {
-    //         return false;
-    //     }
-    //     if (newListing.address.length === 0) {
-    //         return false;
-    //     }
-    //     if (isNaN(newListing.lat)) {
-    //         return false;
-    //     }
-    //     if (isNaN(newListing.lng)) {
-    //         return false;
-    //     }
-    //     if (isNaN(newListing.zipcode)) {
-    //         return false;
-    //     }
-    //     if (newListing.realator.length === 0) {
-    //         return false;
-    //     }
-    //     if (isNaN(newListing.baths)) {
-    //         return false;
-    //     }
-    //     if (isNaN(newListing.beds)) {
-    //         return false;
-    //     }
-    //     if (isNaN(newListing.sqft)) {
-    //         return false;
-    //     }
-    //     if (newListing.style.length === 0) {
-    //         return false;
-    //     }
-    //     if (newListing.description.length === 0) {
-    //         return false;
-    //     }
-    //     return true;
-    // }
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
@@ -122,16 +82,31 @@ export const Confirmation = (props) => {
         formData.append('listing[zipcode]', props.values.zipcode);
         formData.append('listing[owner_id]', currentUser);
         formData.append('listing[image]', props.values.photoFile);
-        $.ajax({
-            url: '/api/listings',
-            method: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-        }).then(
-            (res) => console.log(res.message),
-            (res) => console.log(res.responseJSON)
-        );
+
+        if (handleCheck() === true) {
+            $.ajax({
+                url: '/api/listings',
+                method: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+            });
+            alert("Thanks! Your listing has been created!");
+            window.location = "#/buy"
+        }else {
+            alert("Please enter the correct information.")
+        }
+
+        // $.ajax({
+        //     url: '/api/listings',
+        //     method: 'POST',
+        //     data: formData,
+        //     contentType: false,
+        //     processData: false,
+        // }).then(
+        //     (res) => console.log(res.message),
+        //     (res) => console.log(res.responseJSON)
+        // );
     }
 
     // const handleClick = (e) => {

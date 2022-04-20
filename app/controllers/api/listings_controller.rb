@@ -19,11 +19,6 @@ class Api::ListingsController < ApplicationController
         render "/api/listings/index"
     end
 
-    # def user_listings_index
-    #     @user_listings = Listing.select { |listing| listing.owner_id(params[:id]) }
-    #     render "/api/listings/index"
-    # end
-
     def destroy
         @listing = Listing.find(params[:id])
 
