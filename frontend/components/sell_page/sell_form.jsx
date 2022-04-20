@@ -15,7 +15,7 @@ export class SellForm extends React.Component {
             address: "",
             beds: "",
             baths: "",
-            status: "Select an Option",
+            status: "",
             zipcode: "",
             realator: "",
             style: "",
