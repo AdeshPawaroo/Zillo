@@ -6,7 +6,6 @@ export const Confirmation = (props) => {
     const { prevStep } = props;
     const dispatch = useDispatch();
     const currentUser = useSelector(state => state.session.currentUser);
-    console.log(props.values, 'confirm');
     
     const newListing = {
         price: props.values.price,
@@ -62,28 +61,31 @@ export const Confirmation = (props) => {
         if (newListing.description.length === 0) {
             return false;
         }
+        if (newListing.photoFile === null) {
+            return false;
+        }
         return true;
     }
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append('listing[price]', props.values.price);
-        formData.append('listing[baths]', props.values.baths);
-        formData.append('listing[beds]', props.values.beds);
-        formData.append('listing[description]', props.values.description);
-        formData.append('listing[lat]', props.values.lat);
-        formData.append('listing[lng]', props.values.lng);
-        formData.append('listing[address]', props.values.address);
-        formData.append('listing[realator]', props.values.realator);
-        formData.append('listing[sqft]', props.values.sqft);
-        formData.append('listing[status]', props.values.status);
-        formData.append('listing[style]', props.values.style);
-        formData.append('listing[zipcode]', props.values.zipcode);
-        formData.append('listing[owner_id]', currentUser);
-        formData.append('listing[image]', props.values.photoFile);
-
+        
         if (handleCheck() === true) {
+            formData.append('listing[price]', props.values.price);
+            formData.append('listing[baths]', props.values.baths);
+            formData.append('listing[beds]', props.values.beds);
+            formData.append('listing[description]', props.values.description);
+            formData.append('listing[lat]', props.values.lat);
+            formData.append('listing[lng]', props.values.lng);
+            formData.append('listing[address]', props.values.address);
+            formData.append('listing[realator]', props.values.realator);
+            formData.append('listing[sqft]', props.values.sqft);
+            formData.append('listing[status]', props.values.status);
+            formData.append('listing[style]', props.values.style);
+            formData.append('listing[zipcode]', props.values.zipcode);
+            formData.append('listing[owner_id]', currentUser);
+            formData.append('listing[image]', props.values.photoFile);
             $.ajax({
                 url: '/api/listings',
                 method: 'POST',
@@ -96,28 +98,7 @@ export const Confirmation = (props) => {
         }else {
             alert("Please enter the correct information.")
         }
-
-        // $.ajax({
-        //     url: '/api/listings',
-        //     method: 'POST',
-        //     data: formData,
-        //     contentType: false,
-        //     processData: false,
-        // }).then(
-        //     (res) => console.log(res.message),
-        //     (res) => console.log(res.responseJSON)
-        // );
     }
-
-    // const handleClick = (e) => {
-    //     e.preventDefault();
-    //     if (handleCheck() === true) {
-    //         dispatch(createListing(newListing));
-    //         alert("Thanks! Your listing has been created!")
-    //     }else {
-    //        alert("Please enter the correct information.")
-    //     }
-    // }
   
     const handlePrice = () => {
         if (newListing.price.length === 0) {
