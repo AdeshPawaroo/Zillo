@@ -16,8 +16,8 @@ export const Page_2 = (props) => {
                         <div className="page-form-r1">
                             <div className="page-form-element">
                                 <h1>BEDS*</h1>
-                                <select name="status" id="select2" onChange={handleChange("beds")}>
-                                    <option value="none" selected disabled hidden>Select an Option</option>
+                                <select name="status" id="select2" defaultValue={values.beds} onChange={handleChange("beds")}>
+                                    <option value="none" hidden>Select an Option</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -27,8 +27,8 @@ export const Page_2 = (props) => {
                             </div>
                             <div className="page-form-element">
                                 <h1>BATHS*</h1>
-                                <select name="status" id="select2" onChange={handleChange("baths")}>
-                                    <option value="none" selected disabled hidden>Select an Option</option>
+                                <select name="status" id="select2" defaultValue={values.baths} onChange={handleChange("baths")}>
+                                    <option value="none" hidden>Select an Option</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -40,8 +40,8 @@ export const Page_2 = (props) => {
                         <div className="page-form-r2">
                             <div className="page-form-element">
                                 <h1>STYLE*</h1>
-                                <select name="status" id="select2" onChange={handleChange("style")}>
-                                    <option value="none" selected disabled hidden>Select an Option</option>
+                                <select name="status" id="select2" defaultValue={values.style} onChange={handleChange("style")}>
+                                    <option value="none" hidden>Select an Option</option>
                                     <option value="bungalow">Bungalow</option>
                                     <option value="cottage">Cottage</option>
                                     <option value="victorian">Victorian</option>

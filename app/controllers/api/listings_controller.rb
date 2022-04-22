@@ -2,7 +2,7 @@ class Api::ListingsController < ApplicationController
 
     def create
         @listing = Listing.new(listing_params)
-
+    
         if @listing.save
             render "/api/listings/show"
         else
@@ -18,11 +18,6 @@ class Api::ListingsController < ApplicationController
         @listings = Listing.all
         render "/api/listings/index"
     end
-
-    # def user_listings_index
-    #     @user_listings = Listing.select { |listing| listing.owner_id(params[:id]) }
-    #     render "/api/listings/index"
-    # end
 
     def destroy
         @listing = Listing.find(params[:id])

@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 export const Page_1 = (props) => {
     library.add(faArrowRight);
     const { values, nextStep, handleChange } = props;
-
+    console.log(props.values, 'page1');
     return (
         <div className='page-container'>
             <div className="page-contents">
@@ -46,12 +46,16 @@ export const Page_1 = (props) => {
                         <div className="page-form-r3">
                             <div className="page-form-element">
                                 <h1>STATUS*</h1>
-                                <input type="textarea" />
+                                <select className="realator-select" defaultValue={values.status} name="status" id="select2" onChange={handleChange("status")}>
+                                    <option value="none" hidden>Select an Option</option>
+                                    <option value="for sale">For Sale</option>
+                                    <option value="for rent">For Rent</option>
+                                </select>
                             </div>
                             <div className="page-form-element">
                                 <h1>REALATOR*</h1>
-                                <select className="realator-select" name="status" id="select2" onChange={handleChange("realator")}>
-                                    <option value="none" selected disabled hidden>Select an Option</option>
+                                <select className="realator-select" defaultValue={values.realator} name="status" id="select2" onChange={handleChange("realator")}>
+                                    <option value="none" hidden>Select an Option</option>
                                     <option value="Crown Realators">Crown Realators</option>
                                     <option value="Empire Estates">Empire Estates</option>
                                     <option value="Royalty Regals">Royalty Regals</option>
@@ -78,9 +82,6 @@ export const Page_1 = (props) => {
                                 />
                             </div>
                         </div>
-                        {/* <br />
-                        <br />
-                        <br /> */}
                         <div className='page-form-buttons'>
                             <button onClick={nextStep}>CONTINUE
                                 {" "}<FontAwesomeIcon icon={faArrowRight} onClick={nextStep} />

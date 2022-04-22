@@ -3,7 +3,7 @@ import React from "react";
 // import { Page2 } from "./page2";
 import { Page_1 } from "./page_1";
 import { Page_2 } from "./page_2";
-import { Confirm } from "./confirm";
+import { Confirmation } from "./confirmation";
 
 export class SellForm extends React.Component {
     constructor(props) {
@@ -55,7 +55,6 @@ export class SellForm extends React.Component {
 
     render () {
         const { step } = this.state;
-        console.log(this.state, "VALUES");
         const {
             price,
             address,
@@ -68,7 +67,8 @@ export class SellForm extends React.Component {
             sqft,
             description,
             lat,
-            lng
+            lng,
+            photoFile
         } = this.state;
 
         const values = {
@@ -83,7 +83,8 @@ export class SellForm extends React.Component {
             sqft,
             description,
             lat,
-            lng
+            lng,
+            photoFile
         }
 
         switch(step) {
@@ -108,7 +109,7 @@ export class SellForm extends React.Component {
                 )
             case 3:
                 return (
-                    <Confirm 
+                    <Confirmation
                         prevStep={this.prevStep}
                         values={values}
                     />
