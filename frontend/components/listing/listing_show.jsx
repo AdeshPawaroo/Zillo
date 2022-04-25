@@ -10,6 +10,9 @@ export const ListingShow = (props) => {
         listing: {}
     })
 
+    // console.log(currListing.listing.lat, "SHOW");
+    // console.log(typeof currListing.listing.lat === 'string' || currListing.listing.lat instanceof String);
+
     // for map position
     const mapOptions = {
         height: "100%",
