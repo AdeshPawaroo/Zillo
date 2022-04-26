@@ -9,8 +9,8 @@ export class FilteredNavBar extends React.Component {
             realator: "",
             style: "",
             zipcode: "",
-            beds: "",
-            baths: ""
+            baths: "",
+            beds: ""
         }
     }
      

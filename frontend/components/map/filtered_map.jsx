@@ -22,7 +22,8 @@ export const FilteredMap = (props) => {
 
     const mapOptions = {
         height: "760px",
-        width: "1150px"
+        width: "1050px"
+        // width: "1150px"
     }
 
     const center = {
