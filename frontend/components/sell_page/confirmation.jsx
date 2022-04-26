@@ -12,8 +12,8 @@ export const Confirmation = (props) => {
         baths: parseInt(props.values.baths),
         beds: parseInt(props.values.beds),
         description: props.values.description,
-        lat: parseFloat(props.values.lat),
-        lng: parseFloat(props.values.lng),
+        lat: 1231231231,
+        lng: 1231231231,
         address: props.values.address,
         realator: props.values.realator,
         sqft: parseInt(props.values.sqft),
@@ -23,7 +23,7 @@ export const Confirmation = (props) => {
         photoFile: props.values.photoFile,
         owner_id: currentUser
     }
-
+    
     const handleCheck = () => {
         if (newListing.price.length === 0) {
             return false;
@@ -76,8 +76,8 @@ export const Confirmation = (props) => {
             formData.append('listing[baths]', props.values.baths);
             formData.append('listing[beds]', props.values.beds);
             formData.append('listing[description]', props.values.description);
-            formData.append('listing[lat]', props.values.lat);
-            formData.append('listing[lng]', props.values.lng);
+            formData.append('listing[lat]', newListing.lat);
+            formData.append('listing[lng]', newListing.lng);
             formData.append('listing[address]', props.values.address);
             formData.append('listing[realator]', props.values.realator);
             formData.append('listing[sqft]', props.values.sqft);
