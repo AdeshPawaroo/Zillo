@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 export const Page_1 = (props) => {
     library.add(faArrowRight);
     const { values, nextStep, handleChange } = props;
-    console.log(props.values, 'page1');
+    
     return (
         <div className='page-container'>
             <div className="page-contents">
@@ -64,7 +64,7 @@ export const Page_1 = (props) => {
                             </div>
                         </div>
                         <br />
-                        <div className="page-form-r4">
+                        {/* <div className="page-form-r4">
                             <div className="page-form-element">
                                 <h1>LATITUDE*</h1>
                                 <input type="textarea" 
@@ -81,7 +81,7 @@ export const Page_1 = (props) => {
                                     defaultValue={values.lng}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                         <div className='page-form-buttons'>
                             <button onClick={nextStep}>CONTINUE
                                 {" "}<FontAwesomeIcon icon={faArrowRight} onClick={nextStep} />
