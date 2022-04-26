@@ -64,24 +64,6 @@ export const Page_1 = (props) => {
                             </div>
                         </div>
                         <br />
-                        {/* <div className="page-form-r4">
-                            <div className="page-form-element">
-                                <h1>LATITUDE*</h1>
-                                <input type="textarea" 
-                                    placeholder={values.lat}
-                                    onChange={handleChange("lat")}
-                                    defaultValue={values.lat}
-                                />
-                            </div>
-                            <div className="page-form-element">
-                                <h1>LONGITUDE*</h1>
-                                <input type="textarea" 
-                                    placeholder={values.lng}
-                                    onChange={handleChange("lng")}
-                                    defaultValue={values.lng}
-                                />
-                            </div>
-                        </div> */}
                         <div className='page-form-buttons'>
                             <button onClick={nextStep}>CONTINUE
                                 {" "}<FontAwesomeIcon icon={faArrowRight} onClick={nextStep} />
