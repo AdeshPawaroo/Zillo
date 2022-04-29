@@ -7,7 +7,10 @@ import { fetchListing } from "../../actions/listing_actions";
 export const ListingShow = (props) => {
 
     const [currListing, setListing] = useState({
-        listing: {}
+        listing: {
+            lat: 0,
+            lng: 0
+        }
     });
 
     // for map position
