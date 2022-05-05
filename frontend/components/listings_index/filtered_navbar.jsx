@@ -19,9 +19,9 @@ export class FilteredNavBar extends React.Component {
             [input]: e.target.value
         })
     }
-
-    handleRealatorFilter = () => {
-        return (
+              
+    handleRealatorFilter = () => {              
+        return (              
             <div className="filter-dropdown">
                 <label>Realator: {" "}</label>
                 <select onChange={this.handleChange("realator")}>
