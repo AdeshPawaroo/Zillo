@@ -49,9 +49,6 @@ export const Listing = (props) => {
                     saveObj={saveObj}
                 />
             </div>
-            {/* <ListingButton 
-                saveObj={saveObj}
-            /> */}
         </div>
     )
 }
