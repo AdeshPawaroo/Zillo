@@ -113,7 +113,7 @@ listing1 = Listing.create!({
     description: description.sample, 
     lat: 40.683264, 
     lng: -73.823070,
-    owner_id: 0 
+    owner_id: 0
 });
 
 num = rand(1..11);
